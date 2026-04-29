@@ -1,0 +1,1186 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Conga Digital Commerce 202604.2.0 on Conga Revenue Lifecycle Platform</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Conga Digital Commerce 202604.2.0 on Conga Revenue Lifecycle Platform</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li >AttachmentService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>projects/congarevenuecloud/ecommerce/src/lib/modules/catalog/services/attachment.service.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>The attachment represents a file that can be associated with an order, quote, etc as an attachment.</p>
+
+            </p>
+
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+                    <code>AObjectService</code>
+            </p>
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#type" >type</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#userService" >userService</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#checkSupportedFileType" >checkSupportedFileType</a>
+                            </li>
+                            <li>
+                                <a href="#deleteAttachment" >deleteAttachment</a>
+                            </li>
+                            <li>
+                                <a href="#generateDocument" >generateDocument</a>
+                            </li>
+                            <li>
+                                <a href="#getAttachments" >getAttachments</a>
+                            </li>
+                            <li>
+                                <a href="#getDocumentStatus" >getDocumentStatus</a>
+                            </li>
+                            <li>
+                                <a href="#getSupportedAttachmentType" >getSupportedAttachmentType</a>
+                            </li>
+                            <li>
+                                <a href="#uploadAttachment" >uploadAttachment</a>
+                            </li>
+                            <li>
+                                <a href="#uploadMultipleAttachments" >uploadMultipleAttachments</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkSupportedFileType"></a>
+                    <span class="name">
+                        <span ><b>checkSupportedFileType</b></span>
+                        <a href="#checkSupportedFileType"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>checkSupportedFileType(fileList: <a href="../classes/File.html" target="_self">FileList</a>, supportedFileTypes: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This method is used to check supported file type</p>
+<p>See <a href="FileList">FileList</a> for more details on the structure and fields required.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fileList</td>
+                                    <td>
+                                                <code><a href="../classes/File.html" target="_self" >FileList</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The files to be checked for supported file types.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>supportedFileTypes</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>A string containing supported file extensions.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>&#39;true<code>if all files in the</code>fileList<code>have a supported file type; otherwise,</code>false`.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteAttachment"></a>
+                    <span class="name">
+                        <span ><b>deleteAttachment</b></span>
+                        <a href="#deleteAttachment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteAttachment(documentId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method to delete the attachment for quote, order, etc using the Id of the document.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { AttachmentService, Attachment } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+
+constructor(private attachmentService: AttachmentService){}
+
+ngOnInit(){
+this.attachmentService.deleteAttachment(documentId: string).subscribe((res) =&gt; {
+});
+}
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>documentId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Id of the document to be deleted.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;boolean&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an observable of the boolean on successful delete.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="generateDocument"></a>
+                    <span class="name">
+                        <span ><b>generateDocument</b></span>
+                        <a href="#generateDocument"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>generateDocument(templateId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, object: AObject, type: <a href="../classes/Order.html" target="_self">&quot;Order&quot; | &quot;Proposal&quot;</a>, format: "PDF" | "PDF/A" | "DOCX", watermark: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method generates a document for a given quote record based on a template.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">
+import { AttachmentService, TemplateService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+export class MyComponent implements OnInit{
+
+constructor(private attachmentService: AttachmentService, private templateService: TemplateService){}
+
+generateDocumentForQuote(quote: Quote){
+this.templateService.getActiveTemplates(&#39;Proposal&#39;)
+.take(1)
+.subscribe(templateList =&gt; {
+this.attachmentService.generateDocument(templateList[0], quote, &#39;Proposal&#39;, &#39;DOC&#39;, true).subscribe(
+() =&gt; {...},
+err =&gt; {...}
+);
+});
+}
+}</code></pre></div><p>See <a href="../interfaces/Job.html">Job</a> for more details on the structure and fields required.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>templateId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>The id of the template record with which to generate the document</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>object</td>
+                                    <td>
+                                            <code>AObject</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>the instance of the quote or order AObject to generate the document from</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>type</td>
+                                    <td>
+                                                <code><a href="../classes/Order.html" target="_self" >&quot;Order&quot; | &quot;Proposal&quot;</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>determines the type of the document, accepts string &#39;Order&#39; for Order Object or &#39;Proposal&#39; for Quote object</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>format</td>
+                                    <td>
+                                            <code>&quot;PDF&quot; | &quot;PDF/A&quot; | &quot;DOCX&quot;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>&#x27;PDF&#x27;</code>
+                                    </td>
+
+                                    <td>
+                                        <p>the format of the document to create</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>watermark</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>false</code>
+                                    </td>
+
+                                    <td>
+                                        <p>to include configured watermark, by default it is false.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/Job.html" target="_self" >Observable&lt;Job&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>observable object of the generated document with job details.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAttachments"></a>
+                    <span class="name">
+                        <span ><b>getAttachments</b></span>
+                        <a href="#getAttachments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAttachments(parentId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, parentObjectName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, sortBy: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, sortDirection: "asc" | "desc")</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Retrieves attachments associated with a object.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { AttachmentService, Attachment } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+
+constructor(private attachmentService: AttachmentService){}
+
+ngOnInit(){
+this.attachmentService.getAttachments(parentId: string, parentObjectName: string).subscribe((res) =&gt; {
+});
+}
+}</code></pre></div><p> @param parentId string identifier of the parent object.
+ @param parentObjectName string representing parent object name
+ @param sortBy string representing the field on the attachment record to sort attachments by. By default the attachments will be sorted based on the creation date.
+ @param sortDirection fetch the records based on asc | desc directions.By default it is descending.
+ @returns An Observable emitting an array of Attachment objects.</p>
+<p> @see <a href="../interfaces/AttachmentDetails.html">AttachmentDetails</a> for more details on the structure and fields required.
+ The files will be filtered based on the <code>IsPrivate_c</code> custom field value.
+If this property is not specified, the file visibility is treated as public.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>parentId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>string identifier of the parent object.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>parentObjectName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>string representing parent object name</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>sortBy</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>&#x27;CreatedDate&#x27;</code>
+                                    </td>
+
+                                    <td>
+                                        <p>string representing the field on the attachment record to sort attachments by. By default the attachments will be sorted based on the creation date.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>sortDirection</td>
+                                    <td>
+                                            <code>&quot;asc&quot; | &quot;desc&quot;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>&#x27;desc&#x27;</code>
+                                    </td>
+
+                                    <td>
+                                        <p>fetch the records based on asc | desc directions.By default it is descending.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/AttachmentDetails.html" target="_self" >Observable&lt;Array&lt;AttachmentDetails&gt;&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An Observable emitting an array of Attachment objects.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getDocumentStatus"></a>
+                    <span class="name">
+                        <span ><b>getDocumentStatus</b></span>
+                        <a href="#getDocumentStatus"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getDocumentStatus(jobId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method fetches the status of the document.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">
+import { AttachmentService, TemplateService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+export class MyComponent implements OnInit{
+
+constructor(private attachmentService: AttachmentService, private templateService: TemplateService){}
+
+getDocumentStatus(jobId:string){
+this.attachmentService.getDocumentStatus(jobId).subscribe(
+() =&gt; {...},
+err =&gt; {...}
+);
+});
+}
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>jobId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The job Id of the attachment to be passed.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>observable of object with success or failure status of the attachment.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSupportedAttachmentType"></a>
+                    <span class="name">
+                        <span ><b>getSupportedAttachmentType</b></span>
+                        <a href="#getSupportedAttachmentType"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getSupportedAttachmentType()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This method is responsible for fetching all valid file extensions supported by Conga platform.</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;string&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An Observable emitting an array of string that contains valid file extensions</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="uploadAttachment"></a>
+                    <span class="name">
+                        <span ><b>uploadAttachment</b></span>
+                        <a href="#uploadAttachment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>uploadAttachment(file: <a href="../classes/File.html" target="_self">File</a>, isPrivate: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>, parentId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, parentObjectName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method to upload the attachment for quote, order, etc and associate with given parent id</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { AttachmentService, Attachment } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+
+constructor(private attachmentService: AttachmentService){}
+
+ngOnInit(){
+this.attachmentService.uploadAttachment(file: File, parentId: string).subscribe((res) =&gt; {
+});
+}
+}</code></pre></div><p>See <a href="../classes/File.html">File</a> for more details on the structure and fields required.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>file</td>
+                                    <td>
+                                                <code><a href="../classes/File.html" target="_self" >File</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>file to upload as an attachment for given parent id</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>isPrivate</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>false</code>
+                                    </td>
+
+                                    <td>
+                                        <p>boolean to specify the visibility of uploaded attachment. Defaulted to false</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>parentId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>id of associted parent of an attachment</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>parentObjectName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>string representing the object name</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/DocumentMetadata.html" target="_self" >Observable&lt;DocumentMetadata&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an observable of the uploaded attachment with id, errors and status</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="uploadMultipleAttachments"></a>
+                    <span class="name">
+                        <span ><b>uploadMultipleAttachments</b></span>
+                        <a href="#uploadMultipleAttachments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>uploadMultipleAttachments(files: <a href="../classes/File.html" target="_self">File[]</a>, parentId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, parentObjectName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, customProperties: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank">Object</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method to upload multiple attachments for a quote, order, etc., and associate them with the given parent ID.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { AttachmentService, Attachment } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+
+constructor(private attachmentService: AttachmentService){}
+
+uploadMultipleAttachments(files:File[]){
+this.attachmentService.uploadMultipleAttachments(files, parentId, parentObjectName, { IsPrivate_c: false }).subscribe((res) =&gt; {
+});
+// or
+this.attachmentService.uploadMultipleAttachments(files, parentId, parentObjectName).subscribe((res) =&gt; {
+});
+}
+}</code></pre></div><p><strong>Ensure that any custom fields passed as method parameters are included in the <code>DocumentMetadata</code> object. For more details, please refer to the product documentation.</strong></p>
+<p>For more info on <code>customProperties</code>, please refer to the <a href="https://developer.conga.com/revenue">Conga Revenue Reference Documentation</a></p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>files</td>
+                                    <td>
+                                                <code><a href="../classes/File.html" target="_self" >File[]</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>List of files to be uploaded as attachments for the given parent ID.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>parentId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>Unique identifier of the business object entity (parent) to associate the attachment to (The parent ID can be either an &#39;Order&#39; or &#39;Quote&#39; ID).</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>parentObjectName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>The name of the object to associate the attachments with (e.g., &#39;Order&#39;, &#39;Quote&#39;).</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>customProperties</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank" >Object</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>{}</code>
+                                    </td>
+
+                                    <td>
+                                        <p>An optional object containing custom properties to associate with the uploaded attachments. Defaults to an empty object.
+<strong>Ensure that any custom fields passed as method parameters are included in the <code>DocumentMetadata</code> object. For more details, please refer to the product documentation.</strong></p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/DocumentMetadata.html" target="_self" >Observable&lt;Array&lt;DocumentMetadata&gt;&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An observable that emits an list of <code>DocumentMetadata</code> containing the uploaded attachment details, including IDs, errors, and statuses.</p>
+<p>For more info on <code>customProperties</code>, please refer to the <a href="https://developer.conga.com/revenue">Conga Revenue Reference Documentation</a></p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="type"></a>
+                    <span class="name">
+                        <span ><b>type</b></span>
+                        <a href="#type"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>DocumentMetadata</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="userService"></a>
+                    <span class="name">
+                            <span class="modifier">Protected</span>
+                        <span ><b>userService</b></span>
+                        <a href="#userService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/UserService.html" target="_self" >UserService</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>this.injector.get(UserService)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'AttachmentService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

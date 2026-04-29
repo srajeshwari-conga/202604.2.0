@@ -1,0 +1,1040 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Conga Digital Commerce 202604.2.0 on Conga Revenue Lifecycle Platform</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Conga Digital Commerce 202604.2.0 on Conga Revenue Lifecycle Platform</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li >PriceService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>projects/congarevenuecloud/ecommerce/src/lib/modules/pricing/services/price.service.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p><strong>This service is a work in progress.</strong></p>
+<p>Price service provides a way of retrieving price for various points in the ecommerce application.
+Different price points are product price, product option price, order and quote totals.</p>
+<h3>Usage</h3>
+
+<div><pre class="line-numbers"><code class="language-typescript">import { PriceService, AObjectService} from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+
+export class MyComponent implements OnInit{
+constructor( private priceService: PriceService)
+}
+// or
+export class MyService extends AObjectService {
+private priceService: PriceService = this.injector.get(PriceService);
+}</code></pre></div>
+            </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#cartPending" >cartPending</a>
+                            </li>
+                            <li>
+                                <a href="#matrixData" >matrixData</a>
+                            </li>
+                            <li>
+                                <a href="#previousCartPrice" >previousCartPrice</a>
+                            </li>
+                            <li>
+                                <a href="#queryKey" >queryKey</a>
+                            </li>
+                            <li>
+                                <a href="#queryList" >queryList</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#adjustValue" class="deprecated-name">adjustValue</a>
+                            </li>
+                            <li>
+                                <a href="#getAttributePriceForProduct" class="deprecated-name">getAttributePriceForProduct</a>
+                            </li>
+                            <li>
+                                <a href="#getCartPrice" class="deprecated-name">getCartPrice</a>
+                            </li>
+                            <li>
+                                <a href="#getLineItemPrice" class="deprecated-name">getLineItemPrice</a>
+                            </li>
+                            <li>
+                                <a href="#getOptionAdjustmentPrice" >getOptionAdjustmentPrice</a>
+                            </li>
+                            <li>
+                                <a href="#getOrderLineItemPrice" class="deprecated-name">getOrderLineItemPrice</a>
+                            </li>
+                            <li>
+                                <a href="#getOrderPrice" >getOrderPrice</a>
+                            </li>
+                            <li>
+                                <a href="#getProductPrice" >getProductPrice</a>
+                            </li>
+                            <li>
+                                <a href="#getQuoteLineItemPrice" class="deprecated-name">getQuoteLineItemPrice</a>
+                            </li>
+                            <li>
+                                <a href="#getQuotePrice" >getQuotePrice</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(priceListService: <a href="../injectables/PriceListService.html" target="_self">PriceListService</a>, localCurrencyPipe: LocalCurrencyPipe, storefrontService: <a href="../injectables/StorefrontService.html" target="_self">StorefrontService</a>)</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>priceListService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/PriceListService.html" target="_self" >PriceListService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>localCurrencyPipe</td>
+                                                  
+                                                        <td>
+                                                                    <code>LocalCurrencyPipe</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>storefrontService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/StorefrontService.html" target="_self" >StorefrontService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="adjustValue"></a>
+                    <span class="name">
+                        <span class="modifier">Static</span>
+                        <span class="deprecated-name"><b>adjustValue</b></span>
+                        <a href="#adjustValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4 deprecated">
+                    Method calcuates the adjustment amount for a line item based on its adjustment type.
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>adjustValue()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method calcuates the adjustment amount for a line item based on its adjustment type.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAttributePriceForProduct"></a>
+                    <span class="name">
+                        <span class="deprecated-name"><b>getAttributePriceForProduct</b></span>
+                        <a href="#getAttributePriceForProduct"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4 deprecated">
+                    Method returns a price for a given attribute and its value on a product
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAttributePriceForProduct()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method returns a price for a given attribute and its value on a product</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCartPrice"></a>
+                    <span class="name">
+                        <span class="deprecated-name"><b>getCartPrice</b></span>
+                        <a href="#getCartPrice"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4 deprecated">
+                    Method returns the price for a given cart. If the first parameter is left blank, it will return the price for the current cart.
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getCartPrice()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method returns the price for a given cart. If the first parameter is left blank, it will return the price for the current cart.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getLineItemPrice"></a>
+                    <span class="name">
+                        <span class="deprecated-name"><b>getLineItemPrice</b></span>
+                        <a href="#getLineItemPrice"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4 deprecated">
+                    Method returns a price instance for a given cart item. If the price for the item has already been calculated, it will not do client side calculation.
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getLineItemPrice()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method returns a price instance for a given cart item. If the price for the item has already been calculated, it will not do client side calculation.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getOptionAdjustmentPrice"></a>
+                    <span class="name">
+                        <span ><b>getOptionAdjustmentPrice</b></span>
+                        <a href="#getOptionAdjustmentPrice"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getOptionAdjustmentPrice(option: <a href="../classes/ProductOptionComponent.html" target="_self">ProductOptionComponent</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method is used to retrieve the price of an option for a given product</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { PriceService, Price, ProductOptionComponent } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+price: Price;
+price$: Observable&lt;Price&gt;;
+
+constructor(private priceService: PriceService){}
+
+getOptionAdjustmentPrice(option: ProductOptionComponent){
+this.priceService.getOptionAdjustmentPrice(option).subscribe(a =&gt; this.price = a);
+// or
+this.price$ = this.priceService.getOptionAdjustmentPrice(option);
+}
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>option</td>
+                                    <td>
+                                                <code><a href="../classes/ProductOptionComponent.html" target="_self" >ProductOptionComponent</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the instance of the product option component to calculate the adjustment amount for</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Price.html" target="_self" >Observable&lt;Price&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>a hot observable containing the price of the given option</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getOrderLineItemPrice"></a>
+                    <span class="name">
+                        <span class="deprecated-name"><b>getOrderLineItemPrice</b></span>
+                        <a href="#getOrderLineItemPrice"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4 deprecated">
+                    Method returns price for a given OrderLineItem instance.
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getOrderLineItemPrice()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method returns price for a given OrderLineItem instance.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getOrderPrice"></a>
+                    <span class="name">
+                        <span ><b>getOrderPrice</b></span>
+                        <a href="#getOrderPrice"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getOrderPrice(order: <a href="../classes/Order.html" target="_self">Order</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method returns a price for a given order instance.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { PriceService, Price, Order } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+price: Price;
+price$: Observable&lt;Price&gt;;
+
+constructor(private priceService: PriceService){}
+
+getOrderPrice(order: Order){
+this.priceService.getOrderPrice(order).subscribe(a =&gt; this.price = a);
+// or
+this.price$ = this.priceService.getOrderPrice(order);
+}
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>order</td>
+                                    <td>
+                                                <code><a href="../classes/Order.html" target="_self" >Order</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the instance of the order to return a price for</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Price.html" target="_self" >Observable&lt;Price&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>a hot observable containing the price of the order</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getProductPrice"></a>
+                    <span class="name">
+                        <span ><b>getProductPrice</b></span>
+                        <a href="#getProductPrice"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getProductPrice(product: <a href="../classes/Product.html" target="_self">Product</a>, chargeType?: ChargeType)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method is used to retrieve the price for a given product.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { PriceService, Price, Product } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+price: Price;
+price$: Observable&lt;Price&gt;;
+
+constructor(private priceService: PriceService){}
+
+getProductPrice(product: Product){
+this.priceService.getProductPrice(product).subscribe(a =&gt; this.price = a);
+// or
+this.price$ = this.priceService.getProductPrice(product);
+}
+}</code></pre></div><p>/**</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>product</td>
+                                    <td>
+                                                <code><a href="../classes/Product.html" target="_self" >Product</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the instance of the product to return the price for.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>chargeType</td>
+                                    <td>
+                                            <code>ChargeType</code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>an optional parameter representing the charge type to calculate the price for.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Price.html" target="_self" >Observable&lt;Price&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>a hot observable containing the price instance for the given product.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getQuoteLineItemPrice"></a>
+                    <span class="name">
+                        <span class="deprecated-name"><b>getQuoteLineItemPrice</b></span>
+                        <a href="#getQuoteLineItemPrice"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4 deprecated">
+                    Method returns a NetPrice for a given QuoteLineItem instance.
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getQuoteLineItemPrice()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method returns a NetPrice for a given QuoteLineItem instance.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getQuotePrice"></a>
+                    <span class="name">
+                        <span ><b>getQuotePrice</b></span>
+                        <a href="#getQuotePrice"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getQuotePrice(quote: <a href="../classes/Quote.html" target="_self">Quote</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method returns a price for a given Quote instance.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { PriceService, Price, Quote} from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+price: Price;
+price$: Observable&lt;Price&gt;;
+
+constructor(private priceService: PriceService){}
+
+getQuotePrice(quote: Quote){
+this.priceService.getQuotePrice(quote).subscribe(a =&gt; this.price = a);
+// or
+this.price$ = this.priceService.getQuotePrice(quote);
+}
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>quote</td>
+                                    <td>
+                                                <code><a href="../classes/Quote.html" target="_self" >Quote</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the instance of the Quote to return a price for</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Price.html" target="_self" >Observable&lt;Price&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>a hot observable containing the price of the Quote</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cartPending"></a>
+                    <span class="name">
+                        <span ><b>cartPending</b></span>
+                        <a href="#cartPending"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="matrixData"></a>
+                    <span class="name">
+                        <span ><b>matrixData</b></span>
+                        <a href="#matrixData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{}</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="previousCartPrice"></a>
+                    <span class="name">
+                        <span ><b>previousCartPrice</b></span>
+                        <a href="#previousCartPrice"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Price.html" target="_self" >Price</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="queryKey"></a>
+                    <span class="name">
+                        <span ><b>queryKey</b></span>
+                        <a href="#queryKey"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="queryList"></a>
+                    <span class="name">
+                        <span ><b>queryList</b></span>
+                        <a href="#queryList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Array&lt;PriceListItem&gt;</code>
+
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'PriceService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,1325 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Conga Digital Commerce 202604.2.0 on Conga Revenue Lifecycle Platform</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Conga Digital Commerce 202604.2.0 on Conga Revenue Lifecycle Platform</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  ViewCommentsComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/congarevenuecloud/elements/src/lib/comments/view-comments/view-comments.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>View comments component displays existing comments/notes for business objects with pagination and filtering capabilities.
+The component supports both modal and inline layouts with configurable options for display and interaction.
+Custom templates can be provided for filters and individual comment items to override the default appearance.</p>
+<h3>Usage</h3>
+
+<div><pre class="line-numbers"><code class="language-typescript">import { CommentsModule } from &#39;&#64;congarevenuecloud/elements&#39;;
+
+&#64;NgModule({
+imports: [CommentsModule, ...]
+})
+export class AppModule {}</code></pre></div><h3>Modal Layout</h3>
+<img src="../res/viewCommentsModal.png" style="max-width: 100%"/>
+
+<h3>Inline Layout</h3>
+<img src="../res/viewCommentsInline.png" style="max-width: 100%"/>
+
+<div><pre class="line-numbers"><code class="language-html">// Basic usage - Modal layout
+```typescript
+&lt;apt-view-comments
+  [record]=&quot;quote&quot;
+  [layout]=&quot;&#39;modal&#39;&quot;
+  [title]=&quot;&#39;View Comments&#39;&quot;
+  (onAction)=&quot;handleViewCommentsAction($event)&quot;&gt;
+&lt;/apt-view-comments&gt;</code></pre></div><div><pre class="line-numbers"><code class="language-none">// Inline layout with configuration
+```typescript
+&lt;apt-view-comments
+  [record]=&quot;quote&quot;
+  [layout]=&quot;&#39;inline&#39;&quot;
+  [config]=&quot;{
+    showTypeFilter: true,
+    pageSize: 10,
+    enablePagination: true
+  }&quot;
+  (onAction)=&quot;handleViewCommentsAction($event)&quot;&gt;
+&lt;/apt-view-comments&gt;</code></pre></div><p>// Custom template usage</p>
+<div><pre class="line-numbers"><code class="language-typescript">&lt;apt-view-comments
+  [record]=&quot;quote&quot;
+  [layout]=&quot;&#39;inline&#39;&quot;
+  [config]=&quot;{
+    showCustomTemplate: true,
+    showTypeFilter: false
+  }&quot;
+  (onAction)=&quot;handleViewCommentsAction($event)&quot;&gt;
+
+  &lt;!-- Custom filters template --&gt;
+  &lt;div slot=&quot;filters&quot;&gt;
+    &lt;!-- Your custom filter controls here --&gt;
+    &lt;input type=&quot;text&quot; placeholder=&quot;Search comments...&quot; [(ngModel)]=&quot;searchTerm&quot;&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Custom comment item template --&gt;
+  &lt;div slot=&quot;comment-item&quot;&gt;
+    &lt;!-- Your custom comment layout here --&gt;
+    &lt;div class=&quot;custom-comment&quot;&gt;
+      &lt;strong&gt;{{ note.CreatedBy?.Name }}&lt;/strong&gt;: {{ note.Description }}
+      &lt;button (click)=&quot;onCustomAction({action: &#39;reply&#39;, noteId: note.Id})&quot;&gt;Reply&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/apt-view-comments&gt;</code></pre></div><h3>Custom Templates</h3>
+Enable `config.showCustomTemplate` to use custom slots:
+- `slot="filters"`: Custom filter controls
+- `slot="comment-item"`: Custom comment layout
+
+<h3>Custom Actions</h3>
+In custom templates, call `onCustomAction({action: 'yourAction', data: 'yourData'})` to emit custom events.
+Parent component receives: `{action: 'customAction', customData: {action: 'yourAction', data: 'yourData'}}`
+
+<p>Example: <code>&lt;button (click)=&quot;onCustomAction({action: &#39;reply&#39;, noteId: note.Id})&quot;&gt;Reply&lt;/button&gt;</code></p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="../interfaces/View.html" target="_self" >AfterViewInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>apt-view-comments</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./view-comments.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./view-comments.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#closeModal" >closeModal</a>
+                            </li>
+                            <li>
+                                <a href="#enhanceComments" >enhanceComments</a>
+                            </li>
+                            <li>
+                                <a href="#loadComments" >loadComments</a>
+                            </li>
+                            <li>
+                                <a href="#loadInitialComments" >loadInitialComments</a>
+                            </li>
+                            <li>
+                                <a href="#loadMoreComments" >loadMoreComments</a>
+                            </li>
+                            <li>
+                                <a href="#onCloseModal" >onCloseModal</a>
+                            </li>
+                            <li>
+                                <a href="#onCustomAction" >onCustomAction</a>
+                            </li>
+                            <li>
+                                <a href="#onTypeFilter" >onTypeFilter</a>
+                            </li>
+                            <li>
+                                <a href="#openModal" >openModal</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#config" >config</a>
+                            </li>
+                            <li>
+                                <a href="#customClass" >customClass</a>
+                            </li>
+                            <li>
+                                <a href="#layout" >layout</a>
+                            </li>
+                            <li>
+                                <a href="#record" >record</a>
+                            </li>
+                            <li>
+                                <a href="#title" >title</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#onAction" >onAction</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(modalService: BsModalService, noteService: <a href="../injectables/NoteService.html" target="_self">NoteService</a>, metadataService: MetadataService)</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>modalService</td>
+                                                  
+                                                        <td>
+                                                                    <code>BsModalService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>noteService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/NoteService.html" target="_self" >NoteService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>metadataService</td>
+                                                  
+                                                        <td>
+                                                                    <code>MetadataService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="config"></a>
+                        <b>config</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/ViewCommentsConfig.html" target="_self" >ViewCommentsConfig</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Configuration options for the comments view including pagination, filtering, and display settings.
+See <a href="../interfaces/ViewCommentsConfig.html">ViewCommentsConfig</a> for more details on the structure and fields required</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="customClass"></a>
+                        <b>customClass</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Custom CSS class to apply to the component for additional styling.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="layout"></a>
+                        <b>layout</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>&quot;modal&quot; | &quot;inline&quot;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;modal&#x27;</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The layout mode for the comments display. &#39;modal&#39; opens in a modal dialog, &#39;inline&#39; embeds in the page.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="record"></a>
+                        <b>record</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>AObject</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The business object record to view comments for.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="title"></a>
+                        <b>title</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The title text displayed at the top of the comments view.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onAction"></a>
+                        <b>onAction</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Event emitter that fires when user actions occur (close, filter, loadMore, etc.).
+See <a href="../interfaces/ViewCommentsOutput.html">ViewCommentsOutput</a> for more details on the structure and fields required</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="closeModal"></a>
+                    <span class="name">
+                        <span ><b>closeModal</b></span>
+                        <a href="#closeModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>closeModal()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Closes the modal dialog and cleans up the modal reference.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="enhanceComments"></a>
+                    <span class="name">
+                        <span ><b>enhanceComments</b></span>
+                        <a href="#enhanceComments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>enhanceComments(comments: <a href="../classes/Note.html" target="_self">Note[]</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Enhance comments with precomputed UI properties for performance.
+This method caches computed display properties
+like user initials and color schemes to optimize rendering performance.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>comments</td>
+                                    <td>
+                                                <code><a href="../classes/Note.html" target="_self" >Note[]</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The array of comments to enhance with UI properties</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Note.html" target="_self" >Note[]</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Enhanced comments array with cached UI properties and guest user substitutions</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadComments"></a>
+                    <span class="name">
+                        <span ><b>loadComments</b></span>
+                        <a href="#loadComments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadComments(page: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, appendToExisting: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Loads comments for the record with pagination and filtering support.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>page</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>The page number to load (1-based).</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>appendToExisting</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>false</code>
+                                    </td>
+
+                                    <td>
+                                        <p>Whether to append results to existing comments or replace them.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadInitialComments"></a>
+                    <span class="name">
+                        <span ><b>loadInitialComments</b></span>
+                        <a href="#loadInitialComments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadInitialComments()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Loads the initial set of comments for the record.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadMoreComments"></a>
+                    <span class="name">
+                        <span ><b>loadMoreComments</b></span>
+                        <a href="#loadMoreComments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadMoreComments()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Loads additional comments when pagination is enabled.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onCloseModal"></a>
+                    <span class="name">
+                        <span ><b>onCloseModal</b></span>
+                        <a href="#onCloseModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onCloseModal()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Closes the modal and emits the close action event.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onCustomAction"></a>
+                    <span class="name">
+                        <span ><b>onCustomAction</b></span>
+                        <a href="#onCustomAction"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onCustomAction(data: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Handles custom actions from the comments view.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The custom action data to emit.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onTypeFilter"></a>
+                    <span class="name">
+                        <span ><b>onTypeFilter</b></span>
+                        <a href="#onTypeFilter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onTypeFilter()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Applies comment type filtering and reloads the comments list.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openModal"></a>
+                    <span class="name">
+                        <span ><b>openModal</b></span>
+                        <a href="#openModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openModal()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Opens the modal dialog for viewing comments.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;view-comments-container&quot; [ngClass]&#x3D;&quot;customClass&quot;&gt;
+  &lt;!-- Modal Layout --&gt;
+  &lt;ng-container *ngIf&#x3D;&quot;layout &#x3D;&#x3D;&#x3D; &#x27;modal&#x27;&quot;&gt;
+    &lt;!-- Modal template will be opened via modalService --&gt;
+    &lt;ng-template #modalTemplate&gt;
+      &lt;div
+        class&#x3D;&quot;modal-header align-items-center d-flex flex-row-reverse pt-0 mt-3 px-0 pb-1&quot;
+      &gt;
+        &lt;button
+          type&#x3D;&quot;button&quot;
+          class&#x3D;&quot;close&quot;
+          [attr.aria-label]&#x3D;&quot;&#x27;COMMON.CLOSE&#x27; | translate&quot;
+          (click)&#x3D;&quot;onCloseModal()&quot;
+        &gt;
+          &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div
+        class&#x3D;&quot;modal-body d-flex flex-column justify-content-center pb-3 bg-white&quot;
+      &gt;
+        &lt;h6 class&#x3D;&quot;modal-title fw-bold pb-3&quot;&gt;
+          &lt;i class&#x3D;&quot;fa fa-comment mr-2&quot;&gt;&lt;/i&gt; {{ modalTitle }}
+        &lt;/h6&gt;
+
+        &lt;!-- Default Comments Template --&gt;
+        &lt;ng-container *ngTemplateOutlet&#x3D;&quot;commentsTemplate&quot;&gt;&lt;/ng-container&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+  &lt;/ng-container&gt;
+
+  &lt;!-- Inline Layout --&gt;
+  &lt;div *ngIf&#x3D;&quot;layout &#x3D;&#x3D;&#x3D; &#x27;inline&#x27;&quot; class&#x3D;&quot;inline-comments&quot;&gt;
+    &lt;div class&#x3D;&quot;comments-header mb-3&quot; *ngIf&#x3D;&quot;title&quot;&gt;
+      &lt;h6 class&#x3D;&quot;mb-2&quot;&gt;&lt;i class&#x3D;&quot;fa fa-comment&quot;&gt;&lt;/i&gt; {{ title }}&lt;/h6&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Default Comments Template --&gt;
+    &lt;ng-container *ngTemplateOutlet&#x3D;&quot;commentsTemplate&quot;&gt;&lt;/ng-container&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Default Comments Template --&gt;
+  &lt;ng-template #commentsTemplate&gt;
+    &lt;!-- Title Row (always shown) --&gt;
+    &lt;div class&#x3D;&quot;d-flex justify-content-between align-items-center&quot;&gt;
+      &lt;!-- Dynamic Title based on filter --&gt;
+      &lt;div class&#x3D;&quot;flex-shrink-0 mb-1&quot;&gt;
+        &lt;h5 *ngIf&#x3D;&quot;!selectedType || !selectedType?.length&quot;&gt;
+          {{ &quot;COMMENTS.ALL_COMMENTS&quot; | translate }}
+        &lt;/h5&gt;
+        &lt;h5 *ngIf&#x3D;&quot;selectedType &amp;&amp; selectedType?.length&quot;&gt;
+          {{ selectedType }} {{ &quot;COMMENTS.COMMENTS&quot; | translate }}
+        &lt;/h5&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Default Comment Type Filter --&gt;
+      &lt;div
+        class&#x3D;&quot;flex-shrink-0 filter-container&quot;
+        *ngIf&#x3D;&quot;
+          config?.showTypeFilter !&#x3D;&#x3D; false &amp;&amp;
+          config?.showCustomTemplate !&#x3D;&#x3D; true
+        &quot;
+      &gt;
+        &lt;apt-input-field
+          [entity]&#x3D;&quot;filterNote&quot;
+          [field]&#x3D;&quot;&#x27;NoteType&#x27;&quot;
+          [(ngModel)]&#x3D;&quot;selectedType&quot;
+          (ngModelChange)&#x3D;&quot;onTypeFilter()&quot;
+          [placeholder]&#x3D;&quot;&#x27;COMMENTS.FILTER_BY_TYPE&#x27; | translate&quot;
+          [required]&#x3D;&quot;false&quot;
+          [showLabel]&#x3D;&quot;false&quot;
+          [allowClearableLookups]&#x3D;&quot;true&quot;
+          [cssClass]&#x3D;&quot;&#x27;w-100&#x27;&quot;
+        &gt;
+        &lt;/apt-input-field&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Custom Filters Template --&gt;
+    &lt;ng-container *ngIf&#x3D;&quot;config?.showCustomTemplate &#x3D;&#x3D;&#x3D; true&quot;&gt;
+      &lt;ng-content select&#x3D;&quot;[slot&#x3D;filters]&quot;&gt;&lt;/ng-content&gt;
+    &lt;/ng-container&gt;
+
+    &lt;!-- Comments List --&gt;
+    &lt;div class&#x3D;&quot;comments-list overflow-auto pr-1&quot;&gt;
+      &lt;div
+        *ngFor&#x3D;&quot;
+          let note of displayedComments;
+          let i &#x3D; index;
+          trackBy: trackByCommentId
+        &quot;
+        class&#x3D;&quot;comment-item&quot;
+      &gt;
+        &lt;!-- Custom Comment Template --&gt;
+        &lt;ng-container *ngIf&#x3D;&quot;config?.showCustomTemplate &#x3D;&#x3D;&#x3D; true&quot;&gt;
+          &lt;ng-content select&#x3D;&quot;[slot&#x3D;comment-item]&quot;&gt;&lt;/ng-content&gt;
+        &lt;/ng-container&gt;
+
+        &lt;!-- Default Comment Template --&gt;
+        &lt;div
+          *ngIf&#x3D;&quot;config?.showCustomTemplate !&#x3D;&#x3D; true&quot;
+          class&#x3D;&quot;comment-item-content p-3&quot;
+        &gt;
+          &lt;div class&#x3D;&quot;d-flex align-items-start&quot;&gt;
+            &lt;!-- User Avatar --&gt;
+            &lt;div class&#x3D;&quot;flex-shrink-0 mr-3&quot;&gt;
+              &lt;div
+                class&#x3D;&quot;user-avatar d-flex justify-content-center align-items-center rounded-circle text-white fw-bold&quot;
+                [style.background-color]&#x3D;&quot;note.get(&#x27;userBackgroundColor&#x27;)&quot;
+                style&#x3D;&quot;height: 40px; width: 40px; font-size: 14px&quot;
+              &gt;
+                {{ note.get(&quot;userInitials&quot;) }}
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class&#x3D;&quot;flex-grow-1&quot;&gt;
+              &lt;div class&#x3D;&quot;d-flex justify-content-between&quot;&gt;
+                &lt;div&gt;
+                  &lt;!-- User Name --&gt;
+                  &lt;div class&#x3D;&quot;fw-bold text-dark&quot;&gt;
+                    {{ note.CreatedBy?.Name }}
+                  &lt;/div&gt;
+
+                  &lt;!-- Timestamp --&gt;
+                  &lt;div class&#x3D;&quot;mb-2&quot;&gt;
+                    &lt;small class&#x3D;&quot;text-muted&quot;&gt;
+                      {{
+                        note.CreatedDate
+                          | dateFormat : config?.dateFormat || DateFormat.Medium
+                          | async
+                      }}
+                    &lt;/small&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Comment type --&gt;
+                &lt;div&gt;
+                  &lt;span
+                    class&#x3D;&quot;badge rounded-pill text-light py-0 px-2 border&quot;
+                    [style.background-color]&#x3D;&quot;
+                      note._metadata?.noteTypeBackgroundColor
+                    &quot;
+                    *ngIf&#x3D;&quot;note.NoteType&quot;
+                  &gt;
+                    &lt;apt-output-field
+                      [record]&#x3D;&quot;note&quot;
+                      [field]&#x3D;&quot;&#x27;NoteType&#x27;&quot;
+                      [valueOnly]&#x3D;&quot;true&quot;
+                      [editable]&#x3D;&quot;false&quot;
+                      [showLabel]&#x3D;&quot;false&quot;
+                      [valueClass]&#x3D;&quot;&#x27;p-0&#x27;&quot;
+                    &gt;
+                    &lt;/apt-output-field&gt;
+                  &lt;/span&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;!-- Comment Text --&gt;
+              &lt;div class&#x3D;&quot;comment-text text-dark&quot;&gt;
+                {{ note.Description }}
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Custom Empty State Template --&gt;
+      &lt;ng-container
+        *ngIf&#x3D;&quot;
+          config?.showCustomTemplate &amp;&amp;
+          displayedComments.length &#x3D;&#x3D;&#x3D; 0 &amp;&amp;
+          !loading
+        &quot;
+      &gt;
+        &lt;ng-content select&#x3D;&quot;[slot&#x3D;empty-state]&quot;&gt;&lt;/ng-content&gt;
+      &lt;/ng-container&gt;
+
+      &lt;!-- Default Empty State --&gt;
+      &lt;div
+        class&#x3D;&quot;text-center text-muted mt-4 empty-state&quot;
+        *ngIf&#x3D;&quot;
+          !config?.showCustomTemplate &amp;&amp;
+          displayedComments.length &#x3D;&#x3D;&#x3D; 0 &amp;&amp;
+          !loading
+        &quot;
+      &gt;
+        &lt;i class&#x3D;&quot;fa fa-comments fa-2x mb-2&quot;&gt;&lt;/i&gt;
+        &lt;p&gt;{{ &quot;COMMENTS.NO_COMMENTS_FOUND&quot; | translate }}&lt;/p&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Load More Button --&gt;
+      &lt;div
+        class&#x3D;&quot;text-center mt-3&quot;
+        *ngIf&#x3D;&quot;canLoadMore &amp;&amp; config?.enablePagination !&#x3D;&#x3D; false&quot;
+      &gt;
+        &lt;button
+          type&#x3D;&quot;button&quot;
+          class&#x3D;&quot;btn btn-link text-primary text-decoration-none p-0&quot;
+          [ladda]&#x3D;&quot;loading&quot;
+          data-style&#x3D;&quot;zoom-in&quot;
+          data-spinner-color&#x3D;&quot;black&quot;
+          (click)&#x3D;&quot;loadMoreComments()&quot;
+          [disabled]&#x3D;&quot;loading&quot;
+        &gt;
+          {{
+            config?.loadMoreButtonText ||
+              (&quot;COMMENTS.LOAD_MORE_COMMENTS&quot; | translate)
+          }}
+        &lt;/button&gt;
+      &lt;/div&gt;
+
+      &lt;!-- No more comments message --&gt;
+      &lt;div
+        class&#x3D;&quot;text-center text-muted mt-3&quot;
+        *ngIf&#x3D;&quot;
+          !canLoadMore &amp;&amp; displayedComments.length &gt; (config?.pageSize || 10)
+        &quot;
+      &gt;
+        &lt;small&gt;{{ &quot;COMMENTS.NO_MORE_COMMENTS&quot; | translate }}&lt;/small&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Custom Footer Template --&gt;
+    &lt;div *ngIf&#x3D;&quot;config?.showCustomTemplate&quot;&gt;
+      &lt;ng-content select&#x3D;&quot;[slot&#x3D;footer]&quot;&gt;&lt;/ng-content&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./view-comments.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">
+.comment-item-content {
+  .comment-text {
+    line-height: 1.4;
+    word-wrap: break-word;
+  }
+}
+
+.comments-list {
+  max-height: 350px !important;
+  
+  &amp;::-webkit-scrollbar {
+    width: 0.375rem !important;
+    height: 0.375rem !important;
+    background: #fff !important;
+  }
+
+  &amp;::-webkit-scrollbar-thumb {
+    background: #A8B2BB !important;
+    border-radius: 0.25rem !important;
+  }
+}
+
+.filter-container {
+  min-width: 200px;
+}
+
+.view-comments-container {
+  apt-input-field {
+    .form-group {
+      margin-bottom: 0 !important;
+    }
+  }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="view-comments-container" [ngClass]="customClass">  <!-- Modal Layout -->  <ng-container *ngIf="layout === \'modal\'">    <!-- Modal template will be opened via modalService -->    <ng-template #modalTemplate>      <div        class="modal-header align-items-center d-flex flex-row-reverse pt-0 mt-3 px-0 pb-1"      >        <button          type="button"          class="close"          [attr.aria-label]="\'COMMON.CLOSE\' | translate"          (click)="onCloseModal()"        >          <span aria-hidden="true">&times;</span>        </button>      </div>      <div        class="modal-body d-flex flex-column justify-content-center pb-3 bg-white"      >        <h6 class="modal-title fw-bold pb-3">          <i class="fa fa-comment mr-2"></i> {{ modalTitle }}        </h6>        <!-- Default Comments Template -->        <ng-container *ngTemplateOutlet="commentsTemplate"></ng-container>      </div>    </ng-template>  </ng-container>  <!-- Inline Layout -->  <div *ngIf="layout === \'inline\'" class="inline-comments">    <div class="comments-header mb-3" *ngIf="title">      <h6 class="mb-2"><i class="fa fa-comment"></i> {{ title }}</h6>    </div>    <!-- Default Comments Template -->    <ng-container *ngTemplateOutlet="commentsTemplate"></ng-container>  </div>  <!-- Default Comments Template -->  <ng-template #commentsTemplate>    <!-- Title Row (always shown) -->    <div class="d-flex justify-content-between align-items-center">      <!-- Dynamic Title based on filter -->      <div class="flex-shrink-0 mb-1">        <h5 *ngIf="!selectedType || !selectedType?.length">          {{ "COMMENTS.ALL_COMMENTS" | translate }}        </h5>        <h5 *ngIf="selectedType && selectedType?.length">          {{ selectedType }} {{ "COMMENTS.COMMENTS" | translate }}        </h5>      </div>      <!-- Default Comment Type Filter -->      <div        class="flex-shrink-0 filter-container"        *ngIf="          config?.showTypeFilter !== false &&          config?.showCustomTemplate !== true        "      >        <apt-input-field          [entity]="filterNote"          [field]="\'NoteType\'"          [(ngModel)]="selectedType"          (ngModelChange)="onTypeFilter()"          [placeholder]="\'COMMENTS.FILTER_BY_TYPE\' | translate"          [required]="false"          [showLabel]="false"          [allowClearableLookups]="true"          [cssClass]="\'w-100\'"        >        </apt-input-field>      </div>    </div>    <!-- Custom Filters Template -->    <ng-container *ngIf="config?.showCustomTemplate === true">      <ng-content select="[slot=filters]"></ng-content>    </ng-container>    <!-- Comments List -->    <div class="comments-list overflow-auto pr-1">      <div        *ngFor="          let note of displayedComments;          let i = index;          trackBy: trackByCommentId        "        class="comment-item"      >        <!-- Custom Comment Template -->        <ng-container *ngIf="config?.showCustomTemplate === true">          <ng-content select="[slot=comment-item]"></ng-content>        </ng-container>        <!-- Default Comment Template -->        <div          *ngIf="config?.showCustomTemplate !== true"          class="comment-item-content p-3"        >          <div class="d-flex align-items-start">            <!-- User Avatar -->            <div class="flex-shrink-0 mr-3">              <div                class="user-avatar d-flex justify-content-center align-items-center rounded-circle text-white fw-bold"                [style.background-color]="note.get(\'userBackgroundColor\')"                style="height: 40px; width: 40px; font-size: 14px"              >                {{ note.get("userInitials") }}              </div>            </div>            <div class="flex-grow-1">              <div class="d-flex justify-content-between">                <div>                  <!-- User Name -->                  <div class="fw-bold text-dark">                    {{ note.CreatedBy?.Name }}                  </div>                  <!-- Timestamp -->                  <div class="mb-2">                    <small class="text-muted">                      {{                        note.CreatedDate                          | dateFormat : config?.dateFormat || DateFormat.Medium                          | async                      }}                    </small>                  </div>                </div>                <!-- Comment type -->                <div>                  <span                    class="badge rounded-pill text-light py-0 px-2 border"                    [style.background-color]="                      note._metadata?.noteTypeBackgroundColor                    "                    *ngIf="note.NoteType"                  >                    <apt-output-field                      [record]="note"                      [field]="\'NoteType\'"                      [valueOnly]="true"                      [editable]="false"                      [showLabel]="false"                      [valueClass]="\'p-0\'"                    >                    </apt-output-field>                  </span>                </div>              </div>              <!-- Comment Text -->              <div class="comment-text text-dark">                {{ note.Description }}              </div>            </div>          </div>        </div>      </div>      <!-- Custom Empty State Template -->      <ng-container        *ngIf="          config?.showCustomTemplate &&          displayedComments.length === 0 &&          !loading        "      >        <ng-content select="[slot=empty-state]"></ng-content>      </ng-container>      <!-- Default Empty State -->      <div        class="text-center text-muted mt-4 empty-state"        *ngIf="          !config?.showCustomTemplate &&          displayedComments.length === 0 &&          !loading        "      >        <i class="fa fa-comments fa-2x mb-2"></i>        <p>{{ "COMMENTS.NO_COMMENTS_FOUND" | translate }}</p>      </div>      <!-- Load More Button -->      <div        class="text-center mt-3"        *ngIf="canLoadMore && config?.enablePagination !== false"      >        <button          type="button"          class="btn btn-link text-primary text-decoration-none p-0"          [ladda]="loading"          data-style="zoom-in"          data-spinner-color="black"          (click)="loadMoreComments()"          [disabled]="loading"        >          {{            config?.loadMoreButtonText ||              ("COMMENTS.LOAD_MORE_COMMENTS" | translate)          }}        </button>      </div>      <!-- No more comments message -->      <div        class="text-center text-muted mt-3"        *ngIf="          !canLoadMore && displayedComments.length > (config?.pageSize || 10)        "      >        <small>{{ "COMMENTS.NO_MORE_COMMENTS" | translate }}</small>      </div>    </div>    <!-- Custom Footer Template -->    <div *ngIf="config?.showCustomTemplate">      <ng-content select="[slot=footer]"></ng-content>    </div>  </ng-template></div></div>'
+    var COMPONENTS = [{'name': 'AddCommentsComponent', 'selector': 'apt-add-comments'},{'name': 'AdditionalInformationComponent', 'selector': 'apt-additional-information'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AlertComponent', 'selector': 'apt-alert'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CaptchaComponent', 'selector': 'apt-captcha'},{'name': 'CartTotalsViewComponent', 'selector': 'app-cart-totals-view'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'ConstraintRuleAlertComponent', 'selector': 'apt-constraint-rule-alert'},{'name': 'ConstraintRuleSidebarComponent', 'selector': 'apt-constraint-rule-sidebar'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DependentPicklistComponent', 'selector': 'apt-dependent-picklist'},{'name': 'DocumentSelectorComponent', 'selector': 'apt-document-selector'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'EmailComposerComponent', 'selector': 'apt-email-composer'},{'name': 'EmailSearchComponent', 'selector': 'apt-email-search'},{'name': 'ErrorPageComponent', 'selector': 'apt-error-page'},{'name': 'FacetFilterComponent', 'selector': 'apt-facet-filter'},{'name': 'FavoriteFilterComponent', 'selector': 'apt-favorite-filter'},{'name': 'FavoriteModalComponent', 'selector': 'apt-favorite-modal'},{'name': 'FilesComponent', 'selector': 'apt-files'},{'name': 'FileUploaderComponent', 'selector': 'apt-file-uploader'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineitemCardComponent', 'selector': 'apt-lineitem-card'},{'name': 'LineItemMenuComponent', 'selector': 'apt-line-item-menu'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentIntegrationComponent', 'selector': 'apt-payment-integration'},{'name': 'PopoverComponent', 'selector': 'apt-popover'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceModalComponent', 'selector': 'apt-price-modal'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductAttributeComponent', 'selector': 'apt-product-attribute'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductSearchComponent', 'selector': 'apt-product-search'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'PromotionModalComponent', 'selector': 'apt-pr-modal'},{'name': 'QuickAddComponent', 'selector': 'app-quick-add'},{'name': 'RecipientsComponent', 'selector': 'apt-recipients'},{'name': 'ReplaceProductModalComponent', 'selector': 'apt-replace-product-modal'},{'name': 'RevalidateCartModalComponent', 'selector': 'apt-revalidate-cart-modal'},{'name': 'SelectAllComponent', 'selector': 'apt-select-all'},{'name': 'SendForSignatureComponent', 'selector': 'apt-send-for-signature'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'},{'name': 'TableRowSubItemComponent', 'selector': 'apt-table-row-sub-item'},{'name': 'ViewCommentsComponent', 'selector': 'apt-view-comments'},{'name': 'WizardComponent', 'selector': 'apt-wizard'}];
+    var DIRECTIVES = [{'name': 'AutoFocusDirective', 'selector': '[aptAutoFocus]'}];
+    var ACTUAL_COMPONENT = {'name': 'ViewCommentsComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ViewCommentsComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

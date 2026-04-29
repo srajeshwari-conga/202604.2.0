@@ -1,0 +1,1325 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Conga Digital Commerce 202604.2.0 on Conga Revenue Lifecycle Platform</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Conga Digital Commerce 202604.2.0 on Conga Revenue Lifecycle Platform</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  WizardComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/congarevenuecloud/elements/src/lib/wizard/wizard.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>The Wizard component provides a step-by-step navigation interface for multi-step processes
+such as checkout flows, forms, or configuration wizards.</p>
+<h3>Preview</h3>
+<img src="../res/wizard.png" style="max-width: 100%">
+
+<h3>Usage</h3>
+
+<div><pre class="line-numbers"><code class="language-typescript">import { WizardModule } from &#39;&#64;congarevenuecloud/elements&#39;;
+
+&#64;NgModule({
+  imports: [WizardModule, ...]
+})
+export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code class="language-html">```typescript
+// Using step numbers and checkmarks (default)
+wizardConfig = { showStepNumbers: true };
+&lt;apt-wizard
+  [steps]=&quot;wizardSteps&quot;
+  [config]=&quot;wizardConfig&quot;
+  (stepChange)=&quot;onStepChange($event)&quot;
+&gt;
+&lt;/apt-wizard&gt;</code></pre></div><p>// Using icons only (no checkmarks)
+wizardConfig = { showStepNumbers: false };
+wizardSteps = [
+  { id: &#39;step1&#39;, label: &#39;Step 1&#39;, icon: &#39;fa fa-user&#39; },
+  { id: &#39;step2&#39;, label: &#39;Step 2&#39;, icon: &#39;fa fa-check&#39; }
+];
+&lt;apt-wizard
+  [steps]=&quot;wizardSteps&quot;
+  [config]=&quot;wizardConfig&quot;
+  [activeStepIndex]=&quot;currentStepIndex&quot;
+  (stepChange)=&quot;onStepChange($event)&quot;</p>
+<blockquote>
+</blockquote>
+</apt-wizard>
+```
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>apt-wizard</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./wizard.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./wizard.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#currentStep" >currentStep</a>
+                            </li>
+                            <li>
+                                <a href="#currentStepIndex" >currentStepIndex</a>
+                            </li>
+                            <li>
+                                <a href="#stepTemplates" >stepTemplates</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getStepClasses" >getStepClasses</a>
+                            </li>
+                            <li>
+                                <a href="#getStepTemplate" >getStepTemplate</a>
+                            </li>
+                            <li>
+                                <a href="#goToStep" >goToStep</a>
+                            </li>
+                            <li>
+                                <a href="#onStepClick" >onStepClick</a>
+                            </li>
+                            <li>
+                                <a href="#trackByFn" >trackByFn</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#activeStepIndex" >activeStepIndex</a>
+                            </li>
+                            <li>
+                                <a href="#config" >config</a>
+                            </li>
+                            <li>
+                                <a href="#onStepNavigationRequest" >onStepNavigationRequest</a>
+                            </li>
+                            <li>
+                                <a href="#steps" >steps</a>
+                            </li>
+                            <li>
+                                <a href="#stepTemplate" >stepTemplate</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#finish" >finish</a>
+                            </li>
+                            <li>
+                                <a href="#next" >next</a>
+                            </li>
+                            <li>
+                                <a href="#previous" >previous</a>
+                            </li>
+                            <li>
+                                <a href="#stepChange" >stepChange</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="activeStepIndex"></a>
+                        <b>activeStepIndex</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Current active step index. When this value changes, the wizard automatically navigates to the specified step.
+If not set, the wizard starts at the first step (index 0).</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="config"></a>
+                        <b>config</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/WizardConfig.html" target="_self" >WizardConfig</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+    showStepNumbers: true,
+    showNavigation: true,
+  }</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Configuration options for the wizard</p>
+<div><pre class="line-numbers"><code class="language-none">{
+  showStepNumbers: true,
+  showNavigation: true
+}</code></pre></div></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onStepNavigationRequest"></a>
+                        <b>onStepNavigationRequest</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Optional callback function to handle step navigation requests.
+If provided, this function will be called when a step is clicked.
+Return true to allow navigation, false to prevent it.
+This allows parent components to show confirmation dialogs before navigation.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="steps"></a>
+                        <b>steps</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/WizardStep.html" target="_self" >WizardStep[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Array of wizard steps</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="stepTemplate"></a>
+                        <b>stepTemplate</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Template.html" target="_self" >TemplateRef&lt;any&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Template for custom step content</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="finish"></a>
+                        <b>finish</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Event emitted when the wizard is completed</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="next"></a>
+                        <b>next</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Event emitted when the next button is clicked</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="previous"></a>
+                        <b>previous</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Event emitted when the previous button is clicked</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="stepChange"></a>
+                        <b>stepChange</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Event emitted when the active step changes</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getStepClasses"></a>
+                    <span class="name">
+                        <span ><b>getStepClasses</b></span>
+                        <a href="#getStepClasses"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getStepClasses(step: <a href="../interfaces/WizardStep.html" target="_self">WizardStep</a>, index: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get CSS classes for a step</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>step</td>
+                                    <td>
+                                                <code><a href="../interfaces/WizardStep.html" target="_self" >WizardStep</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The step to get classes for</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>index</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Index of the step</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getStepTemplate"></a>
+                    <span class="name">
+                        <span ><b>getStepTemplate</b></span>
+                        <a href="#getStepTemplate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getStepTemplate(index: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get the template for a specific step</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>index</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Index of the step</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Template.html" target="_self" >TemplateRef&lt;any&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="goToStep"></a>
+                    <span class="name">
+                        <span ><b>goToStep</b></span>
+                        <a href="#goToStep"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>goToStep(stepIndex: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Navigate to a specific step</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>stepIndex</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Index of the step to navigate to</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onStepClick"></a>
+                    <span class="name">
+                        <span ><b>onStepClick</b></span>
+                        <a href="#onStepClick"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onStepClick(stepIndex: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Handle step click</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>stepIndex</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Index of the clicked step</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="trackByFn"></a>
+                    <span class="name">
+                        <span ><b>trackByFn</b></span>
+                        <a href="#trackByFn"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>trackByFn(index: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, step: <a href="../interfaces/WizardStep.html" target="_self">WizardStep</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Track by function for step iteration</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>index</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Index of the step</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>step</td>
+                                    <td>
+                                                <code><a href="../interfaces/WizardStep.html" target="_self" >WizardStep</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The step object</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="currentStep"></a>
+                    <span class="name">
+                        <span ><b>currentStep</b></span>
+                        <a href="#currentStep"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/WizardStep.html" target="_self" >WizardStep</a></code>
+
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Current active step</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="currentStepIndex"></a>
+                    <span class="name">
+                        <span ><b>currentStepIndex</b></span>
+                        <a href="#currentStepIndex"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Current active step index</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="stepTemplates"></a>
+                    <span class="name">
+                        <span ><b>stepTemplates</b></span>
+                        <a href="#stepTemplates"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Template.html" target="_self" >QueryList&lt;TemplateRef&lt;any&gt;&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ContentChildren(TemplateRef)<br />
+                        </code>
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Content children for step templates</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;wizard-container d-flex flex-column w-100&quot;&gt;
+  &lt;!-- Progress Indicator --&gt;
+  &lt;div class&#x3D;&quot;wizard-steps d-flex justify-content-between&quot;&gt;
+    &lt;ng-container *ngFor&#x3D;&quot;let step of steps; let i &#x3D; index; trackBy: trackByFn&quot;&gt;
+      &lt;div class&#x3D;&quot;wizard-step d-flex flex-column align-items-center position-relative&quot;
+        [ngClass]&#x3D;&quot;getStepClasses(step, i)&quot; (click)&#x3D;&quot;onStepClick(i)&quot;&gt;
+        &lt;!-- Step Circle/Number --&gt;
+        &lt;div class&#x3D;&quot;step-indicator d-flex align-items-center position-relative w-100 justify-content-center&quot;&gt;
+          &lt;div class&#x3D;&quot;step-circle d-flex align-items-center justify-content-center&quot;&gt;
+            &lt;!-- Show step number if showStepNumbers is true and step is not completed --&gt;
+            &lt;ng-container *ngIf&#x3D;&quot;config.showStepNumbers !&#x3D;&#x3D; false &amp;&amp; !step.completed&quot;&gt;
+              {{ i + 1 }}
+            &lt;/ng-container&gt;
+            &lt;!-- Show checkmark if step is completed AND showStepNumbers is true --&gt;
+            &lt;ng-container *ngIf&#x3D;&quot;step.completed &amp;&amp; config.showStepNumbers !&#x3D;&#x3D; false&quot;&gt;
+              &lt;i class&#x3D;&quot;fa fa-check&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+            &lt;/ng-container&gt;
+            &lt;!-- Show icon if showStepNumbers is false and has icon (regardless of completion) --&gt;
+            &lt;ng-container *ngIf&#x3D;&quot;config.showStepNumbers &#x3D;&#x3D;&#x3D; false &amp;&amp; step.icon&quot;&gt;
+              &lt;i [class]&#x3D;&quot;step.icon&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+            &lt;/ng-container&gt;
+          &lt;/div&gt;
+
+          &lt;!-- Connector Line --&gt;
+          &lt;div class&#x3D;&quot;step-connector&quot; *ngIf&#x3D;&quot;i &lt; steps.length - 1&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Step Label --&gt;
+        &lt;div class&#x3D;&quot;step-label text-center mt-2&quot; tooltip&#x3D;&quot;{{ step.label | translate }}&quot; container&#x3D;&quot;body&quot;
+          placement&#x3D;&quot;bottom&quot; triggers&#x3D;&quot;mouseenter:mouseleave&quot;&gt;
+          &lt;div class&#x3D;&quot;step-title overflow-hidden text-break&quot;&gt;{{ step.label | translate }}&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/ng-container&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Step Content --&gt;
+  &lt;div class&#x3D;&quot;wizard-content bg-white rounded p-3&quot; *ngIf&#x3D;&quot;config.showContent !&#x3D;&#x3D; false&quot;&gt;
+    &lt;div class&#x3D;&quot;wizard-step-content&quot;&gt;
+      &lt;ng-container *ngIf&#x3D;&quot;stepTemplates &amp;&amp; stepTemplates.length &gt; 0&quot;&gt;
+        &lt;ng-container *ngTemplateOutlet&#x3D;&quot;getStepTemplate(currentStepIndex); context: { $implicit: currentStep }&quot;&gt;
+        &lt;/ng-container&gt;
+      &lt;/ng-container&gt;
+
+      &lt;!-- Default content projection --&gt;
+      &lt;ng-content&gt;&lt;/ng-content&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Navigation Buttons --&gt;
+  &lt;div class&#x3D;&quot;wizard-navigation d-flex justify-content-between mt-4 pt-3 border-top&quot; *ngIf&#x3D;&quot;config.showNavigation&quot;&gt;
+    &lt;div class&#x3D;&quot;wizard-navigation-buttons d-flex flex-column-reverse flex-md-row justify-content-between w-100&quot;&gt;
+      &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-secondary wizard-btn-previous w-100 w-md-auto mb-2 mb-md-0&quot;
+        [disabled]&#x3D;&quot;!hasPreviousStep()&quot; (click)&#x3D;&quot;previousStep()&quot;&gt;
+        &lt;i class&#x3D;&quot;fas fa-chevron-left mr-2&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+        {{ &#x27;WIZARD.PREVIOUS&#x27; | translate }}
+      &lt;/button&gt;
+
+      &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary wizard-btn-next w-100 w-md-auto mb-2 mb-md-0&quot; *ngIf&#x3D;&quot;!isLastStep()&quot;
+        [disabled]&#x3D;&quot;!hasNextStep()&quot; (click)&#x3D;&quot;nextStep()&quot;&gt;
+        {{ &#x27;WIZARD.NEXT&#x27; | translate }}
+        &lt;i class&#x3D;&quot;fas fa-chevron-right ml-2&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+      &lt;/button&gt;
+
+      &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-success wizard-btn-finish w-100 w-md-auto mb-2 mb-md-0&quot; *ngIf&#x3D;&quot;isLastStep()&quot;
+        (click)&#x3D;&quot;finishWizard()&quot;&gt;
+        &lt;i class&#x3D;&quot;fas fa-check mr-2&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+        {{ &#x27;WIZARD.FINISH&#x27; | translate }}
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./wizard.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.wizard-step {
+  flex: 1;
+
+  &amp;.step-clickable {
+    cursor: pointer;
+
+    &amp;:hover:not(.step-disabled):not(.step-active):not(.step-completed) {
+      .step-circle {
+        border-color: #007bff;
+        box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+      }
+    }
+  }
+
+  &amp;.step-disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+
+    .step-circle {
+      background-color: #f8f9fa;
+      color: #adb5bd;
+    }
+  }
+
+  &amp;.step-active {
+    .step-circle {
+      background-color: white;
+      color: #007bff;
+      border: 2px solid #007bff;
+    }
+
+    .step-label {
+      .step-title {
+        color: #007bff;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &amp;.step-completed {
+    .step-circle {
+      background-color: #007bff;
+      color: white;
+      border-color: #007bff;
+    }
+
+    .step-connector {
+      background-color: #007bff;
+    }
+
+    .step-label {
+      .step-title {
+        color: #495057;
+      }
+    }
+  }
+
+  &amp;.step-active.step-completed {
+    .step-circle {
+      background-color: #007bff;
+      color: white;
+      border-color: #007bff;
+    }
+  }
+
+  &amp;.step-invalid {
+    .step-circle {
+      border-color: #ced4da;
+    }
+
+    .step-label {
+      .step-title {
+        color: #6c757d;
+      }
+    }
+  }
+}
+
+.step-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid #dee2e6;
+  color: #6c757d;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.step-connector {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: calc(100% - 56px);
+  height: 2px;
+  background-color: #dee2e6;
+  transform: translateY(-50%);
+  margin-left: 28px;
+  transition: background-color 0.3s ease;
+}
+
+
+
+.step-label {
+  max-width: 150px;
+
+  .step-title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #6c757d;
+    transition: color 0.3s ease;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.wizard-content {
+  min-height: 300px;
+}
+
+.wizard-step-content {
+  animation: fadeIn 0.3s ease;
+}
+
+.wizard-navigation-buttons {
+  gap: 1rem;
+}
+
+
+// Responsive styles
+@media (max-width: 768px) {
+  .step-label {
+    .step-title {
+      font-size: 0.75rem;
+    }
+  }
+
+  .wizard-content {
+    min-height: 200px;
+  }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="wizard-container d-flex flex-column w-100">  <!-- Progress Indicator -->  <div class="wizard-steps d-flex justify-content-between">    <ng-container *ngFor="let step of steps; let i = index; trackBy: trackByFn">      <div class="wizard-step d-flex flex-column align-items-center position-relative"        [ngClass]="getStepClasses(step, i)" (click)="onStepClick(i)">        <!-- Step Circle/Number -->        <div class="step-indicator d-flex align-items-center position-relative w-100 justify-content-center">          <div class="step-circle d-flex align-items-center justify-content-center">            <!-- Show step number if showStepNumbers is true and step is not completed -->            <ng-container *ngIf="config.showStepNumbers !== false && !step.completed">              {{ i + 1 }}            </ng-container>            <!-- Show checkmark if step is completed AND showStepNumbers is true -->            <ng-container *ngIf="step.completed && config.showStepNumbers !== false">              <i class="fa fa-check" aria-hidden="true"></i>            </ng-container>            <!-- Show icon if showStepNumbers is false and has icon (regardless of completion) -->            <ng-container *ngIf="config.showStepNumbers === false && step.icon">              <i [class]="step.icon" aria-hidden="true"></i>            </ng-container>          </div>          <!-- Connector Line -->          <div class="step-connector" *ngIf="i < steps.length - 1"></div>        </div>        <!-- Step Label -->        <div class="step-label text-center mt-2" tooltip="{{ step.label | translate }}" container="body"          placement="bottom" triggers="mouseenter:mouseleave">          <div class="step-title overflow-hidden text-break">{{ step.label | translate }}</div>        </div>      </div>    </ng-container>  </div>  <!-- Step Content -->  <div class="wizard-content bg-white rounded p-3" *ngIf="config.showContent !== false">    <div class="wizard-step-content">      <ng-container *ngIf="stepTemplates && stepTemplates.length > 0">        <ng-container *ngTemplateOutlet="getStepTemplate(currentStepIndex); context: { $implicit: currentStep }">        </ng-container>      </ng-container>      <!-- Default content projection -->      <ng-content></ng-content>    </div>  </div>  <!-- Navigation Buttons -->  <div class="wizard-navigation d-flex justify-content-between mt-4 pt-3 border-top" *ngIf="config.showNavigation">    <div class="wizard-navigation-buttons d-flex flex-column-reverse flex-md-row justify-content-between w-100">      <button type="button" class="btn btn-secondary wizard-btn-previous w-100 w-md-auto mb-2 mb-md-0"        [disabled]="!hasPreviousStep()" (click)="previousStep()">        <i class="fas fa-chevron-left mr-2" aria-hidden="true"></i>        {{ \'WIZARD.PREVIOUS\' | translate }}      </button>      <button type="button" class="btn btn-primary wizard-btn-next w-100 w-md-auto mb-2 mb-md-0" *ngIf="!isLastStep()"        [disabled]="!hasNextStep()" (click)="nextStep()">        {{ \'WIZARD.NEXT\' | translate }}        <i class="fas fa-chevron-right ml-2" aria-hidden="true"></i>      </button>      <button type="button" class="btn btn-success wizard-btn-finish w-100 w-md-auto mb-2 mb-md-0" *ngIf="isLastStep()"        (click)="finishWizard()">        <i class="fas fa-check mr-2" aria-hidden="true"></i>        {{ \'WIZARD.FINISH\' | translate }}      </button>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AddCommentsComponent', 'selector': 'apt-add-comments'},{'name': 'AdditionalInformationComponent', 'selector': 'apt-additional-information'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AlertComponent', 'selector': 'apt-alert'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CaptchaComponent', 'selector': 'apt-captcha'},{'name': 'CartTotalsViewComponent', 'selector': 'app-cart-totals-view'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'ConstraintRuleAlertComponent', 'selector': 'apt-constraint-rule-alert'},{'name': 'ConstraintRuleSidebarComponent', 'selector': 'apt-constraint-rule-sidebar'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DependentPicklistComponent', 'selector': 'apt-dependent-picklist'},{'name': 'DocumentSelectorComponent', 'selector': 'apt-document-selector'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'EmailComposerComponent', 'selector': 'apt-email-composer'},{'name': 'EmailSearchComponent', 'selector': 'apt-email-search'},{'name': 'ErrorPageComponent', 'selector': 'apt-error-page'},{'name': 'FacetFilterComponent', 'selector': 'apt-facet-filter'},{'name': 'FavoriteFilterComponent', 'selector': 'apt-favorite-filter'},{'name': 'FavoriteModalComponent', 'selector': 'apt-favorite-modal'},{'name': 'FilesComponent', 'selector': 'apt-files'},{'name': 'FileUploaderComponent', 'selector': 'apt-file-uploader'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineitemCardComponent', 'selector': 'apt-lineitem-card'},{'name': 'LineItemMenuComponent', 'selector': 'apt-line-item-menu'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentIntegrationComponent', 'selector': 'apt-payment-integration'},{'name': 'PopoverComponent', 'selector': 'apt-popover'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceModalComponent', 'selector': 'apt-price-modal'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductAttributeComponent', 'selector': 'apt-product-attribute'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductSearchComponent', 'selector': 'apt-product-search'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'PromotionModalComponent', 'selector': 'apt-pr-modal'},{'name': 'QuickAddComponent', 'selector': 'app-quick-add'},{'name': 'RecipientsComponent', 'selector': 'apt-recipients'},{'name': 'ReplaceProductModalComponent', 'selector': 'apt-replace-product-modal'},{'name': 'RevalidateCartModalComponent', 'selector': 'apt-revalidate-cart-modal'},{'name': 'SelectAllComponent', 'selector': 'apt-select-all'},{'name': 'SendForSignatureComponent', 'selector': 'apt-send-for-signature'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'},{'name': 'TableRowSubItemComponent', 'selector': 'apt-table-row-sub-item'},{'name': 'ViewCommentsComponent', 'selector': 'apt-view-comments'},{'name': 'WizardComponent', 'selector': 'apt-wizard'}];
+    var DIRECTIVES = [{'name': 'AutoFocusDirective', 'selector': '[aptAutoFocus]'}];
+    var ACTUAL_COMPONENT = {'name': 'WizardComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'WizardComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

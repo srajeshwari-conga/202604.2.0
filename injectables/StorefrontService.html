@@ -1,0 +1,1748 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Conga Digital Commerce 202604.2.0 on Conga Revenue Lifecycle Platform</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Conga Digital Commerce 202604.2.0 on Conga Revenue Lifecycle Platform</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li >StorefrontService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>projects/congarevenuecloud/ecommerce/src/lib/modules/store/services/storefront.service.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>The storefront record is the backbone to the customer experience. It drives catalog, pricing and interface.</p>
+<h3>Usage</h3>
+
+<div><pre class="line-numbers"><code class="language-typescript">import { StorefrontService, AObjectService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+
+constructor(private storefrontService: StorefrontService) {}
+
+// or
+
+export class MyService extends AObjectService {
+private storefrontService: StorefrontService = this.injector.get(StorefrontService);
+}</code></pre></div>
+            </p>
+
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+                    <code>AObjectService</code>
+            </p>
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#STORAGE_KEY" >STORAGE_KEY</a>
+                            </li>
+                            <li>
+                                <a href="#type" >type</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getAssetActions" >getAssetActions</a>
+                            </li>
+                            <li>
+                                <a href="#getConfigManagementSetting" >getConfigManagementSetting</a>
+                            </li>
+                            <li>
+                                <a href="#getConfigSettings" >getConfigSettings</a>
+                            </li>
+                            <li>
+                                <a href="#getDiscovery" >getDiscovery</a>
+                            </li>
+                            <li>
+                                <a href="#getDisplays" >getDisplays</a>
+                            </li>
+                            <li>
+                                <a href="#getFlowCustomSettings" >getFlowCustomSettings</a>
+                            </li>
+                            <li>
+                                <a href="#getPollingConfig" >getPollingConfig</a>
+                            </li>
+                            <li>
+                                <a href="#getSettingsByKey" >getSettingsByKey</a>
+                            </li>
+                            <li>
+                                <a href="#getSettingsName" >getSettingsName</a>
+                            </li>
+                            <li>
+                                <a href="#getStorefront" >getStorefront</a>
+                            </li>
+                            <li>
+                                <a href="#getStorefronts" >getStorefronts</a>
+                            </li>
+                            <li>
+                                <a href="#getStorefrontsByName" class="deprecated-name">getStorefrontsByName</a>
+                            </li>
+                            <li>
+                                <a href="#isABOEnabled" >isABOEnabled</a>
+                            </li>
+                            <li>
+                                <a href="#isCartRevalidationEnabled" >isCartRevalidationEnabled</a>
+                            </li>
+                            <li>
+                                <a href="#isFavoriteEnabled" >isFavoriteEnabled</a>
+                            </li>
+                            <li>
+                                <a href="#isOneTimeChangeEnabled" >isOneTimeChangeEnabled</a>
+                            </li>
+                            <li>
+                                <a href="#isProductRecommendationEnabled" >isProductRecommendationEnabled</a>
+                            </li>
+                            <li>
+                                <a href="#isPromotionEnabled" >isPromotionEnabled</a>
+                            </li>
+                            <li>
+                                <a href="#onInit" >onInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAssetActions"></a>
+                    <span class="name">
+                        <span ><b>getAssetActions</b></span>
+                        <a href="#getAssetActions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAssetActions()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method to fetch all enabled asset action within the flow associated to storefront.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { StorefrontService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+export class MyComponent implements OnInit{
+getAssetActions: string;
+getAssetActions$: Observable&lt;Array&lt;string&gt;&gt;;
+constructor(private storefrontService: StorefrontService){}
+ngOnInit(){
+this.storefrontService.getAssetActions().subscribe(s =&gt; this.getAssetActions = s);
+// or
+this.getAssetActions$ = this.storefrontService.getAssetActions();
+}
+}</code></pre></div></div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;Array&lt;string&gt;&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An Observable emitting an array of strings representing the asset actions.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getConfigManagementSetting"></a>
+                    <span class="name">
+                        <span ><b>getConfigManagementSetting</b></span>
+                        <a href="#getConfigManagementSetting"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getConfigManagementSetting(category: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, name: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This method retrieves configuration management settings based on category and name.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { StorefrontService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs&#39;;
+export class MyComponent implements OnInit{
+configData$: Observable&lt;Object&gt;;
+constructor(private storefrontService: StorefrontService) {}
+ngOnInit(){
+this.configData$ = this.storefrontService.getConfigManagementSetting(&#39;category&#39;, &#39;name&#39;);
+this.configData$.subscribe(config =&gt; {
+console.log(&#39;Configuration data:&#39;, config);
+});
+}
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>category</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>string value representing the configuration category.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>name</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>string value representing the configuration name.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;Object&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>observable of parsed configuration object for the specified category and name.</p>
+<h3 id="example">Example:</h3>
+<pre><code class="language-typescript">import { StorefrontService } from &#39;@congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs&#39;;
+export class MyComponent implements OnInit{
+configData$: Observable&lt;Object&gt;;
+constructor(private storefrontService: StorefrontService) {}
+ngOnInit(){
+this.configData$ = this.storefrontService.getConfigManagementSetting(&#39;category&#39;, &#39;name&#39;);
+this.configData$.subscribe(config =&gt; {
+console.log(&#39;Configuration data:&#39;, config);
+});
+} 
+}
+</code></pre>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getConfigSettings"></a>
+                    <span class="name">
+                        <span ><b>getConfigSettings</b></span>
+                        <a href="#getConfigSettings"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getConfigSettings()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Retrieves all custom setting properties associated with the flow linked to the storefront.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { StorefrontService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs&#39;;
+
+export class SomeComponent {
+  let configurations = {};
+
+  constructor(private storefrontService: StorefrontService) {}
+
+  ngOnInit() {
+    this.storefrontService.getConfigSettings().subscribe(configSettings =&gt; {
+      this.configurations = configSettings;
+    });
+  }
+}</code></pre></div></div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;Object&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An Observable that emits configuration settings as an object.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getDiscovery"></a>
+                    <span class="name">
+                        <span ><b>getDiscovery</b></span>
+                        <a href="#getDiscovery"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getDiscovery()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method returns the string value of EnableDiscoveryOn property from config system properties associated to the storefront flow.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { StorefrontService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+export class MyComponent implements OnInit{
+constructor(private storefrontService: StorefrontService) {}
+ngOnInit(){
+this.storefrontService.getDiscovery();
+}
+}</code></pre></div></div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>string value of EnableDiscoveryOn property.</p>
+<h3 id="example">Example:</h3>
+<pre><code class="language-typescript">import { StorefrontService } from &#39;@congarevenuecloud/ecommerce&#39;;
+export class MyComponent implements OnInit{
+constructor(private storefrontService: StorefrontService) {}
+ngOnInit(){
+this.storefrontService.getDiscovery();
+}
+}
+</code></pre>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getDisplays"></a>
+                    <span class="name">
+                        <span ><b>getDisplays</b></span>
+                        <a href="#getDisplays"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getDisplays(flowName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@MemoizeAll()<br /></code>
+                </td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This method returns the displays based on the flow name set on the storefront record.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { StorefrontService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+export class MyComponent implements OnInit{
+constructor(private storefrontService: StorefrontService) {}
+ngOnInit(){
+this.storefrontService.getDisplays();
+}
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>flowName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>&#x27;system&#x27;</code>
+                                    </td>
+
+                                    <td>
+                                        <p>string value representing the flow name associated to storefront record. Defaulted to &#39;system&#39;.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;Array&lt;Object&gt;&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>observable list containing displays associated with the flow.</p>
+<h3 id="example">Example:</h3>
+<pre><code class="language-typescript">import { StorefrontService } from &#39;@congarevenuecloud/ecommerce&#39;;
+export class MyComponent implements OnInit{
+constructor(private storefrontService: StorefrontService) {}
+ngOnInit(){
+this.storefrontService.getDisplays();
+} 
+}
+</code></pre>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFlowCustomSettings"></a>
+                    <span class="name">
+                        <span ><b>getFlowCustomSettings</b></span>
+                        <a href="#getFlowCustomSettings"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getFlowCustomSettings(flowName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This method returns the config system properties defined on a given flow.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { StorefrontService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+export class MyComponent implements OnInit{
+constructor(private storefrontService: StorefrontService) {}
+ngOnInit(){
+this.storefrontService.getFlowCustomSettings();
+}
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>flowName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>&#x27;system&#x27;</code>
+                                    </td>
+
+                                    <td>
+                                        <p>string value representing the flow name associated to storefront record. Defaulted to &#39;system&#39;.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;Object&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>observable of config system properties for the associated flow.</p>
+<h3 id="example">Example:</h3>
+<pre><code class="language-typescript">import { StorefrontService } from &#39;@congarevenuecloud/ecommerce&#39;;
+export class MyComponent implements OnInit{
+constructor(private storefrontService: StorefrontService) {}
+ngOnInit(){
+this.storefrontService.getFlowCustomSettings();
+}
+}
+</code></pre>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPollingConfig"></a>
+                    <span class="name">
+                        <span ><b>getPollingConfig</b></span>
+                        <a href="#getPollingConfig"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getPollingConfig()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This method fetches the configuration data related to the maximum number of retries and delay duration
+for pricing circuit from the ConfigSystemProperties for flow associated to Storefront and returns an Observable emitting an object containing
+these values.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { StorefrontService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs&#39;;
+
+export class SomeComponent {
+  maxRetries: number;
+  delay: number;
+  retryData$: Observable&lt;{ maxRetries: number, delay: number }&gt;;
+
+  constructor(private pricingService: PricingService) {}
+
+  ngOnInit() {
+    this.pricingService.getPollingConfig().subscribe(data =&gt; {
+      this.maxRetries = data.maxRetries;
+      this.delay = data.delay;
+    });
+    // or
+    this.retryData$ = this.pricingService.getPollingConfig();
+  }
+}</code></pre></div><p>for pricing circuit.</p>
+<p>See <a href="../interfaces/PollingDispatcher.html">PollingDispatcher</a> for more details on the structure and fields required.</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/PollingDispatcher.html" target="_self" >Observable&lt;PollingDispatcher&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An Observable emitting an object containing the maximum number of retries and delay duration 
+for pricing circuit.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSettingsByKey"></a>
+                    <span class="name">
+                        <span ><b>getSettingsByKey</b></span>
+                        <a href="#getSettingsByKey"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getSettingsByKey(key: <a href="../undefineds/SettingsName.html" target="_self">SettingsName</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Fetches the settings based on the given key.</p>
+<p>This method retrieves specific settings that control various aspects of the configuration.
+The key helps identify which setting needs to be fetched.</p>
+<h3 id="example-usage">Example Usage:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { StorefrontService, SettingsName } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs&#39;;
+
+export class SomeComponent {
+  setting$: Observable&lt;Object&gt;;
+  specificField: any;
+
+  constructor(private storefrontService: StorefrontService) {}
+
+  ngOnInit() {
+    this.setting$ = this.storefrontService.getSettingsByKey(SettingsName.SOME_SETTING);
+    this.setting$.subscribe(setting =&gt; {
+      this.specificField = setting[&#39;desiredField&#39;];
+    });
+  }
+}</code></pre></div><p>See <a href="../miscellaneous/enumerations.html#SettingsName">SettingsName</a> for the list of available settings.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>key</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/enumerations.html#SettingsName" target="_self" >SettingsName</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>The setting to retrieve, which should be taken from the <code>SettingsName</code> enum.</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;Object&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An observable that emits the requested setting or <code>null</code> if not available.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSettingsName"></a>
+                    <span class="name">
+                        <span ><b>getSettingsName</b></span>
+                        <a href="#getSettingsName"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getSettingsName(flowName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, settingName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This method returns the assets system properties based on flow and setting name.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { StorefrontService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+export class MyComponent implements OnInit{
+constructor(private storefrontService: StorefrontService) {}
+ngOnInit(){
+this.storefrontService.getSettingsName();
+}
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>flowName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>&#x27;system&#x27;</code>
+                                    </td>
+
+                                    <td>
+                                        <p>string value representing the flow name associated to storefront record. Defaulted to &#39;system&#39;.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>settingName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>&#x27;assets&#x27;</code>
+                                    </td>
+
+                                    <td>
+                                        <p>string value representing the setting name . Defaulted to &#39;assets&#39;.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;Object&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>observable of system properties for the associated flow and setting.</p>
+<h3 id="example">Example:</h3>
+<pre><code class="language-typescript">import { StorefrontService } from &#39;@congarevenuecloud/ecommerce&#39;;
+export class MyComponent implements OnInit{
+constructor(private storefrontService: StorefrontService) {}
+ngOnInit(){
+this.storefrontService.getSettingsName();
+} 
+}
+</code></pre>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getStorefront"></a>
+                    <span class="name">
+                        <span ><b>getStorefront</b></span>
+                        <a href="#getStorefront"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getStorefront()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Retrieves the storefront record</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { StorefrontService, Storefront } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+export class MyComponent implements OnInit{
+storefront: Storefront;
+storefront$: Observable&lt;Storefront&gt;;
+constructor(private storefrontService: StorefrontService){}
+ngOnInit(){
+this.storefrontService.getStorefront().subscribe(s =&gt; this.storefront = s);
+// or
+this.storefront$ = this.storefrontService.getStorefront();
+}
+}</code></pre></div></div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Storefront.html" target="_self" >Observable&lt;Storefront&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an observable containing the storefront record</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getStorefronts"></a>
+                    <span class="name">
+                        <span ><b>getStorefronts</b></span>
+                        <a href="#getStorefronts"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getStorefronts(filters: <a href="../interfaces/FieldFilter.html" target="_self">Array&lt;FieldFilter&gt;</a>, page: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, limit: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, sortField?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Retrieves a list of storefront records based on the provided filters.
+This method allows you to search for storefronts using various field filters and supports pagination and sorting.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { StorefrontService, Storefront } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { FieldFilter, FilterOperator } from &#39;&#64;congarevenuecloud/core&#39;;
+import { Observable } from &#39;rxjs&#39;;
+
+export class MyComponent implements OnInit {
+  storefronts$: Observable&lt;Array&lt;Storefront&gt;&gt;;
+
+  constructor(private storefrontService: StorefrontService) {}
+
+  ngOnInit() {
+    // Filter by store URL
+    const filters: Array&lt;FieldFilter&gt; = [
+      {
+        field: &#39;StoreUrl&#39;,
+        value: &#39;https://example.com&#39;,
+        filterOperator: FilterOperator.EQUAL
+      }
+    ];
+
+    this.storefronts$ = this.storefrontService.getStorefronts(filters, 1, 10, &#39;Name&#39;);
+    this.storefronts$.subscribe(storefronts =&gt; {
+      console.log(&#39;Found storefronts:&#39;, storefronts);
+    });
+  }
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>filters</td>
+                                    <td>
+                                                <code><a href="../interfaces/FieldFilter.html" target="_self" >Array&lt;FieldFilter&gt;</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>List of field filters to apply to the storefront search</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>page</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>1</code>
+                                    </td>
+
+                                    <td>
+                                        <p>The page number to retrieve. Defaults to 1.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>limit</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>10</code>
+                                    </td>
+
+                                    <td>
+                                        <p>The number of storefront records to include in the result set. Defaults to 10.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>sortField</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>The field by which to sort the storefront records (optional)</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Storefront.html" target="_self" >Observable&lt;Array&lt;Storefront&gt;&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An observable containing an array of Storefront records matching the filters</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getStorefrontsByName"></a>
+                    <span class="name">
+                        <span class="deprecated-name"><b>getStorefrontsByName</b></span>
+                        <a href="#getStorefrontsByName"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4 deprecated">
+                    Retrieves the list of a storefront records based on the provided storefront name.
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getStorefrontsByName(storefrontName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, page: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, limit: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, sortField?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Retrieves the list of a storefront records based on the provided storefront name.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>storefrontName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>The name of the storefront to look up.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>page</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>1</code>
+                                    </td>
+
+                                    <td>
+                                        <p>The page number to retrieve. Defaults to 1.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>limit</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>1</code>
+                                    </td>
+
+                                    <td>
+                                        <p>The number of &#39;Storefront&#39; records to include in the result set. Defaults to 1.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>sortField</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>The field by which to sort the &#39;Storefront&#39; records (optional</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Storefront.html" target="_self" >Observable&lt;Array&lt;Storefront&gt;&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An observable containing the &#39;Storefront&#39; record.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isABOEnabled"></a>
+                    <span class="name">
+                        <span ><b>isABOEnabled</b></span>
+                        <a href="#isABOEnabled"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isABOEnabled()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method verifies whether ABO is enabled within the flow associated to storefront.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { StorefrontService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+export class MyComponent implements OnInit{
+isABOEnabled: boolean;
+isABOEnabled$: Observable&lt;boolean&gt;;
+constructor(private storefrontService: StorefrontService){}
+ngOnInit(){
+this.storefrontService.isABOEnabled().subscribe(s =&gt; this.isABOEnabled = s);
+// or
+this.isABOEnabled$ = this.storefrontService.isABOEnabled();
+}
+}</code></pre></div></div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;boolean&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>boolean observable of EnableABO property</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isCartRevalidationEnabled"></a>
+                    <span class="name">
+                        <span ><b>isCartRevalidationEnabled</b></span>
+                        <a href="#isCartRevalidationEnabled"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isCartRevalidationEnabled()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method retrieves the EnableCartRevalidation property from config system properties.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { StorefrontService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+export class MyComponent implements OnInit{
+cartRevalidationEnabled: boolean;
+cartRevalidationEnabled$: Observable&lt;boolean&gt;;
+constructor(private storefrontService: StorefrontService){}
+ngOnInit(){
+this.storefrontService.isCartRevalidationEnabled().subscribe(s =&gt; this.cartRevalidationEnabled = s);
+// or
+this.cartRevalidationEnabled$ = this.storefrontService.isCartRevalidationEnabled();
+}
+}</code></pre></div></div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;boolean&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>boolean observable of EnableCartRevalidation property</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isFavoriteEnabled"></a>
+                    <span class="name">
+                        <span ><b>isFavoriteEnabled</b></span>
+                        <a href="#isFavoriteEnabled"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isFavoriteEnabled()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method retrieves the EnableFavorite property from config system properties.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { StorefrontService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+export class MyComponent implements OnInit{
+showFavorites: boolean;
+showFavorites$: Observable&lt;boolean&gt;;
+constructor(private storefrontService: StorefrontService){}
+ngOnInit(){
+this.storefrontService.isFavoriteEnabled().subscribe(s =&gt; this.showFavorites = s);
+// or
+this.showFavorites$ = this.storefrontService.isFavoriteEnabled();
+}
+}</code></pre></div></div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;boolean&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>boolean observable of EnableFavorite property</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isOneTimeChangeEnabled"></a>
+                    <span class="name">
+                        <span ><b>isOneTimeChangeEnabled</b></span>
+                        <a href="#isOneTimeChangeEnabled"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isOneTimeChangeEnabled()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method fetches the EnableOneTime Flag for asset flow to enable onetime product for amend action.
+If the flag is not defined, it defaults to <code>false</code>.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { Component, OnInit } from &#39;&#64;angular/core&#39;;
+import { StorefrontService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs&#39;;
+export class MyComponent implements OnInit {
+isOneTimeChangeEnabled$: Observable&lt;boolean&gt;;
+constructor(private storefrontService: StorefrontService) {}
+ngOnInit() {
+this.isOneTimeChangeEnabled$ = this.storefrontService.isOneTimeChangeEnabled();
+this.isOneTimeChangeEnabled$.subscribe(isEnabled =&gt; {
+});
+}
+}</code></pre></div></div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;boolean&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An Observable<boolean> indicating whether EnableOneTimeChange is enabled</p>
+<h3 id="example">Example:</h3>
+<pre><code class="language-typescript">import { Component, OnInit } from &#39;@angular/core&#39;;
+import { StorefrontService } from &#39;@congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs&#39;;
+export class MyComponent implements OnInit {
+isOneTimeChangeEnabled$: Observable&lt;boolean&gt;;
+constructor(private storefrontService: StorefrontService) {}
+ngOnInit() {
+this.isOneTimeChangeEnabled$ = this.storefrontService.isOneTimeChangeEnabled();
+this.isOneTimeChangeEnabled$.subscribe(isEnabled =&gt; {
+});
+}
+}
+</code></pre>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isProductRecommendationEnabled"></a>
+                    <span class="name">
+                        <span ><b>isProductRecommendationEnabled</b></span>
+                        <a href="#isProductRecommendationEnabled"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isProductRecommendationEnabled()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method checks if Product Recommendation feature is enabled within the flow associated to storefront.
+Looks for EnableProductRecommendation in config system properties specified on the flow associated to Storefront.
+If no property is defined, the method defaults to evaluating it as true.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { StorefrontService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+export class MyComponent implements OnInit{
+productRecommendationEnabled: boolean;
+productRecommendationEnabled$: Observable&lt;boolean&gt;;
+constructor(private storefrontService: StorefrontService){}
+ngOnInit(){
+this.storefrontService.isProductRecommendationEnabled().subscribe(s =&gt; this.productRecommendationEnabled = s);
+// or
+this.productRecommendationEnabled$ = this.storefrontService.isProductRecommendationEnabled();
+}
+}</code></pre></div></div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;boolean&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>boolean observable specifying whether the feature is enabled.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isPromotionEnabled"></a>
+                    <span class="name">
+                        <span ><b>isPromotionEnabled</b></span>
+                        <a href="#isPromotionEnabled"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isPromotionEnabled()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method verifies whether promotions are enabled within the flow associated to storefront.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { StorefrontService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+export class MyComponent implements OnInit{
+isPromotionEnabled: boolean;
+isPromotionEnabled$: Observable&lt;boolean&gt;;
+constructor(private storefrontService: StorefrontService){}
+ngOnInit(){
+this.storefrontService.isPromotionEnabled().subscribe(s =&gt; this.isPromotionEnabled = s);
+// or
+this.isPromotionEnabled$ = this.storefrontService.isPromotionEnabled();
+}
+}</code></pre></div></div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;boolean&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>boolean observable of EnablePromotions property</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onInit"></a>
+                    <span class="name">
+                        <span ><b>onInit</b></span>
+                        <a href="#onInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onInit()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="STORAGE_KEY"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>STORAGE_KEY</b></span>
+                        <a href="#STORAGE_KEY"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>PlatformConstants.STOREFRONT_ID</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="type"></a>
+                    <span class="name">
+                        <span ><b>type</b></span>
+                        <a href="#type"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>Storefront</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'StorefrontService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
