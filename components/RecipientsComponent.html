@@ -1,0 +1,2056 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Conga Digital Commerce 202604.2.0 on Conga Revenue Lifecycle Platform</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Conga Digital Commerce 202604.2.0 on Conga Revenue Lifecycle Platform</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  RecipientsComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/congarevenuecloud/elements/src/lib/data/recipients/recipients.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>The Recipients component allows users to manage document signers and recipients signature workflows.</p>
+<p>Users can add multiple recipients, specify their email addresses, assign signer types,
+and optionally set a signing order for sequential document processing.</p>
+<h3>Preview</h3>
+
+<p><strong>Recipient without drag and drop</strong></p>
+<img src="../res/recipients.png" style="max-width: 100%">
+
+<p><strong>Recipient with drag and drop</strong></p>
+<img src="../res/recipientsDragDrop.png" style="max-width: 100%">
+
+<h3>Usage</h3>
+
+<div><pre class="line-numbers"><code class="language-typescript">import { RecipientsModule } from &#39;&#64;congarevenuecloud/elements&#39;;
+
+&#64;NgModule({
+  imports: [RecipientsModule, ...]
+})
+export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code class="language-html">// Basic usage with recipients array
+```html
+&lt;apt-recipients
+  [recipients]=&quot;recipientList&quot;
+  [allowAddSigner]=&quot;true&quot;
+  (recipientsChange)=&quot;handleRecipientsChange($event)&quot;
+  (recipientRemoved)=&quot;handleRecipientRemoved($event)&quot;
+  (signingOrderChange)=&quot;handleSigningOrderChange($event)&quot;&gt;
+&lt;/apt-recipients&gt;</code></pre></div><div><pre class="line-numbers"><code class="language-none"></code></pre></div>
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>apt-recipients</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./recipients.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./recipients.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#currentSearchingIndex" >currentSearchingIndex</a>
+                            </li>
+                            <li>
+                                <a href="#isSearching" >isSearching</a>
+                            </li>
+                            <li>
+                                <a href="#newSigner" >newSigner</a>
+                            </li>
+                            <li>
+                                <a href="#searchResults" >searchResults</a>
+                            </li>
+                            <li>
+                                <a href="#signerTypeOptions" >signerTypeOptions</a>
+                            </li>
+                            <li>
+                                <a href="#validationErrors" >validationErrors</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addNewSigner" >addNewSigner</a>
+                            </li>
+                            <li>
+                                <a href="#addRecipient" >addRecipient</a>
+                            </li>
+                            <li>
+                                <a href="#canAddSigner" >canAddSigner</a>
+                            </li>
+                            <li>
+                                <a href="#onClearSelection" >onClearSelection</a>
+                            </li>
+                            <li>
+                                <a href="#onDrop" >onDrop</a>
+                            </li>
+                            <li>
+                                <a href="#onEmailInput" >onEmailInput</a>
+                            </li>
+                            <li>
+                                <a href="#onFieldBlur" >onFieldBlur</a>
+                            </li>
+                            <li>
+                                <a href="#onSearchTermChange" >onSearchTermChange</a>
+                            </li>
+                            <li>
+                                <a href="#onUserChange" >onUserChange</a>
+                            </li>
+                            <li>
+                                <a href="#removeSigner" >removeSigner</a>
+                            </li>
+                            <li>
+                                <a href="#searchUsers" >searchUsers</a>
+                            </li>
+                            <li>
+                                <a href="#trackBySigner" >trackBySigner</a>
+                            </li>
+                            <li>
+                                <a href="#validateAllRecipients" >validateAllRecipients</a>
+                            </li>
+                            <li>
+                                <a href="#validateRecipient" >validateRecipient</a>
+                            </li>
+                            <li>
+                                <a href="#validateSingleField" >validateSingleField</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#allowAddSigner" >allowAddSigner</a>
+                            </li>
+                            <li>
+                                <a href="#recipients" >recipients</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#recipientRemoved" >recipientRemoved</a>
+                            </li>
+                            <li>
+                                <a href="#recipientsChanged" >recipientsChanged</a>
+                            </li>
+                            <li>
+                                <a href="#signingOrderChange" >signingOrderChange</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(sendForSignatureService: <a href="../injectables/SendForSignatureService.html" target="_self">SendForSignatureService</a>, translateService: TranslateService)</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>sendForSignatureService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SendForSignatureService.html" target="_self" >SendForSignatureService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>translateService</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslateService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="allowAddSigner"></a>
+                        <b>allowAddSigner</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Flag that indicates if new signers can be added. Defaults to true.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="recipients"></a>
+                        <b>recipients</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Signer.html" target="_self" >Array&lt;Signer&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Array of recipients to display and manage.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="recipientRemoved"></a>
+                        <b>recipientRemoved</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Event emitted when a recipient is removed.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="recipientsChanged"></a>
+                        <b>recipientsChanged</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Event emitted when the recipients list changes.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="signingOrderChange"></a>
+                        <b>signingOrderChange</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Event emitted when signing order is toggled.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addNewSigner"></a>
+                    <span class="name">
+                        <span ><b>addNewSigner</b></span>
+                        <a href="#addNewSigner"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addNewSigner()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Adds a new empty signer row to the list.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addRecipient"></a>
+                    <span class="name">
+                        <span ><b>addRecipient</b></span>
+                        <a href="#addRecipient"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addRecipient(recipient: <a href="../interfaces/Signer.html" target="_self">Signer</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Adds a new recipient to the list.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>recipient</td>
+                                    <td>
+                                                <code><a href="../interfaces/Signer.html" target="_self" >Signer</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The recipient to add.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="canAddSigner"></a>
+                    <span class="name">
+                        <span ><b>canAddSigner</b></span>
+                        <a href="#canAddSigner"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>canAddSigner()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Checks if a new signer can be added.
+Allows adding when all existing signers have valid information.</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>True if a new signer can be added, false otherwise.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onClearSelection"></a>
+                    <span class="name">
+                        <span ><b>onClearSelection</b></span>
+                        <a href="#onClearSelection"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onClearSelection(recipientIndex: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Clears the selected recipient information .</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>recipientIndex</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The index of the recipient being cleared</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onDrop"></a>
+                    <span class="name">
+                        <span ><b>onDrop</b></span>
+                        <a href="#onDrop"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onDrop(event: <a href="../interfaces/Signer.html" target="_self">CdkDragDrop&lt;Array&lt;Signer&gt;&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Handles CDK drag and drop events</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="../interfaces/Signer.html" target="_self" >CdkDragDrop&lt;Array&lt;Signer&gt;&gt;</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The CdkDragDrop event</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onEmailInput"></a>
+                    <span class="name">
+                        <span ><b>onEmailInput</b></span>
+                        <a href="#onEmailInput"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onEmailInput(event: <a href="https://angular.io/api/router/Event" target="_blank">Event</a>, recipientIndex: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Handles email input events to avoid focus loss</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/router/Event" target="_blank" >Event</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The input event</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>recipientIndex</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The index of the recipient</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onFieldBlur"></a>
+                    <span class="name">
+                        <span ><b>onFieldBlur</b></span>
+                        <a href="#onFieldBlur"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onFieldBlur(index: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, field?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Handles field blur events for validation</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>index</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Recipient index</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>field</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>Field name</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSearchTermChange"></a>
+                    <span class="name">
+                        <span ><b>onSearchTermChange</b></span>
+                        <a href="#onSearchTermChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSearchTermChange(searchEvent: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, recipientIndex: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Handles search term change from ng-select</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>searchEvent</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The search event from ng-select</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>recipientIndex</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The index of the recipient being searched for</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onUserChange"></a>
+                    <span class="name">
+                        <span ><b>onUserChange</b></span>
+                        <a href="#onUserChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onUserChange(selectedUserName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, recipientIndex: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Handles user selection from ng-select dropdown</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>selectedUserName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The selected user name</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>recipientIndex</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The index of the recipient being updated</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeSigner"></a>
+                    <span class="name">
+                        <span ><b>removeSigner</b></span>
+                        <a href="#removeSigner"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>removeSigner(index: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Removes a signer at the specified index.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>index</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The index of the signer to remove.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="searchUsers"></a>
+                    <span class="name">
+                        <span ><b>searchUsers</b></span>
+                        <a href="#searchUsers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>searchUsers(searchTerm: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, recipientIndex: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Searches for users using the eSign API (with debouncing)</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>searchTerm</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>The search term to use</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>recipientIndex</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>0</code>
+                                    </td>
+
+                                    <td>
+                                        <p>The index of the recipient being searched for</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="trackBySigner"></a>
+                    <span class="name">
+                        <span ><b>trackBySigner</b></span>
+                        <a href="#trackBySigner"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>trackBySigner(index: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, item: <a href="../interfaces/Signer.html" target="_self">Signer</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Track by function for ngFor to improve performance.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>index</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The index of the item.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>item</td>
+                                    <td>
+                                                <code><a href="../interfaces/Signer.html" target="_self" >Signer</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The item.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A unique identifier for the item.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateAllRecipients"></a>
+                    <span class="name">
+                        <span ><b>validateAllRecipients</b></span>
+                        <a href="#validateAllRecipients"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>validateAllRecipients()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Validates all recipients</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateRecipient"></a>
+                    <span class="name">
+                        <span ><b>validateRecipient</b></span>
+                        <a href="#validateRecipient"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>validateRecipient(recipient: <a href="../interfaces/Signer.html" target="_self">Signer</a>, index: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Validates a single recipient&#39;s fields</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>recipient</td>
+                                    <td>
+                                                <code><a href="../interfaces/Signer.html" target="_self" >Signer</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The recipient to validate</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>index</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The index of the recipient</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateSingleField"></a>
+                    <span class="name">
+                        <span ><b>validateSingleField</b></span>
+                        <a href="#validateSingleField"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>validateSingleField(recipient: <a href="../interfaces/Signer.html" target="_self">Signer</a>, index: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, field: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Validates a single field for a recipient</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>recipient</td>
+                                    <td>
+                                                <code><a href="../interfaces/Signer.html" target="_self" >Signer</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The recipient to validate</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>index</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The index of the recipient</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>field</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The specific field to validate</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="currentSearchingIndex"></a>
+                    <span class="name">
+                        <span ><b>currentSearchingIndex</b></span>
+                        <a href="#currentSearchingIndex"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>-1</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isSearching"></a>
+                    <span class="name">
+                        <span ><b>isSearching</b></span>
+                        <a href="#isSearching"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="newSigner"></a>
+                    <span class="name">
+                        <span ><b>newSigner</b></span>
+                        <a href="#newSigner"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Signer.html" target="_self" >Signer</a></code>
+
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="searchResults"></a>
+                    <span class="name">
+                        <span ><b>searchResults</b></span>
+                        <a href="#searchResults"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/ESignUser.html" target="_self" >Array&lt;ESignUser&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="signerTypeOptions"></a>
+                    <span class="name">
+                        <span ><b>signerTypeOptions</b></span>
+                        <a href="#signerTypeOptions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Array&lt;literal type&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validationErrors"></a>
+                    <span class="name">
+                        <span ><b>validationErrors</b></span>
+                        <a href="#validationErrors"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>literal type</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{}</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;col-xl-9 col-lg-9 col-md-11 col-12 mx-auto px-3 pb-3 pt-0 bg-white rounded&quot;&gt;
+  &lt;!-- Add Signers Section --&gt;
+  &lt;div class&#x3D;&quot;add-signers-section mb-4&quot;&gt;
+    &lt;div class&#x3D;&quot;sender-section mb-3&quot;&gt;
+      &lt;div
+        class&#x3D;&quot;section-header d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-end border-bottom pb-2 mb-3&quot;&gt;
+        &lt;div class&#x3D;&quot;section-titles d-flex flex-column&quot;&gt;
+          &lt;h3 class&#x3D;&quot;section-title h5 font-weight-normal mb-2 text-dark&quot;&gt;
+            {{ &quot;RECIPIENTS.ADD_SIGNERS&quot; | translate }}
+          &lt;/h3&gt;
+          &lt;h4 class&#x3D;&quot;sender-title h5 font-weight-bold m-0 text-dark&quot;&gt;
+            {{ &quot;RECIPIENTS.SENDER_ADD_SIGNERS&quot; | translate }}
+          &lt;/h4&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Set Signing Order Checkbox --&gt;
+        &lt;div class&#x3D;&quot;form-check d-flex align-items-center mt-2 mt-sm-0&quot; *ngIf&#x3D;&quot;recipients.length &gt; 1&quot;&gt;
+          &lt;input type&#x3D;&quot;checkbox&quot; [(ngModel)]&#x3D;&quot;setSigningOrder&quot; (change)&#x3D;&quot;onSigningOrderChange()&quot;
+            class&#x3D;&quot;form-check-input checkbox-scaled&quot; id&#x3D;&quot;signing-order-toggle&quot; /&gt;
+          &lt;h6 class&#x3D;&quot;form-check-label font-weight-medium text-dark cursor-pointer&quot; for&#x3D;&quot;signing-order-toggle&quot;&gt;
+            {{ &quot;RECIPIENTS.SET_SIGNING_ORDER&quot; | translate }}
+          &lt;/h6&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Signers List with CDK drag and drop --&gt;
+    &lt;div class&#x3D;&quot;signers-list&quot; *ngIf&#x3D;&quot;recipients &amp;&amp; recipients.length &gt; 0&quot;&gt;
+      &lt;div cdkDropList [cdkDropListDisabled]&#x3D;&quot;!setSigningOrder || recipients.length &lt;&#x3D; 1&quot;
+        (cdkDropListDropped)&#x3D;&quot;onDrop($event)&quot; class&#x3D;&quot;recipients-drop-list&quot;&gt;
+        &lt;div class&#x3D;&quot;signer-row-container d-flex align-items-start mb-3 position-relative&quot;
+          *ngFor&#x3D;&quot;let recipient of recipients; let i &#x3D; index; trackBy: trackBySigner&quot; [attr.data-index]&#x3D;&quot;i&quot; cdkDrag
+          [cdkDragDisabled]&#x3D;&quot;!setSigningOrder || recipients.length &lt;&#x3D; 1&quot;&gt;
+          &lt;!-- User Icon --&gt;
+          &lt;div
+            class&#x3D;&quot;user-icon d-none d-md-flex position-absolute justify-content-center align-items-center rounded-circle bg-light text-muted border border-secondary user-icon-positioned&quot;&gt;
+            &lt;div class&#x3D;&quot;order-number font-weight-bold text-dark&quot; *ngIf&#x3D;&quot;setSigningOrder&quot;&gt;{{
+              i + 1 }}&lt;/div&gt;
+            &lt;i class&#x3D;&quot;fas fa-user&quot; *ngIf&#x3D;&quot;!setSigningOrder&quot;&gt;&lt;/i&gt;
+          &lt;/div&gt;
+
+          &lt;!-- Signer Card --&gt;
+          &lt;div class&#x3D;&quot;signer-row flex-fill border rounded bg-white d-flex signer-card-transition&quot;
+            [class.border-danger]&#x3D;&quot;!recipient.name&quot;&gt;
+            &lt;!-- Drag Handle --&gt;
+            &lt;div
+              class&#x3D;&quot;drag-handle-field bg-light d-flex align-items-center justify-content-center drag-handle-width rounded-start&quot;
+              *ngIf&#x3D;&quot;setSigningOrder &amp;&amp; recipients.length &gt; 1&quot;&gt;
+              &lt;div
+                class&#x3D;&quot;drag-handle d-flex align-items-center justify-content-center w-100 h-100 text-white drag-handle-cursor rounded-start&quot;
+                cdkDragHandle&gt;
+                &lt;i class&#x3D;&quot;fas fa-grip-vertical text-secondary small&quot;&gt;&lt;/i&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Signer Fields --&gt;
+            &lt;div class&#x3D;&quot;signer-fields flex-fill px-4 py-2&quot;&gt;
+              &lt;div class&#x3D;&quot;field-row&quot;&gt;
+                &lt;div class&#x3D;&quot;row&quot;&gt;
+                  &lt;div class&#x3D;&quot;field-group name-field col-12 col-md-4 mb-3&quot;&gt;
+                    &lt;label class&#x3D;&quot;field-label required small font-weight-medium text-dark mb-1&quot;&gt;
+                      &lt;span class&#x3D;&quot;text-danger mr-1&quot;&gt;*&lt;/span&gt;{{
+                      &quot;COMMON.NAME&quot; | translate
+                      }}&lt;/label&gt;
+                    &lt;ng-select [items]&#x3D;&quot;searchResults&quot; bindLabel&#x3D;&quot;Name&quot; [(ngModel)]&#x3D;&quot;recipient.name&quot;
+                      (change)&#x3D;&quot;onUserChange($event, i)&quot; (blur)&#x3D;&quot;onFieldBlur(i, &#x27;name&#x27;)&quot; [placeholder]&#x3D;&quot;
+                      &#x27;RECIPIENTS.TYPE_TO_SEARCH_PLACEHOLDER&#x27; | translate
+                    &quot; [clearable]&#x3D;&quot;true&quot; [searchable]&#x3D;&quot;true&quot; [loading]&#x3D;&quot;isSearching &amp;&amp; currentSearchingIndex &#x3D;&#x3D;&#x3D; i&quot;
+                      [minTermLength]&#x3D;&quot;1&quot; (search)&#x3D;&quot;onSearchTermChange($event, i)&quot; (clear)&#x3D;&quot;onClearSelection(i)&quot;
+                      [addTag]&#x3D;&quot;false&quot; [class.is-invalid]&#x3D;&quot;validationErrors[i]?.name&quot;&gt;
+                    &lt;/ng-select&gt;
+                    &lt;div class&#x3D;&quot;invalid-feedback d-block text-danger small mt-1&quot; *ngIf&#x3D;&quot;validationErrors[i]?.name&quot;&gt;
+                      {{ validationErrors[i]?.name }}
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+
+                  &lt;div class&#x3D;&quot;field-group email-field col-12 col-md-4 mb-3&quot;&gt;
+                    &lt;label class&#x3D;&quot;field-label required small font-weight-medium text-dark mb-1&quot;&gt;
+                      &lt;span class&#x3D;&quot;text-danger mr-1&quot;&gt;*&lt;/span&gt;{{
+                      &quot;COMMON.EMAIL_ADDRESS&quot; | translate
+                      }}&lt;/label&gt;
+                    &lt;input type&#x3D;&quot;email&quot; class&#x3D;&quot;form-control&quot; [value]&#x3D;&quot;recipient.email&quot; (input)&#x3D;&quot;onEmailInput($event, i)&quot;
+                      (blur)&#x3D;&quot;onFieldBlur(i, &#x27;email&#x27;)&quot; [class.is-invalid]&#x3D;&quot;validationErrors[i]?.email&quot;
+                      [placeholder]&#x3D;&quot;&#x27;DETAILS.ENTER_EMAIL&#x27; | translate&quot; /&gt;
+                    &lt;div class&#x3D;&quot;invalid-feedback d-block text-danger small mt-1&quot; *ngIf&#x3D;&quot;validationErrors[i]?.email&quot;&gt;
+                      {{ validationErrors[i]?.email }}
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+
+                  &lt;div class&#x3D;&quot;field-group type-field col-12 col-md-4 mb-3&quot;&gt;
+                    &lt;label class&#x3D;&quot;field-label required small font-weight-medium text-dark mb-1&quot;&gt;
+                      &lt;span class&#x3D;&quot;text-danger mr-1&quot;&gt;*&lt;/span&gt;{{
+                      &quot;RECIPIENTS.SIGNER_TYPE&quot; | translate
+                      }}&lt;/label&gt;
+                    &lt;ng-select [items]&#x3D;&quot;signerTypeOptions&quot; bindLabel&#x3D;&quot;label&quot; bindValue&#x3D;&quot;value&quot;
+                      [(ngModel)]&#x3D;&quot;recipient.signerType&quot; (change)&#x3D;&quot;onFieldBlur(i, &#x27;signerType&#x27;)&quot;
+                      (blur)&#x3D;&quot;onFieldBlur(i, &#x27;signerType&#x27;)&quot; [placeholder]&#x3D;&quot;&#x27;RECIPIENTS.SIGNER_TYPE&#x27; | translate&quot;
+                      [clearable]&#x3D;&quot;false&quot; [searchable]&#x3D;&quot;false&quot; [class.is-invalid]&#x3D;&quot;validationErrors[i]?.signerType&quot;&gt;
+                      &lt;ng-option *ngFor&#x3D;&quot;let option of signerTypeOptions&quot; [value]&#x3D;&quot;option.value&quot;&gt;
+                        {{ option.label | translate }}
+                      &lt;/ng-option&gt;
+                    &lt;/ng-select&gt;
+                    &lt;div class&#x3D;&quot;invalid-feedback d-block text-danger small mt-1&quot;
+                      *ngIf&#x3D;&quot;validationErrors[i]?.signerType&quot;&gt;
+                      {{ validationErrors[i]?.signerType }}
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+
+                  &lt;div
+                    class&#x3D;&quot;field-delete&quot;
+                    *ngIf&#x3D;&quot;recipients.length &gt; 1&quot;&gt;
+                    &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn border-0 p-2 text-muted bg-transparent&quot; (click)&#x3D;&quot;removeSigner(i)&quot;
+                      [title]&#x3D;&quot;&#x27;RECIPIENTS.REMOVE_SIGNER&#x27; | translate&quot;&gt;
+                      &lt;i class&#x3D;&quot;fas fa-trash small&quot;&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Add Signer Button --&gt;
+    &lt;div class&#x3D;&quot;pt-3&quot; *ngIf&#x3D;&quot;allowAddSigner&quot;&gt;
+      &lt;button type&#x3D;&quot;button&quot;
+        [class]&#x3D;&quot;canAddSigner() ? &#x27;btn btn-outline-primary d-flex align-items-center small&#x27; : &#x27;btn btn-outline-secondary d-flex align-items-center small&#x27;&quot;
+        (click)&#x3D;&quot;addNewSigner()&quot; [disabled]&#x3D;&quot;!canAddSigner()&quot;&gt;
+        &lt;i class&#x3D;&quot;fas fa-plus mr-2 btn-icon-small&quot;&gt;&lt;/i&gt;
+        {{ &quot;RECIPIENTS.ADD_SIGNER&quot; | translate }}
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./recipients.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.section-header {
+    border-width: 0.188rem;
+}
+
+.cdk-drag-preview {
+    box-sizing: border-box;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem -0.5rem rgba(0, 0, 0, 0.12);
+    background: white;
+    transform: rotate(5deg);
+}
+
+.cdk-drag-placeholder {
+    opacity: 0;
+}
+
+.cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.recipients-drop-list.cdk-drop-list-dragging .signer-row-container:not(.cdk-drag-placeholder) {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.user-icon-positioned {
+    left: -4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    min-width: 3rem;
+    height: 3rem;
+    font-size: 1.25rem;
+
+    .order-number {
+        font-size: 1rem;
+    }
+}
+
+.drag-handle-width {
+    min-width: 1.5rem;
+    border-radius: 0.25rem;
+}
+
+.drag-handle-cursor {
+    cursor: grab;
+
+    &amp;:active {
+        cursor: grabbing;
+    }
+}
+
+.btn-icon-small {
+    font-size: 0.75rem;
+}
+
+.checkbox-scaled {
+    transform: scale(1.3);
+}
+
+.field-delete {
+    position: absolute;
+    top: 0.125rem;
+    right: 0.125rem;
+}
+
+.add-signers-section {
+    min-height: 30rem;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="col-xl-9 col-lg-9 col-md-11 col-12 mx-auto px-3 pb-3 pt-0 bg-white rounded">  <!-- Add Signers Section -->  <div class="add-signers-section mb-4">    <div class="sender-section mb-3">      <div        class="section-header d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-end border-bottom pb-2 mb-3">        <div class="section-titles d-flex flex-column">          <h3 class="section-title h5 font-weight-normal mb-2 text-dark">            {{ "RECIPIENTS.ADD_SIGNERS" | translate }}          </h3>          <h4 class="sender-title h5 font-weight-bold m-0 text-dark">            {{ "RECIPIENTS.SENDER_ADD_SIGNERS" | translate }}          </h4>        </div>        <!-- Set Signing Order Checkbox -->        <div class="form-check d-flex align-items-center mt-2 mt-sm-0" *ngIf="recipients.length > 1">          <input type="checkbox" [(ngModel)]="setSigningOrder" (change)="onSigningOrderChange()"            class="form-check-input checkbox-scaled" id="signing-order-toggle" />          <h6 class="form-check-label font-weight-medium text-dark cursor-pointer" for="signing-order-toggle">            {{ "RECIPIENTS.SET_SIGNING_ORDER" | translate }}          </h6>        </div>      </div>    </div>    <!-- Signers List with CDK drag and drop -->    <div class="signers-list" *ngIf="recipients && recipients.length > 0">      <div cdkDropList [cdkDropListDisabled]="!setSigningOrder || recipients.length <= 1"        (cdkDropListDropped)="onDrop($event)" class="recipients-drop-list">        <div class="signer-row-container d-flex align-items-start mb-3 position-relative"          *ngFor="let recipient of recipients; let i = index; trackBy: trackBySigner" [attr.data-index]="i" cdkDrag          [cdkDragDisabled]="!setSigningOrder || recipients.length <= 1">          <!-- User Icon -->          <div            class="user-icon d-none d-md-flex position-absolute justify-content-center align-items-center rounded-circle bg-light text-muted border border-secondary user-icon-positioned">            <div class="order-number font-weight-bold text-dark" *ngIf="setSigningOrder">{{              i + 1 }}</div>            <i class="fas fa-user" *ngIf="!setSigningOrder"></i>          </div>          <!-- Signer Card -->          <div class="signer-row flex-fill border rounded bg-white d-flex signer-card-transition"            [class.border-danger]="!recipient.name">            <!-- Drag Handle -->            <div              class="drag-handle-field bg-light d-flex align-items-center justify-content-center drag-handle-width rounded-start"              *ngIf="setSigningOrder && recipients.length > 1">              <div                class="drag-handle d-flex align-items-center justify-content-center w-100 h-100 text-white drag-handle-cursor rounded-start"                cdkDragHandle>                <i class="fas fa-grip-vertical text-secondary small"></i>              </div>            </div>            <!-- Signer Fields -->            <div class="signer-fields flex-fill px-4 py-2">              <div class="field-row">                <div class="row">                  <div class="field-group name-field col-12 col-md-4 mb-3">                    <label class="field-label required small font-weight-medium text-dark mb-1">                      <span class="text-danger mr-1">*</span>{{                      "COMMON.NAME" | translate                      }}</label>                    <ng-select [items]="searchResults" bindLabel="Name" [(ngModel)]="recipient.name"                      (change)="onUserChange($event, i)" (blur)="onFieldBlur(i, \'name\')" [placeholder]="                      \'RECIPIENTS.TYPE_TO_SEARCH_PLACEHOLDER\' | translate                    " [clearable]="true" [searchable]="true" [loading]="isSearching && currentSearchingIndex === i"                      [minTermLength]="1" (search)="onSearchTermChange($event, i)" (clear)="onClearSelection(i)"                      [addTag]="false" [class.is-invalid]="validationErrors[i]?.name">                    </ng-select>                    <div class="invalid-feedback d-block text-danger small mt-1" *ngIf="validationErrors[i]?.name">                      {{ validationErrors[i]?.name }}                    </div>                  </div>                  <div class="field-group email-field col-12 col-md-4 mb-3">                    <label class="field-label required small font-weight-medium text-dark mb-1">                      <span class="text-danger mr-1">*</span>{{                      "COMMON.EMAIL_ADDRESS" | translate                      }}</label>                    <input type="email" class="form-control" [value]="recipient.email" (input)="onEmailInput($event, i)"                      (blur)="onFieldBlur(i, \'email\')" [class.is-invalid]="validationErrors[i]?.email"                      [placeholder]="\'DETAILS.ENTER_EMAIL\' | translate" />                    <div class="invalid-feedback d-block text-danger small mt-1" *ngIf="validationErrors[i]?.email">                      {{ validationErrors[i]?.email }}                    </div>                  </div>                  <div class="field-group type-field col-12 col-md-4 mb-3">                    <label class="field-label required small font-weight-medium text-dark mb-1">                      <span class="text-danger mr-1">*</span>{{                      "RECIPIENTS.SIGNER_TYPE" | translate                      }}</label>                    <ng-select [items]="signerTypeOptions" bindLabel="label" bindValue="value"                      [(ngModel)]="recipient.signerType" (change)="onFieldBlur(i, \'signerType\')"                      (blur)="onFieldBlur(i, \'signerType\')" [placeholder]="\'RECIPIENTS.SIGNER_TYPE\' | translate"                      [clearable]="false" [searchable]="false" [class.is-invalid]="validationErrors[i]?.signerType">                      <ng-option *ngFor="let option of signerTypeOptions" [value]="option.value">                        {{ option.label | translate }}                      </ng-option>                    </ng-select>                    <div class="invalid-feedback d-block text-danger small mt-1"                      *ngIf="validationErrors[i]?.signerType">                      {{ validationErrors[i]?.signerType }}                    </div>                  </div>                  <div                    class="field-delete"                    *ngIf="recipients.length > 1">                    <button type="button" class="btn border-0 p-2 text-muted bg-transparent" (click)="removeSigner(i)"                      [title]="\'RECIPIENTS.REMOVE_SIGNER\' | translate">                      <i class="fas fa-trash small"></i>                    </button>                  </div>                </div>              </div>            </div>          </div>        </div>      </div>    </div>    <!-- Add Signer Button -->    <div class="pt-3" *ngIf="allowAddSigner">      <button type="button"        [class]="canAddSigner() ? \'btn btn-outline-primary d-flex align-items-center small\' : \'btn btn-outline-secondary d-flex align-items-center small\'"        (click)="addNewSigner()" [disabled]="!canAddSigner()">        <i class="fas fa-plus mr-2 btn-icon-small"></i>        {{ "RECIPIENTS.ADD_SIGNER" | translate }}      </button>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AddCommentsComponent', 'selector': 'apt-add-comments'},{'name': 'AdditionalInformationComponent', 'selector': 'apt-additional-information'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AlertComponent', 'selector': 'apt-alert'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CaptchaComponent', 'selector': 'apt-captcha'},{'name': 'CartTotalsViewComponent', 'selector': 'app-cart-totals-view'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'ConstraintRuleAlertComponent', 'selector': 'apt-constraint-rule-alert'},{'name': 'ConstraintRuleSidebarComponent', 'selector': 'apt-constraint-rule-sidebar'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DependentPicklistComponent', 'selector': 'apt-dependent-picklist'},{'name': 'DocumentSelectorComponent', 'selector': 'apt-document-selector'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'EmailComposerComponent', 'selector': 'apt-email-composer'},{'name': 'EmailSearchComponent', 'selector': 'apt-email-search'},{'name': 'ErrorPageComponent', 'selector': 'apt-error-page'},{'name': 'FacetFilterComponent', 'selector': 'apt-facet-filter'},{'name': 'FavoriteFilterComponent', 'selector': 'apt-favorite-filter'},{'name': 'FavoriteModalComponent', 'selector': 'apt-favorite-modal'},{'name': 'FilesComponent', 'selector': 'apt-files'},{'name': 'FileUploaderComponent', 'selector': 'apt-file-uploader'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineitemCardComponent', 'selector': 'apt-lineitem-card'},{'name': 'LineItemMenuComponent', 'selector': 'apt-line-item-menu'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentIntegrationComponent', 'selector': 'apt-payment-integration'},{'name': 'PopoverComponent', 'selector': 'apt-popover'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceModalComponent', 'selector': 'apt-price-modal'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductAttributeComponent', 'selector': 'apt-product-attribute'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductSearchComponent', 'selector': 'apt-product-search'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'PromotionModalComponent', 'selector': 'apt-pr-modal'},{'name': 'QuickAddComponent', 'selector': 'app-quick-add'},{'name': 'RecipientsComponent', 'selector': 'apt-recipients'},{'name': 'ReplaceProductModalComponent', 'selector': 'apt-replace-product-modal'},{'name': 'RevalidateCartModalComponent', 'selector': 'apt-revalidate-cart-modal'},{'name': 'SelectAllComponent', 'selector': 'apt-select-all'},{'name': 'SendForSignatureComponent', 'selector': 'apt-send-for-signature'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'},{'name': 'TableRowSubItemComponent', 'selector': 'apt-table-row-sub-item'},{'name': 'ViewCommentsComponent', 'selector': 'apt-view-comments'},{'name': 'WizardComponent', 'selector': 'apt-wizard'}];
+    var DIRECTIVES = [{'name': 'AutoFocusDirective', 'selector': '[aptAutoFocus]'}];
+    var ACTUAL_COMPONENT = {'name': 'RecipientsComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'RecipientsComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

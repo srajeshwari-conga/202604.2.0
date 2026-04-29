@@ -1,0 +1,3022 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Conga Digital Commerce 202604.2.0 on Conga Revenue Lifecycle Platform</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Conga Digital Commerce 202604.2.0 on Conga Revenue Lifecycle Platform</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  QuickAddComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/congarevenuecloud/elements/src/lib/quick-add/quick-add.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>QuickAdd component is used to show a modal window or embedded layout with the cartItems fields that can be added to the cart.</p>
+<h3>Preview</h3>
+<img src="../res/quick-add.png" style="max-width: 100%">
+<h3>Usage</h3>
+
+<div><pre class="line-numbers"><code class="language-typescript">import { QuickAddModule } from &#39;&#64;congarevenuecloud/elements&#39;;
+
+&#64;NgModule({
+imports: [ QuickAddModule, ...]
+})
+export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code class="language-html">```typescript
+&lt;app-quick-add layout=&#39;modal&#39; productFieldType=&#39;text&#39;&gt;</code></pre></div><div><pre class="line-numbers"><code class="language-none"></code></pre></div>
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+            <tr>
+                <td class="col-md-3">encapsulation</td>
+                <td class="col-md-9"><code>ViewEncapsulation.None</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-quick-add</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./quick-add.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./quick-add.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#bOView" >bOView</a>
+                            </li>
+                            <li>
+                                <a href="#businessObjectView$" >businessObjectView$</a>
+                            </li>
+                            <li>
+                                <a href="#cancelDisabled" >cancelDisabled</a>
+                            </li>
+                            <li>
+                                <a href="#confirmationModal" >confirmationModal</a>
+                            </li>
+                            <li>
+                                <a href="#confirmationTemplate" >confirmationTemplate</a>
+                            </li>
+                            <li>
+                                <a href="#count" >count</a>
+                            </li>
+                            <li>
+                                <a href="#disabled" >disabled</a>
+                            </li>
+                            <li>
+                                <a href="#errorMessage" >errorMessage</a>
+                            </li>
+                            <li>
+                                <a href="#instance" >instance</a>
+                            </li>
+                            <li>
+                                <a href="#isDisabled" >isDisabled</a>
+                            </li>
+                            <li>
+                                <a href="#loading" >loading</a>
+                            </li>
+                            <li>
+                                <a href="#modalRef" >modalRef</a>
+                            </li>
+                            <li>
+                                <a href="#noResult" >noResult</a>
+                            </li>
+                            <li>
+                                <a href="#objectInstance" >objectInstance</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#orderService" >orderService</a>
+                            </li>
+                            <li>
+                                <a href="#priceList$" >priceList$</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#quoteService" >quoteService</a>
+                            </li>
+                            <li>
+                                <a href="#searchBox" >searchBox</a>
+                            </li>
+                            <li>
+                                <a href="#searchQuery" >searchQuery</a>
+                            </li>
+                            <li>
+                                <a href="#showTemplate" >showTemplate</a>
+                            </li>
+                            <li>
+                                <a href="#subscription" >subscription</a>
+                            </li>
+                            <li>
+                                <a href="#title" >title</a>
+                            </li>
+                            <li>
+                                <a href="#type" >type</a>
+                            </li>
+                            <li>
+                                <a href="#typeahead$" >typeahead$</a>
+                            </li>
+                            <li>
+                                <a href="#typeAheadItem" >typeAheadItem</a>
+                            </li>
+                            <li>
+                                <a href="#typeaheadLoading" >typeaheadLoading</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addItem" >addItem</a>
+                            </li>
+                            <li>
+                                <a href="#changeHeaderValue" >changeHeaderValue</a>
+                            </li>
+                            <li>
+                                <a href="#changeProductText" >changeProductText</a>
+                            </li>
+                            <li>
+                                <a href="#changeProductValue" >changeProductValue</a>
+                            </li>
+                            <li>
+                                <a href="#changeValue" >changeValue</a>
+                            </li>
+                            <li>
+                                <a href="#closeConfirmationModal" >closeConfirmationModal</a>
+                            </li>
+                            <li>
+                                <a href="#closeModal" >closeModal</a>
+                            </li>
+                            <li>
+                                <a href="#handleAddToCart" >handleAddToCart</a>
+                            </li>
+                            <li>
+                                <a href="#isItemSelected" >isItemSelected</a>
+                            </li>
+                            <li>
+                                <a href="#openModal" >openModal</a>
+                            </li>
+                            <li>
+                                <a href="#removeItem" >removeItem</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#actionType" >actionType</a>
+                            </li>
+                            <li>
+                                <a href="#allowBulkUpload" >allowBulkUpload</a>
+                            </li>
+                            <li>
+                                <a href="#btnClass" >btnClass</a>
+                            </li>
+                            <li>
+                                <a href="#businessObject" >businessObject</a>
+                            </li>
+                            <li>
+                                <a href="#businessObjectFields" class="deprecated-name">businessObjectFields</a>
+                            </li>
+                            <li>
+                                <a href="#fields" >fields</a>
+                            </li>
+                            <li>
+                                <a href="#layout" >layout</a>
+                            </li>
+                            <li>
+                                <a href="#orderFields" >orderFields</a>
+                            </li>
+                            <li>
+                                <a href="#presetFields" >presetFields</a>
+                            </li>
+                            <li>
+                                <a href="#productFieldType" >productFieldType</a>
+                            </li>
+                            <li>
+                                <a href="#quoteFields" >quoteFields</a>
+                            </li>
+                            <li>
+                                <a href="#value" >value</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(modalService: BsModalService, exceptionService: <a href="../injectables/ExceptionService.html" target="_self">ExceptionService</a>, aobjectService: AObjectService, cartItemService: <a href="../injectables/CartItemService.html" target="_self">CartItemService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, sanitizer: <a href="https://angular.io/api/platform-browser/DomSanitizer" target="_blank">DomSanitizer</a>, plservice: <a href="../injectables/PriceListService.html" target="_self">PriceListService</a>, productService: <a href="../injectables/ProductService.html" target="_self">ProductService</a>, cartService: <a href="../injectables/CartService.html" target="_self">CartService</a>, quoteService: <a href="../injectables/QuoteService.html" target="_self">QuoteService</a>, orderService: <a href="../injectables/OrderService.html" target="_self">OrderService</a>, accountService: <a href="../injectables/AccountService.html" target="_self">AccountService</a>, translateService: TranslateService, storefrontService: <a href="../injectables/StorefrontService.html" target="_self">StorefrontService</a>, integrationService: <a href="../injectables/IntegrationService.html" target="_self">IntegrationService</a>)</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>modalService</td>
+                                                  
+                                                        <td>
+                                                                    <code>BsModalService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>exceptionService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ExceptionService.html" target="_self" >ExceptionService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>aobjectService</td>
+                                                  
+                                                        <td>
+                                                                    <code>AObjectService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cartItemService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CartItemService.html" target="_self" >CartItemService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>sanitizer</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/platform-browser/DomSanitizer" target="_blank" >DomSanitizer</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>plservice</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/PriceListService.html" target="_self" >PriceListService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>productService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ProductService.html" target="_self" >ProductService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cartService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CartService.html" target="_self" >CartService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>quoteService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/QuoteService.html" target="_self" >QuoteService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>orderService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/OrderService.html" target="_self" >OrderService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>accountService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AccountService.html" target="_self" >AccountService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>translateService</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslateService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>storefrontService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/StorefrontService.html" target="_self" >StorefrontService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>integrationService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/IntegrationService.html" target="_self" >IntegrationService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="actionType"></a>
+                        <b>actionType</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>&quot;quick-add&quot; | &quot;quick-quote&quot; | &quot;quick-order&quot;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;quick-add&#x27;</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Input property that specifies the representation and behavior of an action component.
+It controls whether the action appears as a button (for quick quote/order) or an icon (for add-to-cart).
+&#39;quick-add&#39;: Renders a button with a dropdown menu for quick item addition, quick order creation, and quick quote generation. The dropdown allows users to select the specific action.
+&#39;quick-quote&#39;: Renders a standalone button labeled &#39;New Quote&#39; for initiating the creation of a new quote.
+&#39;quick-order&#39;: Renders a standalone button labeled &#39;New Order&#39; for initiating the creation of a new order.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="allowBulkUpload"></a>
+                        <b>allowBulkUpload</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Flag indicates whether the bulk upload feature is enabled on quick add component.
+When enabled, users can import products in bulk via a CSV file, to perform quick addition of products to the active cart or generate a quick order/quote.
+Defaults to true.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="btnClass"></a>
+                        <b>btnClass</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;btn-custom-primary&#x27;</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Custom class or bootstrap class to set on the primary button.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="businessObject"></a>
+                        <b>businessObject</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Order | Quote | Cart</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The field accepts a business object that can be an instance of <code>Order</code>, <code>Quote</code>, or <code>Cart</code>.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="businessObjectFields"></a>
+                        <b>businessObjectFields</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Array&lt;string&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>List of business Object fields to be shown on the layout.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fields"></a>
+                        <b>fields</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Array&lt;string&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>List of field properties to be shown on the layout</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="layout"></a>
+                        <b>layout</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>&quot;modal&quot; | &quot;embedded&quot;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;embedded&#x27;</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The layout specifies to show as a modal or embedded.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="orderFields"></a>
+                        <b>orderFields</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/QuickAddField.html" target="_self" >Array&lt;string | QuickAddField&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Fields to display in the Order header form during quick order creation.</p>
+<div><pre class="line-numbers"><code class="language-html">orderFields = [&#39;Description&#39;, &#39;PONumber&#39;, { field: &#39;BillToAccount&#39;, required: true }]
+See {&#64;link QuickAddField} for more details on the structure and fields required.</code></pre></div></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="presetFields"></a>
+                        <b>presetFields</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Record&lt;string | any&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{}</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Use this to lock specific fields on the quote or order form to a fixed value.
+Any field listed here will be pre-filled automatically and shown as read-only,
+so the user cannot change it.</p>
+<div><pre class="line-numbers"><code class="language-html">presetFields = { SourceChannel: &#39;E-Commerce&#39;, Description: &#39;Web Order&#39; }</code></pre></div></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="productFieldType"></a>
+                        <b>productFieldType</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>&quot;text&quot; | &quot;lookup&quot;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;lookup&#x27;</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Flag to set the type of &#39;Product&#39; field.
+when set to &#39;text&#39; user can enter the valid product code.
+when set to &#39;lookup&#39; the field displays the list of products that match the product name or product code.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="quoteFields"></a>
+                        <b>quoteFields</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/QuickAddField.html" target="_self" >Array&lt;string | QuickAddField&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Fields to display in the Quote header form during quick quote creation.</p>
+<div><pre class="line-numbers"><code class="language-html">quoteFields = [&#39;Description&#39;, &#39;BillToAccount&#39;, { field: &#39;PartnerAccount&#39;, required: true, lookupOptions: { ... } }]
+See {&#64;link QuickAddField} for more details on the structure and fields required.</code></pre></div></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="value"></a>
+                        <b>value</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Array&lt;CartItem&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Flag to set the predefined products to be displayed on the layout.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addItem"></a>
+                    <span class="name">
+                        <span ><b>addItem</b></span>
+                        <a href="#addItem"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addItem(view: <a href="../interfaces/View.html" target="_self">View</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The method is responsible to add new cartItem records to the layout on
+&#39;Add Product&#39; action.</p>
+<p>See <a href="../interfaces/View.html">View</a> for more details on the structure and fields required.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>view</td>
+                                    <td>
+                                                <code><a href="../interfaces/View.html" target="_self" >View</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>represents the fields to render on the layout for cartItem record.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeHeaderValue"></a>
+                    <span class="name">
+                        <span ><b>changeHeaderValue</b></span>
+                        <a href="#changeHeaderValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>changeHeaderValue(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, item: Order | Quote, field: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The method updates the order/quote header values updated by user.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>represents the value of order/quote fields that needs to be updated.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>item</td>
+                                    <td>
+                                            <code>Order | Quote</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>is an instance of order/quote to be updated.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>field</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>represents the field name of order/quote that needs to be updated.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeProductText"></a>
+                    <span class="name">
+                        <span ><b>changeProductText</b></span>
+                        <a href="#changeProductText"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>changeProductText(searchQuery: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, item?: <a href="../classes/CartItem.html" target="_self">CartItem</a>, field?: Field)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The method updates the value selected by the user for the product field of cartItem record when productFieldType set as &#39;text&#39;.</p>
+<p>See <a href="Field">Field</a> for more details on the structure and fields required.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>searchQuery</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>is of type string to search the product based on the query.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>item</td>
+                                    <td>
+                                                <code><a href="../classes/CartItem.html" target="_self" >CartItem</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>is an instance of cartItem to be updated.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>field</td>
+                                    <td>
+                                            <code>Field</code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>represents the product field that needs to be updated in the cartItem record.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeProductValue"></a>
+                    <span class="name">
+                        <span ><b>changeProductValue</b></span>
+                        <a href="#changeProductValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>changeProductValue(searchQuery: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, item?: <a href="../classes/CartItem.html" target="_self">CartItem</a>, field?: Field)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The method updates the value selected by the user for the product field of cartItem record when productFieldType set as &#39;lookup&#39;.</p>
+<p>See <a href="Field">Field</a> for more details on the structure and fields required.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>searchQuery</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>is of type string to search the product based on the query.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>item</td>
+                                    <td>
+                                                <code><a href="../classes/CartItem.html" target="_self" >CartItem</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>is an instance of cartItem to be updated.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>field</td>
+                                    <td>
+                                            <code>Field</code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>represents the product field that needs to be updated in the cartItem record.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeValue"></a>
+                    <span class="name">
+                        <span ><b>changeValue</b></span>
+                        <a href="#changeValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>changeValue(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, item: <a href="../classes/CartItem.html" target="_self">CartItem</a>, field: Field)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The method updates the cartItem record values updated by user.</p>
+<p>See <a href="Field">Field</a> for more details on the structure and fields required.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>represents the value of cartItem fields that needs to be updated.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>item</td>
+                                    <td>
+                                                <code><a href="../classes/CartItem.html" target="_self" >CartItem</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>is an instance of cartItem to be updated.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>field</td>
+                                    <td>
+                                            <code>Field</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>represents the field name of cartItem that needs to be updated.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="closeConfirmationModal"></a>
+                    <span class="name">
+                        <span ><b>closeConfirmationModal</b></span>
+                        <a href="#closeConfirmationModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>closeConfirmationModal(record: Order | Quote)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The method is responsible for closing the confirmation modal upon successful order or quote generation.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>record</td>
+                                    <td>
+                                            <code>Order | Quote</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>null</code>
+                                    </td>
+
+                                    <td>
+                                        <p>instance of order /quote object.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="closeModal"></a>
+                    <span class="name">
+                        <span ><b>closeModal</b></span>
+                        <a href="#closeModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>closeModal()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The method is responsible to close modal popup reference for the layout &#39;modal&#39;.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleAddToCart"></a>
+                    <span class="name">
+                        <span ><b>handleAddToCart</b></span>
+                        <a href="#handleAddToCart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleAddToCart(view: <a href="../interfaces/View.html" target="_self">View</a>, bOView?: <a href="../interfaces/ObjectView.html" target="_self">ObjectView</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The method is fired when the user clicks on Add to Cart button.
+The selected items gets added to user&#39;s current active cart.</p>
+<p>See <a href="../interfaces/ObjectView.html">ObjectView</a> for more details on the structure and fields required.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>view</td>
+                                    <td>
+                                                <code><a href="../interfaces/View.html" target="_self" >View</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>represents the fields to render on the layout for cartItem record.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>bOView</td>
+                                    <td>
+                                                <code><a href="../interfaces/ObjectView.html" target="_self" >ObjectView</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>represents the fields to render on the layout for order/quote record.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isItemSelected"></a>
+                    <span class="name">
+                        <span ><b>isItemSelected</b></span>
+                        <a href="#isItemSelected"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isItemSelected(view: <a href="../interfaces/View.html" target="_self">View</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Enables/disables the Add to cart button based on the availability of mandatory field on cart item record.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>view</td>
+                                    <td>
+                                                <code><a href="../interfaces/View.html" target="_self" >View</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>represents the fields to render on the layout for cartItem record.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openModal"></a>
+                    <span class="name">
+                        <span ><b>openModal</b></span>
+                        <a href="#openModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openModal(view: <a href="../interfaces/View.html" target="_self">View</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The method is responsible to open modal popup for layout &#39;modal&#39;.</p>
+<p>See <a href="../interfaces/View.html">View</a> for more details on the structure and fields required.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>view</td>
+                                    <td>
+                                                <code><a href="../interfaces/View.html" target="_self" >View</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>represents the fields to render on the layout for cartItem record.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeItem"></a>
+                    <span class="name">
+                        <span ><b>removeItem</b></span>
+                        <a href="#removeItem"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>removeItem(item: <a href="../classes/CartItem.html" target="_self">CartItem</a>, view: <a href="../interfaces/View.html" target="_self">View</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The method is responsible to delete a cartItem record from the layout.</p>
+<p>See <a href="../interfaces/View.html">View</a> for more details on the structure and fields required.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>item</td>
+                                    <td>
+                                                <code><a href="../classes/CartItem.html" target="_self" >CartItem</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>is an instance of cartItem to be removed.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>view</td>
+                                    <td>
+                                                <code><a href="../interfaces/View.html" target="_self" >View</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>represents the fields to render on the layout for cartItem record.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="bOView"></a>
+                    <span class="name">
+                        <span ><b>bOView</b></span>
+                        <a href="#bOView"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/ObjectView.html" target="_self" >ObjectView</a></code>
+
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="businessObjectView$"></a>
+                    <span class="name">
+                        <span ><b>businessObjectView$</b></span>
+                        <a href="#businessObjectView$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Observable&lt;ObjectView&gt;</code>
+
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cancelDisabled"></a>
+                    <span class="name">
+                        <span ><b>cancelDisabled</b></span>
+                        <a href="#cancelDisabled"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="confirmationModal"></a>
+                    <span class="name">
+                        <span ><b>confirmationModal</b></span>
+                        <a href="#confirmationModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>BsModalRef</code>
+
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Confirmation modal is displayed on successful creation of order /quote object.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="confirmationTemplate"></a>
+                    <span class="name">
+                        <span ><b>confirmationTemplate</b></span>
+                        <a href="#confirmationTemplate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Template.html" target="_self" >TemplateRef&lt;any&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;confirmationTemplate&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="count"></a>
+                    <span class="name">
+                        <span ><b>count</b></span>
+                        <a href="#count"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>1</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="disabled"></a>
+                    <span class="name">
+                        <span ><b>disabled</b></span>
+                        <a href="#disabled"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="errorMessage"></a>
+                    <span class="name">
+                        <span ><b>errorMessage</b></span>
+                        <a href="#errorMessage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="instance"></a>
+                    <span class="name">
+                        <span ><b>instance</b></span>
+                        <a href="#instance"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>AObject</code>
+
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isDisabled"></a>
+                    <span class="name">
+                        <span ><b>isDisabled</b></span>
+                        <a href="#isDisabled"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loading"></a>
+                    <span class="name">
+                        <span ><b>loading</b></span>
+                        <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="modalRef"></a>
+                    <span class="name">
+                        <span ><b>modalRef</b></span>
+                        <a href="#modalRef"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>BsModalRef</code>
+
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Reference for modal dialog for layout &#39;modal&#39;</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="noResult"></a>
+                    <span class="name">
+                        <span ><b>noResult</b></span>
+                        <a href="#noResult"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="objectInstance"></a>
+                    <span class="name">
+                        <span ><b>objectInstance</b></span>
+                        <a href="#objectInstance"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>AObject</code>
+
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="orderService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>orderService</b></span>
+                        <a href="#orderService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/OrderService.html" target="_self" >OrderService</a></code>
+
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="priceList$"></a>
+                    <span class="name">
+                        <span ><b>priceList$</b></span>
+                        <a href="#priceList$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Observable&lt;PriceList&gt;</code>
+
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="quoteService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>quoteService</b></span>
+                        <a href="#quoteService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/QuoteService.html" target="_self" >QuoteService</a></code>
+
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="searchBox"></a>
+                    <span class="name">
+                        <span ><b>searchBox</b></span>
+                        <a href="#searchBox"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;searchBox&#x27;, {static: false})<br />
+                        </code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="searchQuery"></a>
+                    <span class="name">
+                        <span ><b>searchQuery</b></span>
+                        <a href="#searchQuery"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Typeahead product search query.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showTemplate"></a>
+                    <span class="name">
+                        <span ><b>showTemplate</b></span>
+                        <a href="#showTemplate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="subscription"></a>
+                    <span class="name">
+                        <span ><b>subscription</b></span>
+                        <a href="#subscription"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Subscription[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="title"></a>
+                    <span class="name">
+                        <span ><b>title</b></span>
+                        <a href="#title"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="type"></a>
+                    <span class="name">
+                        <span ><b>type</b></span>
+                        <a href="#type"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>CartItem</code>
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>By default the type is set to cartItem for add to cart action.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="typeahead$"></a>
+                    <span class="name">
+                        <span ><b>typeahead$</b></span>
+                        <a href="#typeahead$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Product.html" target="_self" >Observable&lt;Array&lt;Product&gt;&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Observable&lt;Array&lt;Product&gt;&gt;()</code>
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Observable instance of type Product to show result based on search.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="typeAheadItem"></a>
+                    <span class="name">
+                        <span ><b>typeAheadItem</b></span>
+                        <a href="#typeAheadItem"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>TypeaheadDirective</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;typeAheadItem&#x27;, {static: false})<br />
+                        </code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="typeaheadLoading"></a>
+                    <span class="name">
+                        <span ><b>typeaheadLoading</b></span>
+                        <a href="#typeaheadLoading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Flag to show loader for typeAhead.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div *ngIf&#x3D;&quot;view$ | async as view&quot; [autoClose]&#x3D;&quot;false&quot;&gt;
+  &lt;div *ngIf&#x3D;&quot;layout &#x3D;&#x3D;&#x3D; &#x27;modal&#x27;; else embedLayout&quot;&gt;
+    &lt;div class&#x3D;&quot;btn-group&quot;&gt;
+      &lt;!-- Quick add icon with dropdown options --&gt;
+      &lt;div *ngIf&#x3D;&quot;actionType &#x3D;&#x3D;&#x3D; &#x27;quick-add&#x27;&quot;&gt;
+        &lt;button type&#x3D;&quot;button&quot; placement&#x3D;&quot;auto&quot; title&#x3D;&quot;{{ &#x27;COMMON.QUICK_ADD_TOOLTIP&#x27; | translate }}&quot;
+          class&#x3D;&quot;btn btn-link text-primary btn-raised dropdown-toggle border-0 bg-white px-0 py-0&quot;
+          data-toggle&#x3D;&quot;dropdown&quot; aria-expanded&#x3D;&quot;false&quot; [ngClass]&#x3D;&quot;buttonClass&quot;&gt;
+          &lt;img src&#x3D;&quot;assets/icons/quick-add.svg&quot; alt&#x3D;&quot;quick-add&quot; class&#x3D;&quot;quick-icon&quot;&gt;
+        &lt;/button&gt;
+
+        &lt;div class&#x3D;&quot;dropdown-menu dropdown-menu-right border mt-2&quot;&gt;
+          &lt;span class&#x3D;&quot;dropdown-item py-2&quot; (click)&#x3D;&quot;setBusinessObjectValue(&#x27;cart&#x27;)&quot;&gt;{{ &quot;COMMON.QUICK_ADD&quot; | translate
+            }}&lt;/span&gt;
+
+          &lt;span class&#x3D;&quot;dropdown-item py-2&quot; (click)&#x3D;&quot;setBusinessObjectValue(&#x27;order&#x27;)&quot;&gt;{{ &quot;COMMON.QUICK_ORDER&quot; | translate
+            }}&lt;/span&gt;
+
+          &lt;span class&#x3D;&quot;dropdown-item py-2&quot; (click)&#x3D;&quot;setBusinessObjectValue(&#x27;quote&#x27;)&quot;&gt;{{ &quot;COMMON.QUICK_QUOTE&quot; | translate
+            }}&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;!-- Quick quote icon --&gt;
+      &lt;div *ngIf&#x3D;&quot;actionType &#x3D;&#x3D;&#x3D; &#x27;quick-quote&#x27;&quot;&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary text-nowrap&quot; [ngClass]&#x3D;&quot;buttonClass&quot;
+          (click)&#x3D;&quot;setBusinessObjectValue(&#x27;quote&#x27;)&quot;&gt;{{ &#x27;MY_ACCOUNT.QUOTE_LIST.CREATE_NEW&#x27; | translate}}
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Template for modal layout --&gt;
+    &lt;ng-template #modalTemplate&gt;
+      &lt;div class&#x3D;&quot;modal-header align-items-center d-flex flex-row-reverse pt-0 mt-3 px-0 pb-2&quot;&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;close close-button pull-right&quot; aria-label&#x3D;&quot;Close&quot; (click)&#x3D;&quot;closeModal()&quot;&gt;
+          &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;modal-body d-flex flex-column justify-content-center pb-3 bg-white scrollbar&quot;&gt;
+        &lt;h6 class&#x3D;&quot;modal-title pull-left font-weight-bold py-2 px-3&quot;&gt;
+          {{ title | translate }}
+        &lt;/h6&gt;
+        &lt;ng-container [ngSwitch]&#x3D;&quot;showTemplate&quot;&gt;
+          &lt;ng-container *ngSwitchCase&#x3D;&quot;&#x27;cart&#x27;&quot;&gt;
+            &lt;ng-container *ngTemplateOutlet&#x3D;&quot;template&quot;&gt;&lt;/ng-container&gt;
+          &lt;/ng-container&gt;
+
+          &lt;ng-container *ngSwitchCase&#x3D;&quot;&#x27;quote&#x27;&quot;&gt;
+            &lt;ng-container *ngTemplateOutlet&#x3D;&quot;quoteForm&quot;&gt;&lt;/ng-container&gt;
+          &lt;/ng-container&gt;
+
+          &lt;ng-container *ngSwitchCase&#x3D;&quot;&#x27;order&#x27;&quot;&gt;
+            &lt;ng-container *ngTemplateOutlet&#x3D;&quot;orderForm&quot;&gt;&lt;/ng-container&gt;
+          &lt;/ng-container&gt;
+
+          &lt;ng-container *ngSwitchCase&#x3D;&quot;&#x27;uploadFile&#x27;&quot;&gt;
+            &lt;ng-container *ngTemplateOutlet&#x3D;&quot;uploadFileTemplate&quot;&gt;&lt;/ng-container&gt;
+          &lt;/ng-container&gt;
+        &lt;/ng-container&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+  &lt;/div&gt;
+
+
+  &lt;!-- Template for embedded layout/inline form --&gt;
+  &lt;ng-template #embedLayout&gt;
+    &lt;div class&#x3D;&quot;container-fluid py-4 d-flex justify-content-center&quot;&gt;
+      &lt;div class&#x3D;&quot;d-block card&quot;&gt;
+        &lt;div class&#x3D;&quot;pb-2&quot;&gt;
+          &lt;h5 class&#x3D;&quot;p-2&quot;&gt;{{ title | translate }}&lt;/h5&gt;
+        &lt;/div&gt;
+        &lt;ng-container [ngSwitch]&#x3D;&quot;showTemplate&quot;&gt;
+          &lt;ng-container *ngSwitchCase&#x3D;&quot;&#x27;cart&#x27;&quot;&gt;
+            &lt;ng-container *ngTemplateOutlet&#x3D;&quot;template&quot;&gt;&lt;/ng-container&gt;
+          &lt;/ng-container&gt;
+
+          &lt;ng-container *ngSwitchCase&#x3D;&quot;&#x27;quote&#x27;&quot;&gt;
+            &lt;ng-container *ngTemplateOutlet&#x3D;&quot;quoteForm&quot;&gt;&lt;/ng-container&gt;
+          &lt;/ng-container&gt;
+
+          &lt;ng-container *ngSwitchCase&#x3D;&quot;&#x27;order&#x27;&quot;&gt;
+            &lt;ng-container *ngTemplateOutlet&#x3D;&quot;orderForm&quot;&gt;&lt;/ng-container&gt;
+          &lt;/ng-container&gt;
+
+          &lt;ng-container *ngSwitchCase&#x3D;&quot;&#x27;uploadFile&#x27;&quot;&gt;
+            &lt;ng-container *ngTemplateOutlet&#x3D;&quot;uploadFileTemplate&quot;&gt;&lt;/ng-container&gt;
+          &lt;/ng-container&gt;
+        &lt;/ng-container&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+
+  &lt;!-- Render cart item fields --&gt;
+  &lt;ng-template #template&gt;
+    &lt;div class&#x3D;&quot;table-responsive px-3 quick-icon-scrollbar&quot;&gt;
+      &lt;table class&#x3D;&quot;table table-borderless&quot;&gt;
+        &lt;thead class&#x3D;&quot;bg-white sticky-top&quot;&gt;
+          &lt;tr&gt;
+            &lt;th scope&#x3D;&quot;col&quot; class&#x3D;&quot;text-start pl-1&quot;&gt;#&lt;/th&gt;
+            &lt;th scope&#x3D;&quot;col&quot; class&#x3D;&quot;text-start pl-2&quot; *ngFor&#x3D;&quot;let field of view?.fieldList&quot;&gt; {{ field?.label }} &lt;/th&gt;
+            &lt;th scope&#x3D;&quot;col&quot; class&#x3D;&quot;text-start pl-1&quot;&gt;&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr *ngFor&#x3D;&quot;let item of view?.item; let i &#x3D; index&quot;&gt;
+            &lt;th scope&#x3D;&quot;row&quot; class&#x3D;&quot;pt-4 pl-1&quot;&gt;{{ i + 1 }}&lt;/th&gt;
+
+            &lt;ng-container *ngFor&#x3D;&quot;let list of view.fieldList&quot;&gt;
+              &lt;td class&#x3D;&quot;col-md-3 pl-1&quot; *ngIf&#x3D;&quot;list?.referenceType &#x3D;&#x3D;&#x3D; &#x27;Product&#x27;; else inputField&quot;&gt;
+                &lt;ng-container *ngIf&#x3D;&quot;productFieldType &#x3D;&#x3D;&#x3D; &#x27;lookup&#x27;; else productText&quot;&gt;
+                  &lt;input type&#x3D;&quot;search&quot; class&#x3D;&quot;form-control&quot;
+                    placeholder&#x3D;&quot;{{ &#x27;HEADER.ENTER_PRODUCT_TO_QUICK_ADD&#x27; | translate}}&quot;
+                    (typeaheadLoading)&#x3D;&quot;typeaheadLoading &#x3D; $event&quot;
+                    (typeaheadOnSelect)&#x3D;&quot;typeaheadOnSelect($event, item, list?.result)&quot;
+                    [typeaheadIsFirstItemActive]&#x3D;&quot;false&quot; [typeaheadItemTemplate]&#x3D;&quot;typeAheadItem&quot;
+                    [typeahead]&#x3D;&quot;typeahead$&quot; [typeaheadOptionsLimit]&#x3D;&quot;5&quot; minlength&#x3D;&quot;2&quot; [typeaheadWaitMs]&#x3D;&quot;1000&quot;
+                    [typeaheadOptionField]&#x3D;&quot;Name&quot; [(ngModel)]&#x3D;&quot;item._metadata.typheaheadSelection&quot;
+                    (ngModelChange)&#x3D;&quot;changeProductValue($event, item, list?.result)&quot; name&#x3D;&quot;searchQuery&quot;
+                    (typeaheadNoResults)&#x3D;&quot;typeaheadNoResults($event, item)&quot; #searchBox aptAutoFocus
+                    autocomplete&#x3D;&quot;off&quot; /&gt;
+
+                  &lt;small class&#x3D;&quot;media w-100 py-2 pl-2 text-danger&quot;
+                    *ngIf&#x3D;&quot;item?._metadata?.noResult &amp;&amp; item?._metadata?.searchQuery?.length &gt;&#x3D; 3 &amp;&amp; !typeaheadLoading&quot;&gt;
+                    {{ &quot;COMMON.NO_PRODUCT&quot; | translate }}
+                  &lt;/small&gt;
+
+                  &lt;small class&#x3D;&quot;media w-100 py-2 pl-2&quot;
+                    *ngIf&#x3D;&quot;item?._metadata?.pickValue &amp;&amp; item?._metadata?.searchQuery?.length &gt;&#x3D; 3 &amp;&amp; !typeaheadLoading&quot;&gt;{{
+                    &quot;COMMON.PICKVALUE&quot; | translate }}
+                  &lt;/small&gt;
+                &lt;/ng-container&gt;
+
+                &lt;ng-template #productText&gt;
+                  &lt;apt-input-field [entity]&#x3D;&quot;item&quot; [field]&#x3D;&quot;&#x27;Name&#x27;&quot; [showLabel]&#x3D;&quot;false&quot;
+                    [(ngModel)]&#x3D;&quot;item._metadata.searchQuery&quot; (keyup)&#x3D;&quot;loadDataDebounce($event, item, list?.result)&quot;
+                    [placeholder]&#x3D;&quot;&#x27;HEADER.SEARCH_BY_CODE&#x27; | translate&quot;
+                    [overrideDefaultFormValidation]&#x3D;&quot;item._metadata.errorMessage !&#x3D;&#x3D; null&quot;
+                    [errorMsg]&#x3D;&quot;item._metadata.errorMessage&quot;&gt;
+                  &lt;/apt-input-field&gt;
+                &lt;/ng-template&gt;
+              &lt;/td&gt;
+
+              &lt;ng-template #inputField&gt;
+                &lt;td class&#x3D;&quot;col-md-3 pl-1&quot;&gt;
+                  &lt;apt-input-field class&#x3D;&quot;show&quot; [entity]&#x3D;&quot;item&quot; [field]&#x3D;&quot;list?.result&quot; [showLabel]&#x3D;&quot;false&quot;
+                    [minVal]&#x3D;&quot;list?.result &#x3D;&#x3D;&#x3D; &#x27;Quantity&#x27; ? 1 : 0&quot; [(ngModel)]&#x3D;&quot;item[list?.result]&quot;
+                    [customStyling]&#x3D;&quot;list?.type &#x3D;&#x3D;&#x3D; &#x27;Picklist&#x27; ? &#x27;180px&#x27; : none&quot;
+                    (ngModelChange)&#x3D;&quot;changeValue($event, item, list?.result)&quot;
+                    [errorMsg]&#x3D;&quot;list?.result &#x3D;&#x3D;&#x3D; &#x27;Quantity&#x27; ? &#x27;ERROR.INVALID_QUANTITY&#x27; : &#x27;ERROR.NEGATIVE_VALUE&#x27;&quot;&gt;
+                  &lt;/apt-input-field&gt;
+                &lt;/td&gt;
+              &lt;/ng-template&gt;
+            &lt;/ng-container&gt;
+
+            &lt;td&gt;
+              &lt;button class&#x3D;&quot;btn btn-link text-primary pl-0&quot; type&#x3D;&quot;button&quot; (click)&#x3D;&quot;removeItem(item, view)&quot;&gt;
+                &lt;i class&#x3D;&quot;fas fa-times-circle&quot;&gt;&lt;/i&gt;
+              &lt;/button&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+
+      &lt;button class&#x3D;&quot;btn btn-link text-primary btn-icon pb-3&quot; type&#x3D;&quot;button&quot; (click)&#x3D;&quot;addItem(view)&quot;&gt;
+        &lt;i class&#x3D;&quot;fas fa-plus-circle mx-1&quot;&gt;&lt;/i&gt;
+        {{ &quot;COMMON.ADD_PRODUCT&quot; | translate }}
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div *ngIf&#x3D;&quot;showTemplate &#x3D;&#x3D;&#x3D; &#x27;cart&#x27;&quot; class&#x3D;&quot;border-top d-flex&quot; [ngClass]&#x3D;&quot;allowBulkUpload ? &#x27;justify-content-between&#x27; : &#x27;justify-content-end&#x27; &quot;&gt;
+      &lt;div class&#x3D;&quot;pt-3&quot; *ngIf&#x3D;&quot;allowBulkUpload&quot;&gt;
+        &lt;button class&#x3D;&quot;btn btn-link px-3&quot; tooltip&#x3D;&quot;{{ &#x27;QUICK_ADD.BULK_UPLOAD_TOOLTIP&#x27; | translate }}&quot; container&#x3D;&quot;body&quot;
+          [adaptivePosition]&#x3D;&quot;false&quot; (click)&#x3D;&quot;showFileUploadTemplate()&quot;&gt;{{ &quot;QUICK_ADD.BULK_UPLOAD&quot; | translate }}
+          &lt;i class&#x3D;&quot;fas fa-info-circle text-muted&quot;&gt;&lt;/i&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;pt-3&quot; *ngIf&#x3D;&quot;instanceObject(businessObject) &#x3D;&#x3D;&#x3D; &#x27;cart&#x27;&quot;&gt;
+        &lt;button class&#x3D;&quot;btn btn-primary btn-raised px-1 m-0&quot; [disabled]&#x3D;&quot;isItemSelected(view)&quot; [ladda]&#x3D;&quot;loading&quot;
+          (click)&#x3D;&quot;handleAddToCart(view)&quot;&gt;
+          {{ title | translate }}
+        &lt;/button&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;pt-3&quot; *ngIf&#x3D;&quot;instanceObject(businessObject) !&#x3D; &#x27;cart&#x27;&quot;&gt;
+        &lt;button class&#x3D;&quot;btn btn-primary btn-raised px-1 m-0&quot; [disabled]&#x3D;&quot;isItemSelected(view)&quot; [ladda]&#x3D;&quot;loading&quot;
+          (click)&#x3D;&quot;nextPage(view, bOView)&quot;&gt;
+          {{ title | translate }}
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+
+  &lt;!-- Render create quote form --&gt;
+  &lt;ng-template #quoteForm&gt;
+    &lt;div class&#x3D;&quot;card border-0&quot;&gt;
+      &lt;div class&#x3D;&quot;card-body py-2&quot;&gt;
+        &lt;div class&#x3D;&quot;row&quot;&gt;
+          &lt;div class&#x3D;&quot;col-md-6&quot; *ngFor&#x3D;&quot;let list of bOView?.fieldList&quot;&gt;
+            &lt;div *ngIf&#x3D;&quot;!allPresetFields[list?.result]; else showQuoteReadOnly&quot;&gt;
+              &lt;apt-input-field [entity]&#x3D;&quot;bOView?.item&quot; [field]&#x3D;&quot;list?.result&quot; [(ngModel)]&#x3D;&quot;bOView?.item[list?.result]&quot;
+                [required]&#x3D;&quot;fieldConfigMap[list?.result]?.required&quot;
+                [lookupOptions]&#x3D;&quot;fieldConfigMap[list?.result]?.lookupOptions&quot;
+                (ngModelChange)&#x3D;&quot;changeHeaderValue($event, bOView?.item, list?.result)&quot; [showLabel]&#x3D;&quot;true&quot;
+                [errorMsg]&#x3D;&quot;fieldConfigMap[list?.result]?.errorMsg&quot;&gt;
+              &lt;/apt-input-field&gt;
+            &lt;/div&gt;
+            &lt;ng-template #showQuoteReadOnly&gt;
+              &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                &lt;apt-output-field [record]&#x3D;&quot;bOView?.item&quot; [field]&#x3D;&quot;list?.result&quot; [editable]&#x3D;&quot;false&quot;&gt;&lt;/apt-output-field&gt;
+              &lt;/div&gt;
+            &lt;/ng-template&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;border-top d-flex justify-content-end pt-3 pb-1 mx-2&quot;&gt;
+      &lt;button class&#x3D;&quot;btn btn-link text-primary&quot; *ngIf&#x3D;&quot;showTemplate &#x3D;&#x3D;&#x3D; &#x27;quote&#x27;&quot; [disabled]&#x3D;&quot;cancelDisabled&quot;
+        (click)&#x3D;&quot;actionType &#x3D;&#x3D;&#x3D; &#x27;quick-quote&#x27; ? closeModal() : showTemplate &#x3D; &#x27;cart&#x27;&quot;&gt;
+        {{ &quot;COMMON.CANCEL&quot; | translate }}
+      &lt;/button&gt;
+
+      &lt;button class&#x3D;&quot;btn btn-primary btn-raised px-1 m-0&quot; [disabled]&#x3D;&quot;disabled&quot; *ngIf&#x3D;&quot;showTemplate &#x3D;&#x3D;&#x3D; &#x27;quote&#x27;&quot;
+        [ladda]&#x3D;&quot;loading&quot; (click)&#x3D;&quot;handleAddToCart(view, bOView)&quot;&gt;
+        {{ &quot;COMMON.REQUEST_QUOTE&quot; | translate }}
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+
+  &lt;!-- Render create order form --&gt;
+  &lt;ng-template #orderForm&gt;
+    &lt;div class&#x3D;&quot;card border-0&quot;&gt;
+      &lt;div class&#x3D;&quot;card-body py-0&quot;&gt;
+        &lt;div class&#x3D;&quot;row&quot;&gt;
+          &lt;div class&#x3D;&quot;col-md-6&quot; *ngFor&#x3D;&quot;let list of bOView?.fieldList&quot;&gt;
+            &lt;div *ngIf&#x3D;&quot;!allPresetFields[list?.result]; else showOrderReadOnly&quot;&gt;
+              &lt;apt-input-field [entity]&#x3D;&quot;bOView?.item&quot; [field]&#x3D;&quot;list?.result&quot; [(ngModel)]&#x3D;&quot;bOView?.item[list?.result]&quot;
+                [required]&#x3D;&quot;fieldConfigMap[list?.result]?.required&quot;
+                [lookupOptions]&#x3D;&quot;fieldConfigMap[list?.result]?.lookupOptions&quot;
+                (ngModelChange)&#x3D;&quot;changeHeaderValue($event, bOView?.item, list?.result)&quot; [showLabel]&#x3D;&quot;true&quot;
+                [errorMsg]&#x3D;&quot;fieldConfigMap[list?.result]?.errorMsg&quot;&gt;
+              &lt;/apt-input-field&gt;
+            &lt;/div&gt;
+
+            &lt;ng-template #showOrderReadOnly&gt;
+              &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                &lt;apt-output-field [record]&#x3D;&quot;bOView?.item&quot; [field]&#x3D;&quot;list?.result&quot; [editable]&#x3D;&quot;false&quot;&gt;&lt;/apt-output-field&gt;
+              &lt;/div&gt;
+            &lt;/ng-template&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;border-top d-flex justify-content-end pt-3 pb-1 mx-3&quot;&gt;
+      &lt;button class&#x3D;&quot;btn btn-link text-primary&quot; *ngIf&#x3D;&quot;showTemplate &#x3D;&#x3D;&#x3D; &#x27;order&#x27;&quot; [disabled]&#x3D;&quot;cancelDisabled&quot;
+        (click)&#x3D;&quot;showTemplate &#x3D; &#x27;cart&#x27;&quot;&gt;
+        {{ &quot;COMMON.CANCEL&quot; | translate }}
+      &lt;/button&gt;
+
+      &lt;button class&#x3D;&quot;btn btn-primary btn-raised px-1 m-0&quot; [disabled]&#x3D;&quot;disabled&quot; *ngIf&#x3D;&quot;showTemplate &#x3D;&#x3D;&#x3D; &#x27;order&#x27;&quot;
+        [ladda]&#x3D;&quot;loading&quot; (click)&#x3D;&quot;handleAddToCart(view, bOView)&quot;&gt;
+        {{ &quot;COMMON.PLACE_ORDER&quot; | translate }}
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+
+  &lt;!-- Render product search results --&gt;
+  &lt;ng-template #typeAheadItem let-model&#x3D;&quot;item&quot; let-index&#x3D;&quot;index&quot; let-last&#x3D;&quot;last&quot; let-match&#x3D;&quot;match&quot;&gt;
+    &lt;div class&#x3D;&quot;media w-100 p-2&quot; (click)&#x3D;&quot;onTemplateMatch(match)&quot;&gt;
+      &lt;img class&#x3D;&quot;mr-3 align-self-center thumbnail&quot; [src]&#x3D;&quot;model.IconId | image : true : true : model.Id&quot;
+        [alt]&#x3D;&quot;model.IconId&quot; /&gt;
+
+      &lt;div class&#x3D;&quot;media-body truncate&quot;&gt;
+        &lt;h6 class&#x3D;&quot;m-0&quot;&gt;{{ model?.Name }}&lt;/h6&gt;
+        &lt;small class&#x3D;&quot;d-block&quot;&gt;{{ model?.ProductCode }}&lt;/small&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+
+  &lt;!-- Template to show confirmation modal for quote/order creation --&gt;
+  &lt;ng-template #confirmationTemplate&gt;
+    &lt;div class&#x3D;&quot;modal-header align-items-center d-flex flex-row-reverse p-0 mx-3 mt-3 border-bottom border-secondary&quot;&gt;
+      &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;close close-button pull-right pr-0&quot; aria-label&#x3D;&quot;Close&quot;
+        (click)&#x3D;&quot;confirmationModal.hide()&quot;&gt;
+        &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;modal-body bg-white d-flex flex-column justify-content-center py-4&quot;&gt;
+      &lt;h6 *ngIf&#x3D;&quot;instanceObject(businessObject) &#x3D;&#x3D;&#x3D; &#x27;quote&#x27;; else orderRequest&quot;
+        class&#x3D;&quot;modal-title pull-left font-weight-bold pb-3&quot;&gt;
+        {{ &quot;QUOTE_CONFIRMATION_MODAL.QUOTE_REQUEST&quot; | translate }}
+      &lt;/h6&gt;
+
+      &lt;ng-template #orderRequest&gt;
+        &lt;h6 class&#x3D;&quot;modal-title pull-left font-weight-bold pb-3&quot;&gt;
+          {{ &quot;MANAGE_CART.CART_SUMMARY.CHECKOUT&quot; | translate }}
+        &lt;/h6&gt;
+      &lt;/ng-template&gt;
+      &lt;p class&#x3D;&quot;text-center&quot;&gt;
+        &lt;strong&gt;{{ &quot;MODAL.THANK_YOU&quot; | translate }}
+
+          {{ confirmation?.CreatedBy?.Name }}!&lt;/strong&gt;
+      &lt;/p&gt;
+
+      &lt;ng-container *ngIf&#x3D;&quot;instanceObject(businessObject) &#x3D;&#x3D;&#x3D; &#x27;quote&#x27;; else orderName&quot;&gt;
+        &lt;small class&#x3D;&quot;text-center&quot; [translate]&#x3D;&quot;&#x27;QUOTE_CONFIRMATION_MODAL.QUOTE_CONFIRM_MSG&#x27;&quot;
+          [translateParams]&#x3D;&quot;{ Sellername: confirmation?.CreatedBy?.Name }&quot;&gt;&lt;/small&gt;
+
+        &lt;small class&#x3D;&quot;text-center&quot; *ngIf&#x3D;&quot;confirmation?.RFPResponseDueDate&quot; [translate]&#x3D;&quot;
+            &#x27;QUOTE_CONFIRMATION_MODAL.QUOTE_CONFIRMATION_MSG_WITH_RFP&#x27;
+          &quot; [translateParams]&#x3D;&quot;{
+            RFP_value: confirmation.RFPResponseDueDate | date : &#x27;yyyy-MM-dd&#x27;
+          }&quot;&gt;&lt;/small&gt;
+
+        &lt;h5 class&#x3D;&quot;text-center my-3&quot;&gt;
+          {{ &quot;QUOTE_CONFIRMATION_MODAL.QUOTE_CONFIRMATION_NO&quot; | translate }}
+
+          {{ confirmation.Name }}
+        &lt;/h5&gt;
+
+        &lt;button class&#x3D;&quot;btn btn-outline-primary w-25 mx-auto&quot; (click)&#x3D;&quot;closeConfirmationModal(confirmation)&quot;&gt;
+          {{ &quot;QUOTE_CONFIRMATION_MODAL.REVIEW_YOUR_QUOTE&quot; | translate }}
+        &lt;/button&gt;
+      &lt;/ng-container&gt;
+
+      &lt;ng-template #orderName&gt;
+        &lt;small class&#x3D;&quot;text-center&quot; *ngIf&#x3D;&quot;confirmation?.PrimaryContact?.Email; else noEmail&quot;
+          [translate]&#x3D;&quot;&#x27;CART.SUCCESSFUL_ORDER_CREATION_MESSAGE&#x27;&quot; [translateParams]&#x3D;&quot;{
+            emailAddress: confirmation?.PrimaryContact?.Email
+          }&quot;&gt;&lt;/small&gt;
+
+        &lt;ng-template #noEmail&gt;
+          &lt;small class&#x3D;&quot;text-center&quot;&gt;{{
+            &quot;CART.SUCCESSFUL_ORDER_CREATION_MESSAGE_WITHOUT_EMAIL&quot; | translate
+            }}&lt;/small&gt;
+        &lt;/ng-template&gt;
+
+        &lt;h5 class&#x3D;&quot;text-center my-3&quot; [translate]&#x3D;&quot;&#x27;DETAILS.GENERATED_ORDER_NUMBER&#x27;&quot;
+          [translateParams]&#x3D;&quot;{ orderName: confirmation?.Name }&quot;&gt;&lt;/h5&gt;
+
+        &lt;button class&#x3D;&quot;btn btn-outline-primary w-25 mx-auto&quot; (click)&#x3D;&quot;closeConfirmationModal(confirmation)&quot;&gt;
+          {{ &quot;DETAILS.VIEW_YOUR_ORDER&quot; | translate }}
+        &lt;/button&gt;
+      &lt;/ng-template&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+  &lt;!-- Template for bulk upload using CSV --&gt;
+  &lt;ng-template #uploadFileTemplate&gt;
+    &lt;div class&#x3D;&quot;container mt-4&quot;&gt;
+      &lt;div class&#x3D;&quot;d-flex justify-content-start ml-2&quot;&gt;
+        &lt;h5&gt;{{ &quot;QUICK_ADD.BULK_UPLOAD&quot; | translate }}&lt;/h5&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Use file-uploader component with custom template --&gt;
+      &lt;apt-file-uploader 
+        [supportedFileTypes]&#x3D;&quot;&#x27;.csv&#x27;&quot;
+        [showActionButtons]&#x3D;&quot;false&quot;
+        [showSelectedFilesList]&#x3D;&quot;false&quot;
+        [showFileUploadProgress]&#x3D;&quot;true&quot;
+        (onFileUpload)&#x3D;&quot;onCsvFileUpload($event, view)&quot;&gt;
+        
+        &lt;!-- Custom upload template matching the original UI --&gt;
+        &lt;ng-template #customUploadTemplate let-context&gt;
+          &lt;div class&#x3D;&quot;d-flex flex-column justify-content-center align-items-center mt-2 p-2&quot;&gt;
+            &lt;!-- File Upload Area --&gt;
+            &lt;div *ngIf&#x3D;&quot;progress &#x3D;&#x3D;&#x3D; 0&quot; class&#x3D;&quot;upload-area w-100&quot; 
+              (dragover)&#x3D;&quot;context.onDragOver($event)&quot;
+              (drop)&#x3D;&quot;context.onFileDrop($event)&quot;&gt;
+              &lt;div class&#x3D;&quot;d-flex flex-column align-items-center p-4&quot;&gt;
+                &lt;button class&#x3D;&quot;btn btn-outline-primary mb-1&quot; (click)&#x3D;&quot;context.fileInput.click()&quot;&gt;
+                  &lt;i class&#x3D;&quot;fas fa-file-upload mr-2&quot;&gt;&lt;/i&gt;{{ &quot;QUICK_ADD.UPLOAD_CSV&quot; | translate }}
+                &lt;/button&gt;
+                &lt;span&gt;{{ &quot;QUICK_ADD.DRAG_DROP_LABEL&quot; | translate }}&lt;/span&gt;
+
+                &lt;!-- Show error message for invalid file type --&gt;
+                &lt;p *ngIf&#x3D;&quot;!context.isSupportedFileType&quot; class&#x3D;&quot;text-danger mt-2&quot;&gt;
+                  {{ &quot;QUICK_ADD.INVALID_FILE_TYPE&quot; | translate }}
+                &lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Progress bar --&gt;
+            &lt;div *ngIf&#x3D;&quot;progress &gt; 0&quot; class&#x3D;&quot;w-100 mt-1&quot;&gt;
+              &lt;span *ngIf&#x3D;&quot;context.selectedFiles?.length &gt; 0&quot;&gt;{{ context.selectedFiles[0]?.name }}&lt;/span&gt;
+              &lt;div class&#x3D;&quot;progress sleek-progress-bar&quot;&gt;
+                &lt;div class&#x3D;&quot;progress-bar progress-bar-striped progress-bar-animated&quot; [ngClass]&#x3D;&quot;{
+                  &#x27;w-100&#x27;: progress &gt;&#x3D; 100,
+                  &#x27;w-75&#x27;: progress &gt;&#x3D; 75 &amp;&amp; progress &lt; 100,
+                  &#x27;w-50&#x27;: progress &gt;&#x3D; 50 &amp;&amp; progress &lt; 75,
+                  &#x27;w-25&#x27;: progress &gt;&#x3D; 25 &amp;&amp; progress &lt; 50,
+                  &#x27;w-0&#x27;: progress &lt; 25
+                }&quot; role&#x3D;&quot;progressbar&quot;&gt;&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Template download link --&gt;
+            &lt;div class&#x3D;&quot;my-4 d-flex flex-column align-items-center&quot;&gt;
+              &lt;span class&#x3D;&quot;font-weight-bold&quot;&gt;{{ &quot;QUICK_ADD.NEED_TEMPLATE&quot; | translate }}&lt;/span&gt;
+              &lt;span&gt;
+                &lt;button class&#x3D;&quot;btn btn-link pr-1 pt-1&quot; (click)&#x3D;&quot;downloadTemplate($event)&quot;&gt;
+                  {{ &quot;QUICK_ADD.DOWNLOAD_TEMPLATE&quot; | translate }}
+                &lt;/button&gt;
+                {{ &quot;QUICK_ADD.TEMPLATE_INSTRUCTION&quot; | translate }}
+              &lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/ng-template&gt;
+      &lt;/apt-file-uploader&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;border-top d-flex justify-content-end pt-3 pb-1&quot;&gt;
+      &lt;button class&#x3D;&quot;btn btn-link text-primary&quot; *ngIf&#x3D;&quot;showTemplate &#x3D;&#x3D;&#x3D; &#x27;uploadFile&#x27;&quot; (click)&#x3D;&quot;showTemplate &#x3D; &#x27;cart&#x27;&quot;&gt;
+        {{ &quot;COMMON.CANCEL&quot; | translate }}
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./quick-add.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">div.dropdown-menu {
+  span {
+    cursor: pointer;
+  }
+}
+
+.quick-icon-scrollbar {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+  ::-webkit-scrollbar {
+    width: 0.375rem !important;
+    height: 0.375rem !important;
+    background: #fff !important;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #A8B2BB !important;
+    border-radius: 0.25rem !important;
+}
+
+.quick-icon {
+  height: 2.1rem;
+  width: 2.2rem;
+}
+
+.upload-area {
+  border-style: dashed;
+  border-width: 1px;
+}
+
+.sleek-progress-bar {
+  height: 0.5rem !important;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div *ngIf="view$ | async as view" [autoClose]="false">  <div *ngIf="layout === \'modal\'; else embedLayout">    <div class="btn-group">      <!-- Quick add icon with dropdown options -->      <div *ngIf="actionType === \'quick-add\'">        <button type="button" placement="auto" title="{{ \'COMMON.QUICK_ADD_TOOLTIP\' | translate }}"          class="btn btn-link text-primary btn-raised dropdown-toggle border-0 bg-white px-0 py-0"          data-toggle="dropdown" aria-expanded="false" [ngClass]="buttonClass">          <img src="assets/icons/quick-add.svg" alt="quick-add" class="quick-icon">        </button>        <div class="dropdown-menu dropdown-menu-right border mt-2">          <span class="dropdown-item py-2" (click)="setBusinessObjectValue(\'cart\')">{{ "COMMON.QUICK_ADD" | translate            }}</span>          <span class="dropdown-item py-2" (click)="setBusinessObjectValue(\'order\')">{{ "COMMON.QUICK_ORDER" | translate            }}</span>          <span class="dropdown-item py-2" (click)="setBusinessObjectValue(\'quote\')">{{ "COMMON.QUICK_QUOTE" | translate            }}</span>        </div>      </div>      <!-- Quick quote icon -->      <div *ngIf="actionType === \'quick-quote\'">        <button type="button" class="btn btn-primary text-nowrap" [ngClass]="buttonClass"          (click)="setBusinessObjectValue(\'quote\')">{{ \'MY_ACCOUNT.QUOTE_LIST.CREATE_NEW\' | translate}}        </button>      </div>    </div>    <!-- Template for modal layout -->    <ng-template #modalTemplate>      <div class="modal-header align-items-center d-flex flex-row-reverse pt-0 mt-3 px-0 pb-2">        <button type="button" class="close close-button pull-right" aria-label="Close" (click)="closeModal()">          <span aria-hidden="true">&times;</span>        </button>      </div>      <div class="modal-body d-flex flex-column justify-content-center pb-3 bg-white scrollbar">        <h6 class="modal-title pull-left font-weight-bold py-2 px-3">          {{ title | translate }}        </h6>        <ng-container [ngSwitch]="showTemplate">          <ng-container *ngSwitchCase="\'cart\'">            <ng-container *ngTemplateOutlet="template"></ng-container>          </ng-container>          <ng-container *ngSwitchCase="\'quote\'">            <ng-container *ngTemplateOutlet="quoteForm"></ng-container>          </ng-container>          <ng-container *ngSwitchCase="\'order\'">            <ng-container *ngTemplateOutlet="orderForm"></ng-container>          </ng-container>          <ng-container *ngSwitchCase="\'uploadFile\'">            <ng-container *ngTemplateOutlet="uploadFileTemplate"></ng-container>          </ng-container>        </ng-container>      </div>    </ng-template>  </div>  <!-- Template for embedded layout/inline form -->  <ng-template #embedLayout>    <div class="container-fluid py-4 d-flex justify-content-center">      <div class="d-block card">        <div class="pb-2">          <h5 class="p-2">{{ title | translate }}</h5>        </div>        <ng-container [ngSwitch]="showTemplate">          <ng-container *ngSwitchCase="\'cart\'">            <ng-container *ngTemplateOutlet="template"></ng-container>          </ng-container>          <ng-container *ngSwitchCase="\'quote\'">            <ng-container *ngTemplateOutlet="quoteForm"></ng-container>          </ng-container>          <ng-container *ngSwitchCase="\'order\'">            <ng-container *ngTemplateOutlet="orderForm"></ng-container>          </ng-container>          <ng-container *ngSwitchCase="\'uploadFile\'">            <ng-container *ngTemplateOutlet="uploadFileTemplate"></ng-container>          </ng-container>        </ng-container>      </div>    </div>  </ng-template>  <!-- Render cart item fields -->  <ng-template #template>    <div class="table-responsive px-3 quick-icon-scrollbar">      <table class="table table-borderless">        <thead class="bg-white sticky-top">          <tr>            <th scope="col" class="text-start pl-1">#</th>            <th scope="col" class="text-start pl-2" *ngFor="let field of view?.fieldList"> {{ field?.label }} </th>            <th scope="col" class="text-start pl-1"></th>          </tr>        </thead>        <tbody>          <tr *ngFor="let item of view?.item; let i = index">            <th scope="row" class="pt-4 pl-1">{{ i + 1 }}</th>            <ng-container *ngFor="let list of view.fieldList">              <td class="col-md-3 pl-1" *ngIf="list?.referenceType === \'Product\'; else inputField">                <ng-container *ngIf="productFieldType === \'lookup\'; else productText">                  <input type="search" class="form-control"                    placeholder="{{ \'HEADER.ENTER_PRODUCT_TO_QUICK_ADD\' | translate}}"                    (typeaheadLoading)="typeaheadLoading = $event"                    (typeaheadOnSelect)="typeaheadOnSelect($event, item, list?.result)"                    [typeaheadIsFirstItemActive]="false" [typeaheadItemTemplate]="typeAheadItem"                    [typeahead]="typeahead$" [typeaheadOptionsLimit]="5" minlength="2" [typeaheadWaitMs]="1000"                    [typeaheadOptionField]="Name" [(ngModel)]="item._metadata.typheaheadSelection"                    (ngModelChange)="changeProductValue($event, item, list?.result)" name="searchQuery"                    (typeaheadNoResults)="typeaheadNoResults($event, item)" #searchBox aptAutoFocus                    autocomplete="off" />                  <small class="media w-100 py-2 pl-2 text-danger"                    *ngIf="item?._metadata?.noResult && item?._metadata?.searchQuery?.length >= 3 && !typeaheadLoading">                    {{ "COMMON.NO_PRODUCT" | translate }}                  </small>                  <small class="media w-100 py-2 pl-2"                    *ngIf="item?._metadata?.pickValue && item?._metadata?.searchQuery?.length >= 3 && !typeaheadLoading">{{                    "COMMON.PICKVALUE" | translate }}                  </small>                </ng-container>                <ng-template #productText>                  <apt-input-field [entity]="item" [field]="\'Name\'" [showLabel]="false"                    [(ngModel)]="item._metadata.searchQuery" (keyup)="loadDataDebounce($event, item, list?.result)"                    [placeholder]="\'HEADER.SEARCH_BY_CODE\' | translate"                    [overrideDefaultFormValidation]="item._metadata.errorMessage !== null"                    [errorMsg]="item._metadata.errorMessage">                  </apt-input-field>                </ng-template>              </td>              <ng-template #inputField>                <td class="col-md-3 pl-1">                  <apt-input-field class="show" [entity]="item" [field]="list?.result" [showLabel]="false"                    [minVal]="list?.result === \'Quantity\' ? 1 : 0" [(ngModel)]="item[list?.result]"                    [customStyling]="list?.type === \'Picklist\' ? \'180px\' : none"                    (ngModelChange)="changeValue($event, item, list?.result)"                    [errorMsg]="list?.result === \'Quantity\' ? \'ERROR.INVALID_QUANTITY\' : \'ERROR.NEGATIVE_VALUE\'">                  </apt-input-field>                </td>              </ng-template>            </ng-container>            <td>              <button class="btn btn-link text-primary pl-0" type="button" (click)="removeItem(item, view)">                <i class="fas fa-times-circle"></i>              </button>            </td>          </tr>        </tbody>      </table>      <button class="btn btn-link text-primary btn-icon pb-3" type="button" (click)="addItem(view)">        <i class="fas fa-plus-circle mx-1"></i>        {{ "COMMON.ADD_PRODUCT" | translate }}      </button>    </div>    <div *ngIf="showTemplate === \'cart\'" class="border-top d-flex" [ngClass]="allowBulkUpload ? \'justify-content-between\' : \'justify-content-end\' ">      <div class="pt-3" *ngIf="allowBulkUpload">        <button class="btn btn-link px-3" tooltip="{{ \'QUICK_ADD.BULK_UPLOAD_TOOLTIP\' | translate }}" container="body"          [adaptivePosition]="false" (click)="showFileUploadTemplate()">{{ "QUICK_ADD.BULK_UPLOAD" | translate }}          <i class="fas fa-info-circle text-muted"></i>        </button>      </div>      <div class="pt-3" *ngIf="instanceObject(businessObject) === \'cart\'">        <button class="btn btn-primary btn-raised px-1 m-0" [disabled]="isItemSelected(view)" [ladda]="loading"          (click)="handleAddToCart(view)">          {{ title | translate }}        </button>      </div>      <div class="pt-3" *ngIf="instanceObject(businessObject) != \'cart\'">        <button class="btn btn-primary btn-raised px-1 m-0" [disabled]="isItemSelected(view)" [ladda]="loading"          (click)="nextPage(view, bOView)">          {{ title | translate }}        </button>      </div>    </div>  </ng-template>  <!-- Render create quote form -->  <ng-template #quoteForm>    <div class="card border-0">      <div class="card-body py-2">        <div class="row">          <div class="col-md-6" *ngFor="let list of bOView?.fieldList">            <div *ngIf="!allPresetFields[list?.result]; else showQuoteReadOnly">              <apt-input-field [entity]="bOView?.item" [field]="list?.result" [(ngModel)]="bOView?.item[list?.result]"                [required]="fieldConfigMap[list?.result]?.required"                [lookupOptions]="fieldConfigMap[list?.result]?.lookupOptions"                (ngModelChange)="changeHeaderValue($event, bOView?.item, list?.result)" [showLabel]="true"                [errorMsg]="fieldConfigMap[list?.result]?.errorMsg">              </apt-input-field>            </div>            <ng-template #showQuoteReadOnly>              <div class="form-group">                <apt-output-field [record]="bOView?.item" [field]="list?.result" [editable]="false"></apt-output-field>              </div>            </ng-template>          </div>        </div>      </div>    </div>    <div class="border-top d-flex justify-content-end pt-3 pb-1 mx-2">      <button class="btn btn-link text-primary" *ngIf="showTemplate === \'quote\'" [disabled]="cancelDisabled"        (click)="actionType === \'quick-quote\' ? closeModal() : showTemplate = \'cart\'">        {{ "COMMON.CANCEL" | translate }}      </button>      <button class="btn btn-primary btn-raised px-1 m-0" [disabled]="disabled" *ngIf="showTemplate === \'quote\'"        [ladda]="loading" (click)="handleAddToCart(view, bOView)">        {{ "COMMON.REQUEST_QUOTE" | translate }}      </button>    </div>  </ng-template>  <!-- Render create order form -->  <ng-template #orderForm>    <div class="card border-0">      <div class="card-body py-0">        <div class="row">          <div class="col-md-6" *ngFor="let list of bOView?.fieldList">            <div *ngIf="!allPresetFields[list?.result]; else showOrderReadOnly">              <apt-input-field [entity]="bOView?.item" [field]="list?.result" [(ngModel)]="bOView?.item[list?.result]"                [required]="fieldConfigMap[list?.result]?.required"                [lookupOptions]="fieldConfigMap[list?.result]?.lookupOptions"                (ngModelChange)="changeHeaderValue($event, bOView?.item, list?.result)" [showLabel]="true"                [errorMsg]="fieldConfigMap[list?.result]?.errorMsg">              </apt-input-field>            </div>            <ng-template #showOrderReadOnly>              <div class="form-group">                <apt-output-field [record]="bOView?.item" [field]="list?.result" [editable]="false"></apt-output-field>              </div>            </ng-template>          </div>        </div>      </div>    </div>    <div class="border-top d-flex justify-content-end pt-3 pb-1 mx-3">      <button class="btn btn-link text-primary" *ngIf="showTemplate === \'order\'" [disabled]="cancelDisabled"        (click)="showTemplate = \'cart\'">        {{ "COMMON.CANCEL" | translate }}      </button>      <button class="btn btn-primary btn-raised px-1 m-0" [disabled]="disabled" *ngIf="showTemplate === \'order\'"        [ladda]="loading" (click)="handleAddToCart(view, bOView)">        {{ "COMMON.PLACE_ORDER" | translate }}      </button>    </div>  </ng-template>  <!-- Render product search results -->  <ng-template #typeAheadItem let-model="item" let-index="index" let-last="last" let-match="match">    <div class="media w-100 p-2" (click)="onTemplateMatch(match)">      <img class="mr-3 align-self-center thumbnail" [src]="model.IconId | image : true : true : model.Id"        [alt]="model.IconId" />      <div class="media-body truncate">        <h6 class="m-0">{{ model?.Name }}</h6>        <small class="d-block">{{ model?.ProductCode }}</small>      </div>    </div>  </ng-template>  <!-- Template to show confirmation modal for quote/order creation -->  <ng-template #confirmationTemplate>    <div class="modal-header align-items-center d-flex flex-row-reverse p-0 mx-3 mt-3 border-bottom border-secondary">      <button type="button" class="close close-button pull-right pr-0" aria-label="Close"        (click)="confirmationModal.hide()">        <span aria-hidden="true">&times;</span>      </button>    </div>    <div class="modal-body bg-white d-flex flex-column justify-content-center py-4">      <h6 *ngIf="instanceObject(businessObject) === \'quote\'; else orderRequest"        class="modal-title pull-left font-weight-bold pb-3">        {{ "QUOTE_CONFIRMATION_MODAL.QUOTE_REQUEST" | translate }}      </h6>      <ng-template #orderRequest>        <h6 class="modal-title pull-left font-weight-bold pb-3">          {{ "MANAGE_CART.CART_SUMMARY.CHECKOUT" | translate }}        </h6>      </ng-template>      <p class="text-center">        <strong>{{ "MODAL.THANK_YOU" | translate }}          {{ confirmation?.CreatedBy?.Name }}!</strong>      </p>      <ng-container *ngIf="instanceObject(businessObject) === \'quote\'; else orderName">        <small class="text-center" [translate]="\'QUOTE_CONFIRMATION_MODAL.QUOTE_CONFIRM_MSG\'"          [translateParams]="{ Sellername: confirmation?.CreatedBy?.Name }"></small>        <small class="text-center" *ngIf="confirmation?.RFPResponseDueDate" [translate]="            \'QUOTE_CONFIRMATION_MODAL.QUOTE_CONFIRMATION_MSG_WITH_RFP\'          " [translateParams]="{            RFP_value: confirmation.RFPResponseDueDate | date : \'yyyy-MM-dd\'          }"></small>        <h5 class="text-center my-3">          {{ "QUOTE_CONFIRMATION_MODAL.QUOTE_CONFIRMATION_NO" | translate }}          {{ confirmation.Name }}        </h5>        <button class="btn btn-outline-primary w-25 mx-auto" (click)="closeConfirmationModal(confirmation)">          {{ "QUOTE_CONFIRMATION_MODAL.REVIEW_YOUR_QUOTE" | translate }}        </button>      </ng-container>      <ng-template #orderName>        <small class="text-center" *ngIf="confirmation?.PrimaryContact?.Email; else noEmail"          [translate]="\'CART.SUCCESSFUL_ORDER_CREATION_MESSAGE\'" [translateParams]="{            emailAddress: confirmation?.PrimaryContact?.Email          }"></small>        <ng-template #noEmail>          <small class="text-center">{{            "CART.SUCCESSFUL_ORDER_CREATION_MESSAGE_WITHOUT_EMAIL" | translate            }}</small>        </ng-template>        <h5 class="text-center my-3" [translate]="\'DETAILS.GENERATED_ORDER_NUMBER\'"          [translateParams]="{ orderName: confirmation?.Name }"></h5>        <button class="btn btn-outline-primary w-25 mx-auto" (click)="closeConfirmationModal(confirmation)">          {{ "DETAILS.VIEW_YOUR_ORDER" | translate }}        </button>      </ng-template>    </div>  </ng-template>  <!-- Template for bulk upload using CSV -->  <ng-template #uploadFileTemplate>    <div class="container mt-4">      <div class="d-flex justify-content-start ml-2">        <h5>{{ "QUICK_ADD.BULK_UPLOAD" | translate }}</h5>      </div>      <!-- Use file-uploader component with custom template -->      <apt-file-uploader         [supportedFileTypes]="\'.csv\'"        [showActionButtons]="false"        [showSelectedFilesList]="false"        [showFileUploadProgress]="true"        (onFileUpload)="onCsvFileUpload($event, view)">                <!-- Custom upload template matching the original UI -->        <ng-template #customUploadTemplate let-context>          <div class="d-flex flex-column justify-content-center align-items-center mt-2 p-2">            <!-- File Upload Area -->            <div *ngIf="progress === 0" class="upload-area w-100"               (dragover)="context.onDragOver($event)"              (drop)="context.onFileDrop($event)">              <div class="d-flex flex-column align-items-center p-4">                <button class="btn btn-outline-primary mb-1" (click)="context.fileInput.click()">                  <i class="fas fa-file-upload mr-2"></i>{{ "QUICK_ADD.UPLOAD_CSV" | translate }}                </button>                <span>{{ "QUICK_ADD.DRAG_DROP_LABEL" | translate }}</span>                <!-- Show error message for invalid file type -->                <p *ngIf="!context.isSupportedFileType" class="text-danger mt-2">                  {{ "QUICK_ADD.INVALID_FILE_TYPE" | translate }}                </p>              </div>            </div>            <!-- Progress bar -->            <div *ngIf="progress > 0" class="w-100 mt-1">              <span *ngIf="context.selectedFiles?.length > 0">{{ context.selectedFiles[0]?.name }}</span>              <div class="progress sleek-progress-bar">                <div class="progress-bar progress-bar-striped progress-bar-animated" [ngClass]="{                  \'w-100\': progress >= 100,                  \'w-75\': progress >= 75 && progress < 100,                  \'w-50\': progress >= 50 && progress < 75,                  \'w-25\': progress >= 25 && progress < 50,                  \'w-0\': progress < 25                }" role="progressbar"></div>              </div>            </div>            <!-- Template download link -->            <div class="my-4 d-flex flex-column align-items-center">              <span class="font-weight-bold">{{ "QUICK_ADD.NEED_TEMPLATE" | translate }}</span>              <span>                <button class="btn btn-link pr-1 pt-1" (click)="downloadTemplate($event)">                  {{ "QUICK_ADD.DOWNLOAD_TEMPLATE" | translate }}                </button>                {{ "QUICK_ADD.TEMPLATE_INSTRUCTION" | translate }}              </span>            </div>          </div>        </ng-template>      </apt-file-uploader>    </div>    <div class="border-top d-flex justify-content-end pt-3 pb-1">      <button class="btn btn-link text-primary" *ngIf="showTemplate === \'uploadFile\'" (click)="showTemplate = \'cart\'">        {{ "COMMON.CANCEL" | translate }}      </button>    </div>  </ng-template></div></div>'
+    var COMPONENTS = [{'name': 'AddCommentsComponent', 'selector': 'apt-add-comments'},{'name': 'AdditionalInformationComponent', 'selector': 'apt-additional-information'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AlertComponent', 'selector': 'apt-alert'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CaptchaComponent', 'selector': 'apt-captcha'},{'name': 'CartTotalsViewComponent', 'selector': 'app-cart-totals-view'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'ConstraintRuleAlertComponent', 'selector': 'apt-constraint-rule-alert'},{'name': 'ConstraintRuleSidebarComponent', 'selector': 'apt-constraint-rule-sidebar'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DependentPicklistComponent', 'selector': 'apt-dependent-picklist'},{'name': 'DocumentSelectorComponent', 'selector': 'apt-document-selector'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'EmailComposerComponent', 'selector': 'apt-email-composer'},{'name': 'EmailSearchComponent', 'selector': 'apt-email-search'},{'name': 'ErrorPageComponent', 'selector': 'apt-error-page'},{'name': 'FacetFilterComponent', 'selector': 'apt-facet-filter'},{'name': 'FavoriteFilterComponent', 'selector': 'apt-favorite-filter'},{'name': 'FavoriteModalComponent', 'selector': 'apt-favorite-modal'},{'name': 'FilesComponent', 'selector': 'apt-files'},{'name': 'FileUploaderComponent', 'selector': 'apt-file-uploader'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineitemCardComponent', 'selector': 'apt-lineitem-card'},{'name': 'LineItemMenuComponent', 'selector': 'apt-line-item-menu'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentIntegrationComponent', 'selector': 'apt-payment-integration'},{'name': 'PopoverComponent', 'selector': 'apt-popover'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceModalComponent', 'selector': 'apt-price-modal'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductAttributeComponent', 'selector': 'apt-product-attribute'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductSearchComponent', 'selector': 'apt-product-search'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'PromotionModalComponent', 'selector': 'apt-pr-modal'},{'name': 'QuickAddComponent', 'selector': 'app-quick-add'},{'name': 'RecipientsComponent', 'selector': 'apt-recipients'},{'name': 'ReplaceProductModalComponent', 'selector': 'apt-replace-product-modal'},{'name': 'RevalidateCartModalComponent', 'selector': 'apt-revalidate-cart-modal'},{'name': 'SelectAllComponent', 'selector': 'apt-select-all'},{'name': 'SendForSignatureComponent', 'selector': 'apt-send-for-signature'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'},{'name': 'TableRowSubItemComponent', 'selector': 'apt-table-row-sub-item'},{'name': 'ViewCommentsComponent', 'selector': 'apt-view-comments'},{'name': 'WizardComponent', 'selector': 'apt-wizard'}];
+    var DIRECTIVES = [{'name': 'AutoFocusDirective', 'selector': '[aptAutoFocus]'}];
+    var ACTUAL_COMPONENT = {'name': 'QuickAddComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'QuickAddComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

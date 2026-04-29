@@ -1,0 +1,922 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Conga Digital Commerce 202604.2.0 on Conga Revenue Lifecycle Platform</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Conga Digital Commerce 202604.2.0 on Conga Revenue Lifecycle Platform</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  LineItemMenuComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/congarevenuecloud/elements/src/lib/line-item-table-row/line-item-menu/line-item-menu.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Line item menu component is used to display configurable view of cart item fields for a user on cart page.</p>
+<h3>Preview</h3>
+<img src="../res/line-item-menu.png" style="max-width: 100%">
+<h3>Usage</h3>
+
+<div><pre class="line-numbers"><code class="language-typescript">import { LineItemTableRowModule } from &#39;&#64;congarevenuecloud/elements&#39;;
+
+&#64;NgModule({
+imports: [LineItemTableRowModule, ...]
+})
+export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code class="language-html">```typescript
+&lt;apt-line-item-menu&gt;&lt;/apt-line-item-menu&gt;</code></pre></div><div><pre class="line-numbers"><code class="language-none"></code></pre></div>
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>apt-line-item-menu</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./line-item-menu.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./line-item-menu.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#allowSwitchView" >allowSwitchView</a>
+                            </li>
+                            <li>
+                                <a href="#cartItem" >cartItem</a>
+                            </li>
+                            <li>
+                                <a href="#isGuest" >isGuest</a>
+                            </li>
+                            <li>
+                                <a href="#loading" >loading</a>
+                            </li>
+                            <li>
+                                <a href="#menuItems$" >menuItems$</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getView" >getView</a>
+                            </li>
+                            <li>
+                                <a href="#handleCheckbox" >handleCheckbox</a>
+                            </li>
+                            <li>
+                                <a href="#isValidCartItemField" >isValidCartItemField</a>
+                            </li>
+                            <li>
+                                <a href="#updateSelections" >updateSelections</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(mappingService: <a href="../injectables/UserViewMappingService.html" target="_self">UserViewMappingService</a>, userService: <a href="../injectables/UserService.html" target="_self">UserService</a>, exceptionService: <a href="../injectables/ExceptionService.html" target="_self">ExceptionService</a>)</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>mappingService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UserViewMappingService.html" target="_self" >UserViewMappingService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>userService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UserService.html" target="_self" >UserService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>exceptionService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ExceptionService.html" target="_self" >ExceptionService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getView"></a>
+                    <span class="name">
+                        <span ><b>getView</b></span>
+                        <a href="#getView"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getView(switchView: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Fetches view based on the switch condition.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>switchView</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>A boolean value that determines which view to retrieve. If true, it retrieves the user view else the default flow view.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleCheckbox"></a>
+                    <span class="name">
+                        <span ><b>handleCheckbox</b></span>
+                        <a href="#handleCheckbox"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleCheckbox(item: <a href="../interfaces/CartItemView.html" target="_self">CartItemView</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Toggles the selection state of a CartItemView.
+This method changes the isSelected property of the provided CartItemView</p>
+<p>See <a href="../interfaces/CartItemView.html">CartItemView</a> for more details on the structure and fields required.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>item</td>
+                                    <td>
+                                                <code><a href="../interfaces/CartItemView.html" target="_self" >CartItemView</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The CartItemView to toggle the selection for.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isValidCartItemField"></a>
+                    <span class="name">
+                        <span ><b>isValidCartItemField</b></span>
+                        <a href="#isValidCartItemField"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isValidCartItemField(fieldName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Validates whether the provided field name exists in a CartItem object.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fieldName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The name of the field to validate.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>True if the field is a valid field in CartItem, false otherwise.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateSelections"></a>
+                    <span class="name">
+                        <span ><b>updateSelections</b></span>
+                        <a href="#updateSelections"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updateSelections(switchView: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Updates user selections based on the current state of menu items.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>switchView</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>A boolean value that determines which view to retrieve. If true, it retrieves the user view else the default flow view.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="allowSwitchView"></a>
+                    <span class="name">
+                        <span ><b>allowSwitchView</b></span>
+                        <a href="#allowSwitchView"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cartItem"></a>
+                    <span class="name">
+                        <span ><b>cartItem</b></span>
+                        <a href="#cartItem"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/CartItem.html" target="_self" >CartItem</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new CartItem()</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isGuest"></a>
+                    <span class="name">
+                        <span ><b>isGuest</b></span>
+                        <a href="#isGuest"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loading"></a>
+                    <span class="name">
+                        <span ><b>loading</b></span>
+                        <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="menuItems$"></a>
+                    <span class="name">
+                        <span ><b>menuItems$</b></span>
+                        <a href="#menuItems$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>BehaviorSubject&lt;Array&lt;CartItemView&gt;&gt;</code>
+
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;dropdown py-lg-0 py-md-0 pb-sm-1 pb-1&quot; dropdown (onHidden)&#x3D;&quot;updateSelections(allowSwitchView)&quot; [insideClick]&#x3D;&quot;true&quot;&gt;
+  &lt;button id&#x3D;&quot;dropdownLabel&quot; class&#x3D;&quot;dropdown-toggle btn btn-icon btn-link text-primary&quot; dropdownToggle
+    aria-controls&#x3D;&quot;dropdownMenu&quot;&gt;
+    &lt;i class&#x3D;&quot;fa fa-md fa-table mr-1 mt-lg-0 mt-md-0 mt-sm-2 mt-2&quot;&gt;&lt;/i&gt;
+    &lt;label class&#x3D;&quot;pl-1 d-lg-inline-flex d-md-inline-flex d-sm-none d-none text-primary&quot;&gt;{{&#x27;COMMON.EDIT_LAYOUT&#x27; | translate }}&lt;/label&gt;
+  &lt;/button&gt;
+  &lt;div id&#x3D;&quot;dropdownMenu&quot; *dropdownMenu class&#x3D;&quot;dropdown-menu overflow-auto scrollbar py-0 pl-3&quot;
+    aria-labelledby&#x3D;&quot;dropdownLabel&quot;&gt;
+    &lt;span *ngFor&#x3D;&quot;let item of (menuItems$ | async) as items; let i &#x3D; index&quot; class&#x3D;&quot;dropdown-item pb-0&quot;&gt;
+      &lt;div class&#x3D;&quot;ml-2&quot;&gt;
+        &lt;div class&#x3D;&quot;d-flex align-items-center justify-content-between&quot;&gt;
+          &lt;div class&#x3D;&quot;d-flex align-items-center flex-wrap&quot;&gt;
+            &lt;input class&#x3D;&quot;form-check-input checkbox mt-1 mr-2&quot; type&#x3D;&quot;checkbox&quot; [checked]&#x3D;&quot;item.isSelected&quot;
+              (change)&#x3D;&quot;handleCheckbox(item)&quot; [value]&#x3D;&quot;item?.id&quot; [id]&#x3D;&quot;item?.id&quot; /&gt;
+            &lt;ng-container *ngIf&#x3D;&quot;isValidCartItemField(item.fieldName); else fallback&quot;&gt;
+              &lt;apt-output-field [labelOnly]&#x3D;&quot;true&quot; [record]&#x3D;&quot;cartItem&quot; [field]&#x3D;&quot;item.fieldName&quot; [label]&#x3D;&quot;item.fieldName&quot;
+                [editable]&#x3D;&quot;false&quot; [labelClass]&#x3D;&quot;&#x27;mt-0&#x27;&quot;&gt;&lt;/apt-output-field&gt;
+            &lt;/ng-container&gt;
+
+            &lt;ng-template #fallback&gt;
+              &lt;label *ngIf&#x3D;&quot;!isValidCartItemField(item.fieldName)&quot; class&#x3D;&quot;form-check-label mt-1&quot;
+                [class.font-weight-bold]&#x3D;&quot;item.isSelected&quot; [for]&#x3D;&quot;item?.id&quot;&gt;
+                {{ item?.label }}
+              &lt;/label&gt;
+            &lt;/ng-template&gt;
+          &lt;/div&gt;
+          &lt;span class&#x3D;&quot;float-right&quot; *ngIf&#x3D;&quot;item.isSelected&quot;&gt;
+            &lt;i class&#x3D;&quot;fas fa-arrow-up&quot; (click)&#x3D;&quot;moveItemUp(items, i)&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+            &lt;i class&#x3D;&quot;pl-2 fas fa-arrow-down&quot; (click)&#x3D;&quot;moveItemDown(items, i)&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+          &lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/span&gt;
+    &lt;div class&#x3D;&quot;navbar border-0 p-0&quot;&gt;
+      &lt;div class&#x3D;&quot;custom-control custom-checkbox px-1 pb-1 border-top w-100&quot;&gt;
+        &lt;label class&#x3D;&quot;w-100&quot;&gt;{{ &#x27;COMMON.MANAGE_VIEW&#x27; | translate }}&lt;/label&gt;
+        &lt;div class&#x3D;&quot;row&quot;&gt;
+          &lt;div class&#x3D;&quot;col&quot;&gt;
+            &lt;div class&#x3D;&quot;view-selection d-flex align-items-center&quot;&gt;
+              &lt;small class&#x3D;&quot;mb-0 d-flex align-items-center&quot;&gt;
+                &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;view&quot; [value]&#x3D;&quot;&#x27;default&#x27;&quot; [checked]&#x3D;&quot;!allowSwitchView&quot; (change)&#x3D;&quot;switchView()&quot;
+                  [disabled]&#x3D;&quot;isGuest&quot;&gt;
+                &lt;span class&#x3D;&quot;px-1&quot;&gt;{{ &#x27;COMMON.DEFAULT_VIEW&#x27; | translate }}&lt;/span&gt;
+              &lt;/small&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;d-flex align-items-center&quot;&gt;
+              &lt;small class&#x3D;&quot;mb-0 d-flex align-items-center&quot;&gt;
+                &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;view&quot; [value]&#x3D;&quot;&#x27;myView&#x27;&quot; [checked]&#x3D;&quot;allowSwitchView&quot;
+                  (change)&#x3D;&quot;switchView(&#x27;myView&#x27;)&quot; [disabled]&#x3D;&quot;isGuest&quot;&gt;
+                &lt;span class&#x3D;&quot;px-1&quot;&gt;{{ &#x27;COMMON.MY_VIEW&#x27; | translate }}&lt;/span&gt;
+              &lt;/small&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div *ngIf&#x3D;&quot;allowSwitchView&quot; class&#x3D;&quot;col text-right align-self-end pb-1&quot;&gt;
+            &lt;button *ngIf&#x3D;&quot;allowSwitchView&quot; class&#x3D;&quot;btn btn-outline-primary btn-sm px-3&quot; type&#x3D;&quot;button&quot; [ladda]&#x3D;&quot;loading&quot;
+              data-style&#x3D;&quot;zoom-in&quot; data-spinner-color&#x3D;&quot;black&quot; (click)&#x3D;&quot;saveUserView()&quot;&gt;
+              &lt;small&gt;{{ &#x27;COMMON.SAVE&#x27; | translate }}&lt;/small&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./line-item-menu.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.dropdown-menu&gt;span:hover {
+  background-color: rgb(195, 230, 203);
+
+  div.ml-2 {
+    span.float-right {
+      i.fas {
+        color: rgb(0, 0, 0);
+      }
+    }
+  }
+}
+
+i.fas {
+  color: rgb(255, 255, 255);
+}
+
+.dropdown-menu {
+  min-width: 15rem;
+  max-height: 17rem;
+}
+
+button {
+  font-size: small;
+}
+
+.dropdown-menu {
+   transform: translateX(-70%) !important;
+  .dropdown-item {
+    line-height: 1.6;
+  }
+}
+
+
+  ::-webkit-scrollbar {
+    width: 0.375rem !important;
+    height: 0.375rem !important;
+    background: #fff !important;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #A8B2BB !important;
+    border-radius: 0.25rem !important;
+  }</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="dropdown py-lg-0 py-md-0 pb-sm-1 pb-1" dropdown (onHidden)="updateSelections(allowSwitchView)" [insideClick]="true">  <button id="dropdownLabel" class="dropdown-toggle btn btn-icon btn-link text-primary" dropdownToggle    aria-controls="dropdownMenu">    <i class="fa fa-md fa-table mr-1 mt-lg-0 mt-md-0 mt-sm-2 mt-2"></i>    <label class="pl-1 d-lg-inline-flex d-md-inline-flex d-sm-none d-none text-primary">{{\'COMMON.EDIT_LAYOUT\' | translate }}</label>  </button>  <div id="dropdownMenu" *dropdownMenu class="dropdown-menu overflow-auto scrollbar py-0 pl-3"    aria-labelledby="dropdownLabel">    <span *ngFor="let item of (menuItems$ | async) as items; let i = index" class="dropdown-item pb-0">      <div class="ml-2">        <div class="d-flex align-items-center justify-content-between">          <div class="d-flex align-items-center flex-wrap">            <input class="form-check-input checkbox mt-1 mr-2" type="checkbox" [checked]="item.isSelected"              (change)="handleCheckbox(item)" [value]="item?.id" [id]="item?.id" />            <ng-container *ngIf="isValidCartItemField(item.fieldName); else fallback">              <apt-output-field [labelOnly]="true" [record]="cartItem" [field]="item.fieldName" [label]="item.fieldName"                [editable]="false" [labelClass]="\'mt-0\'"></apt-output-field>            </ng-container>            <ng-template #fallback>              <label *ngIf="!isValidCartItemField(item.fieldName)" class="form-check-label mt-1"                [class.font-weight-bold]="item.isSelected" [for]="item?.id">                {{ item?.label }}              </label>            </ng-template>          </div>          <span class="float-right" *ngIf="item.isSelected">            <i class="fas fa-arrow-up" (click)="moveItemUp(items, i)" aria-hidden="true"></i>            <i class="pl-2 fas fa-arrow-down" (click)="moveItemDown(items, i)" aria-hidden="true"></i>          </span>        </div>      </div>    </span>    <div class="navbar border-0 p-0">      <div class="custom-control custom-checkbox px-1 pb-1 border-top w-100">        <label class="w-100">{{ \'COMMON.MANAGE_VIEW\' | translate }}</label>        <div class="row">          <div class="col">            <div class="view-selection d-flex align-items-center">              <small class="mb-0 d-flex align-items-center">                <input type="radio" name="view" [value]="\'default\'" [checked]="!allowSwitchView" (change)="switchView()"                  [disabled]="isGuest">                <span class="px-1">{{ \'COMMON.DEFAULT_VIEW\' | translate }}</span>              </small>            </div>            <div class="d-flex align-items-center">              <small class="mb-0 d-flex align-items-center">                <input type="radio" name="view" [value]="\'myView\'" [checked]="allowSwitchView"                  (change)="switchView(\'myView\')" [disabled]="isGuest">                <span class="px-1">{{ \'COMMON.MY_VIEW\' | translate }}</span>              </small>            </div>          </div>          <div *ngIf="allowSwitchView" class="col text-right align-self-end pb-1">            <button *ngIf="allowSwitchView" class="btn btn-outline-primary btn-sm px-3" type="button" [ladda]="loading"              data-style="zoom-in" data-spinner-color="black" (click)="saveUserView()">              <small>{{ \'COMMON.SAVE\' | translate }}</small>            </button>          </div>        </div>      </div>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AddCommentsComponent', 'selector': 'apt-add-comments'},{'name': 'AdditionalInformationComponent', 'selector': 'apt-additional-information'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AlertComponent', 'selector': 'apt-alert'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CaptchaComponent', 'selector': 'apt-captcha'},{'name': 'CartTotalsViewComponent', 'selector': 'app-cart-totals-view'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'ConstraintRuleAlertComponent', 'selector': 'apt-constraint-rule-alert'},{'name': 'ConstraintRuleSidebarComponent', 'selector': 'apt-constraint-rule-sidebar'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DependentPicklistComponent', 'selector': 'apt-dependent-picklist'},{'name': 'DocumentSelectorComponent', 'selector': 'apt-document-selector'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'EmailComposerComponent', 'selector': 'apt-email-composer'},{'name': 'EmailSearchComponent', 'selector': 'apt-email-search'},{'name': 'ErrorPageComponent', 'selector': 'apt-error-page'},{'name': 'FacetFilterComponent', 'selector': 'apt-facet-filter'},{'name': 'FavoriteFilterComponent', 'selector': 'apt-favorite-filter'},{'name': 'FavoriteModalComponent', 'selector': 'apt-favorite-modal'},{'name': 'FilesComponent', 'selector': 'apt-files'},{'name': 'FileUploaderComponent', 'selector': 'apt-file-uploader'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineitemCardComponent', 'selector': 'apt-lineitem-card'},{'name': 'LineItemMenuComponent', 'selector': 'apt-line-item-menu'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentIntegrationComponent', 'selector': 'apt-payment-integration'},{'name': 'PopoverComponent', 'selector': 'apt-popover'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceModalComponent', 'selector': 'apt-price-modal'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductAttributeComponent', 'selector': 'apt-product-attribute'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductSearchComponent', 'selector': 'apt-product-search'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'PromotionModalComponent', 'selector': 'apt-pr-modal'},{'name': 'QuickAddComponent', 'selector': 'app-quick-add'},{'name': 'RecipientsComponent', 'selector': 'apt-recipients'},{'name': 'ReplaceProductModalComponent', 'selector': 'apt-replace-product-modal'},{'name': 'RevalidateCartModalComponent', 'selector': 'apt-revalidate-cart-modal'},{'name': 'SelectAllComponent', 'selector': 'apt-select-all'},{'name': 'SendForSignatureComponent', 'selector': 'apt-send-for-signature'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'},{'name': 'TableRowSubItemComponent', 'selector': 'apt-table-row-sub-item'},{'name': 'ViewCommentsComponent', 'selector': 'apt-view-comments'},{'name': 'WizardComponent', 'selector': 'apt-wizard'}];
+    var DIRECTIVES = [{'name': 'AutoFocusDirective', 'selector': '[aptAutoFocus]'}];
+    var ACTUAL_COMPONENT = {'name': 'LineItemMenuComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'LineItemMenuComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

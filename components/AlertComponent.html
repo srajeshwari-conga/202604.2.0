@@ -1,0 +1,874 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Conga Digital Commerce 202604.2.0 on Conga Revenue Lifecycle Platform</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Conga Digital Commerce 202604.2.0 on Conga Revenue Lifecycle Platform</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  AlertComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/congarevenuecloud/elements/src/lib/alert/alert.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>The Alert component is used to display alert messages in the application. This alert display varies with the message type.
+Errors will be displayed as alert-danger.
+Warnings will be displayed as alert-warning.
+Information will be displayed as alert-info.</p>
+<h3>Preview</h3>
+<strong>Single alert</strong>
+
+<img src="../res/alert.png" style="max-width: 100%">
+
+<p><strong>Multiple alerts</strong></p>
+<img src="../res/multipleAlerts.png" style="max-width: 100%">
+<h3>Usage</h3>
+
+<div><pre class="line-numbers"><code class="language-typescript">import { AlertModule } from &#39;&#64;congarevenuecloud/elements&#39;;
+&#64;NgModule({
+imports: [AlertModule, ...]
+})
+export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code class="language-html">```typescript
+ &lt;apt-alert
+          [record]=&quot;record&quot;
+          layout=&quot;alert&quot;
+          message=&quot;error message&quot;
+ &gt;&lt;/apt-alert&gt;</code></pre></div>
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/DoCheck" target="_blank" >DoCheck</a></code>
+                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>apt-alert</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./alert.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./alert.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#errorList" >errorList</a>
+                            </li>
+                            <li>
+                                <a href="#view$" >view$</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#closeError" >closeError</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#autoRun" >autoRun</a>
+                            </li>
+                            <li>
+                                <a href="#expand" >expand</a>
+                            </li>
+                            <li>
+                                <a href="#layout" >layout</a>
+                            </li>
+                            <li>
+                                <a href="#message" >message</a>
+                            </li>
+                            <li>
+                                <a href="#messageType" >messageType</a>
+                            </li>
+                            <li>
+                                <a href="#record" >record</a>
+                            </li>
+                            <li>
+                                <a href="#showAlertWithAction" >showAlertWithAction</a>
+                            </li>
+                            <li>
+                                <a href="#showOnlyMessage" >showOnlyMessage</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(alertService: <a href="../injectables/AlertService.html" target="_self">AlertService</a>, cdr: <a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank">ChangeDetectorRef</a>, revalidateCartService: <a href="../injectables/RevalidateCartService.html" target="_self">RevalidateCartService</a>)</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>alertService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AlertService.html" target="_self" >AlertService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cdr</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank" >ChangeDetectorRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>revalidateCartService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/RevalidateCartService.html" target="_self" >RevalidateCartService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="autoRun"></a>
+                        <b>autoRun</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The flag which indicates to invoke  the Pricing call automatically.
+<b>This input is work in progress</b></p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="expand"></a>
+                        <b>expand</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Boolean flag to expand error message.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="layout"></a>
+                        <b>layout</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>&quot;alert&quot; | &quot;inline&quot;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;alert&#x27;</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Use to set the layout for error messages to be displayed
+either in alert with accordian or inline message.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="message"></a>
+                        <b>message</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;ERROR.RECORD_ERROR&#x27;</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Use to hold dyanmic error message.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="messageType"></a>
+                        <b>messageType</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>&quot;error&quot; | &quot;warning&quot; | &quot;info&quot; | &quot;primary&quot;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;info&#x27;</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The flag to show the type of message for error/ warning/ info/ primary. Defaults to info.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="record"></a>
+                        <b>record</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>AObject</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Record is instance of an Aobject, to fetch the error for</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showAlertWithAction"></a>
+                        <b>showAlertWithAction</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>A boolean flag to indicate if alerts with action buttons should be shown.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showOnlyMessage"></a>
+                        <b>showOnlyMessage</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The flag to show only message.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="closeError"></a>
+                    <span class="name">
+                        <span ><b>closeError</b></span>
+                        <a href="#closeError"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>closeError(view)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Close the alert</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>view</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>an object of the view to display the alert.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="errorList"></a>
+                    <span class="name">
+                        <span ><b>errorList</b></span>
+                        <a href="#errorList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Array&lt;AObjectError&gt;</code>
+
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Use to hold error list of type array of AObjectError.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="view$"></a>
+                    <span class="name">
+                        <span ><b>view$</b></span>
+                        <a href="#view$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>BehaviorSubject&lt;Array&lt;Views&gt;&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new BehaviorSubject&lt;Array&lt;Views&gt;&gt;([])</code>
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>View to render the alert message with the action buttons.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ng-container *ngIf&#x3D;&quot;!showOnlyMessage&quot;&gt;
+  &lt;ng-container [ngSwitch]&#x3D;&quot;layout&quot; *ngIf&#x3D;&quot;errorList?.length &gt; 0&quot;&gt;
+    &lt;ng-container *ngSwitchCase&#x3D;&quot;&#x27;inline&#x27;&quot;&gt;
+      &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-link&quot; [popover]&#x3D;&quot;popTemplate&quot;
+        *ngIf&#x3D;&quot;expand &amp;&amp; errorList.length &gt; 1; else mainError&quot;&gt;
+        &lt;small class&#x3D;&quot;text-danger d-block&quot;&gt;
+          &lt;i class&#x3D;&quot;fas fa-minus-circle mr-2&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+          {{message | translate}}
+        &lt;/small&gt;
+      &lt;/button&gt;
+      &lt;ng-template #mainError&gt;
+        &lt;ng-template [ngTemplateOutlet]&#x3D;&quot;mainBlock&quot; [ngTemplateOutletContext]&#x3D;&quot;{error: errorList[0]}&quot;&gt;&lt;/ng-template&gt;
+      &lt;/ng-template&gt;
+
+      &lt;ng-template #popTemplate&gt;
+        &lt;ng-template [ngTemplateOutlet]&#x3D;&quot;mainBlock&quot; [ngTemplateOutletContext]&#x3D;&quot;{error: error}&quot;
+          *ngFor&#x3D;&quot;let error of errorList&quot;&gt;&lt;/ng-template&gt;
+      &lt;/ng-template&gt;
+
+      &lt;ng-template #mainBlock let-error&#x3D;&quot;error&quot;&gt;
+        &lt;small class&#x3D;&quot;text-danger d-block pt-lg-0 px-md-1 px-sm-1 pt-1&quot;&gt;
+          {{error?.message | translate:error?.parameter}}
+        &lt;/small&gt;
+      &lt;/ng-template&gt;
+    &lt;/ng-container&gt;
+
+    &lt;ng-container *ngSwitchCase&#x3D;&quot;&#x27;alert&#x27;&quot;&gt;
+      &lt;ng-template [ngTemplateOutlet]&#x3D;&quot;collapseError&quot; [ngTemplateOutletContext]&#x3D;&quot;{error: error, index: i}&quot;
+        *ngFor&#x3D;&quot;let error of errorList; let i &#x3D; index; trackBy: trackByFn&quot;&gt;&lt;/ng-template&gt;
+      &lt;ng-template #collapseError let-error&#x3D;&quot;error&quot; let-index&#x3D;&quot;index&quot;&gt;
+        &lt;ng-container *ngIf&#x3D;&quot;error?.children?.length &gt; 0; else singleError&quot;&gt;
+          &lt;div class&#x3D;&quot;alert alert-danger p-1 accordion mb-0&quot; [id]&#x3D;&quot;&#x27;alert&#x27; + index&quot;&gt;
+            &lt;button class&#x3D;&quot;btn btn-link text-dark&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot;
+              [attr.data-target]&#x3D;&quot;&#x27;#collapse&#x27; + index&quot; aria-expanded&#x3D;&quot;false&quot;&gt;
+              &lt;i class&#x3D;&quot;fas fa-minus-circle mr-2 text-danger&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+              &lt;span class&#x3D;&quot;font-weight-bold&quot;&gt;{{message | translate}}&lt;/span&gt;
+            &lt;/button&gt;
+
+            &lt;div [id]&#x3D;&quot;&#x27;collapse&#x27; + index&quot; class&#x3D;&quot;collapse child-errors&quot; [attr.data-parent]&#x3D;&quot;&#x27;#alert&#x27; + index&quot;&gt;
+              &lt;div *ngFor&#x3D;&quot;let childError of error.children&quot; class&#x3D;&quot;mb-0 pl-5 text-dark&quot;&gt;
+                {{childError?.message | translate:childError?.parameter}}
+                &lt;a class&#x3D;&quot;text-underline&quot; *ngIf&#x3D;&quot;childError?.reference&quot; href&#x3D;&quot;javascript:void(0)&quot;
+                  [routerLink]&#x3D;&quot;childError?.reference?.value&quot;&gt;
+                  {{childError?.reference?.key}}
+                &lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/ng-container&gt;
+
+        &lt;ng-template #singleError&gt;
+          &lt;div [class]&#x3D;&quot;&#x27;alert &#x27; + alertColorMap[error?.type] + &#x27; flex-grow-1 mb-0&#x27;&quot;&gt;
+            &lt;i class&#x3D;&quot;fas fa-minus-circle mr-2&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+            {{error?.message | translate:error?.parameter}}
+          &lt;/div&gt;
+        &lt;/ng-template&gt;
+      &lt;/ng-template&gt;
+
+    &lt;/ng-container&gt;
+  &lt;/ng-container&gt;
+
+&lt;/ng-container&gt;
+
+&lt;!-- Template will load alert message with action --&gt;
+&lt;ng-container *ngIf&#x3D;&quot;showAlertWithAction&quot;&gt;
+  &lt;div *ngFor&#x3D;&quot;let view of (view$ | async) as views&quot;&gt;
+    &lt;div *ngIf&#x3D;&quot;view?.show&quot; [class]&#x3D;&quot;&#x27;alert &#x27; + alertColorMap[view?.messageType] + &#x27; accordion mb-0 btn-text-transform row&#x27;&quot;&gt;
+      &lt;div class&#x3D;&quot;d-flex align-items-center&quot;&gt;
+        &lt;i class&#x3D;&quot;fa fa-exclamation-circle ml-1 mr-2 mt-lg-0 mt-md-0 mt-sm-0 mt-1 p-lg-0 pb-md-0 pb-sm-0 pb-0 text-danger&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+        &lt;span class&#x3D;&quot;font-weight-bold&quot;&gt;{{view?.message | translate}}&lt;/span&gt;
+        &lt;div class&#x3D;&quot;d-lg-none d-md-none d-sm-block d-block pb-0 pr-3&quot;&gt;
+          &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;close text-dark&quot; (click)&#x3D;&quot;closeError(view)&quot; aria-label&#x3D;&quot;Close&quot;&gt;
+            &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;ml-lg-auto ml-md-auto ml-sm-4 ml-4 mr-3 pt-lg-0 pt-md-0 pt-sm-1 pt-1 d-flex align-items-center&quot;&gt;
+        &lt;span *ngFor&#x3D;&quot;let action of view?.actions&quot;&gt;
+          &lt;button
+            class&#x3D;&quot;btn ml-lg-3 ml-md-3 ml-sm-3 mr-3 px-2 py-0 bg-white border-secondary btn btn-outline-primary ladda-button text-right&quot;
+            (click)&#x3D;&quot;action.onClick(action?.label)&quot; [ladda]&#x3D;&quot;action.loader &#x3D;&#x3D;&#x3D; action.label&quot; [attr.data-style]&#x3D;&quot;&#x27;zoom-in&#x27;&quot;&gt;
+            {{ action.label | translate }}&lt;/button&gt;
+        &lt;/span&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;close d-sm-none d-none d-lg-block d-md-block pull-right py-0 ml-2 text-dark align-items-center&quot;
+          (click)&#x3D;&quot;closeError(view)&quot; aria-label&#x3D;&quot;Close&quot;&gt;
+          &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-container *ngIf&#x3D;&quot;showOnlyMessage&quot;&gt;
+  &lt;div [class]&#x3D;&quot;&#x27;alert &#x27; + alertColorMap[messageType] + &#x27; flex-grow-1 mb-0&#x27;&quot;&gt;
+    &lt;i class&#x3D;&quot;fas fa-info-circle mr-2&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+    {{message | translate}}
+  &lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./alert.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="!showOnlyMessage">  <ng-container [ngSwitch]="layout" *ngIf="errorList?.length > 0">    <ng-container *ngSwitchCase="\'inline\'">      <button type="button" class="btn btn-link" [popover]="popTemplate"        *ngIf="expand && errorList.length > 1; else mainError">        <small class="text-danger d-block">          <i class="fas fa-minus-circle mr-2" aria-hidden="true"></i>          {{message | translate}}        </small>      </button>      <ng-template #mainError>        <ng-template [ngTemplateOutlet]="mainBlock" [ngTemplateOutletContext]="{error: errorList[0]}"></ng-template>      </ng-template>      <ng-template #popTemplate>        <ng-template [ngTemplateOutlet]="mainBlock" [ngTemplateOutletContext]="{error: error}"          *ngFor="let error of errorList"></ng-template>      </ng-template>      <ng-template #mainBlock let-error="error">        <small class="text-danger d-block pt-lg-0 px-md-1 px-sm-1 pt-1">          {{error?.message | translate:error?.parameter}}        </small>      </ng-template>    </ng-container>    <ng-container *ngSwitchCase="\'alert\'">      <ng-template [ngTemplateOutlet]="collapseError" [ngTemplateOutletContext]="{error: error, index: i}"        *ngFor="let error of errorList; let i = index; trackBy: trackByFn"></ng-template>      <ng-template #collapseError let-error="error" let-index="index">        <ng-container *ngIf="error?.children?.length > 0; else singleError">          <div class="alert alert-danger p-1 accordion mb-0" [id]="\'alert\' + index">            <button class="btn btn-link text-dark" type="button" data-toggle="collapse"              [attr.data-target]="\'#collapse\' + index" aria-expanded="false">              <i class="fas fa-minus-circle mr-2 text-danger" aria-hidden="true"></i>              <span class="font-weight-bold">{{message | translate}}</span>            </button>            <div [id]="\'collapse\' + index" class="collapse child-errors" [attr.data-parent]="\'#alert\' + index">              <div *ngFor="let childError of error.children" class="mb-0 pl-5 text-dark">                {{childError?.message | translate:childError?.parameter}}                <a class="text-underline" *ngIf="childError?.reference" href="javascript:void(0)"                  [routerLink]="childError?.reference?.value">                  {{childError?.reference?.key}}                </a>              </div>            </div>          </div>        </ng-container>        <ng-template #singleError>          <div [class]="\'alert \' + alertColorMap[error?.type] + \' flex-grow-1 mb-0\'">            <i class="fas fa-minus-circle mr-2" aria-hidden="true"></i>            {{error?.message | translate:error?.parameter}}          </div>        </ng-template>      </ng-template>    </ng-container>  </ng-container></ng-container><!-- Template will load alert message with action --><ng-container *ngIf="showAlertWithAction">  <div *ngFor="let view of (view$ | async) as views">    <div *ngIf="view?.show" [class]="\'alert \' + alertColorMap[view?.messageType] + \' accordion mb-0 btn-text-transform row\'">      <div class="d-flex align-items-center">        <i class="fa fa-exclamation-circle ml-1 mr-2 mt-lg-0 mt-md-0 mt-sm-0 mt-1 p-lg-0 pb-md-0 pb-sm-0 pb-0 text-danger" aria-hidden="true"></i>        <span class="font-weight-bold">{{view?.message | translate}}</span>        <div class="d-lg-none d-md-none d-sm-block d-block pb-0 pr-3">          <button type="button" class="close text-dark" (click)="closeError(view)" aria-label="Close">            <span aria-hidden="true">&times;</span>          </button>        </div>      </div>      <div class="ml-lg-auto ml-md-auto ml-sm-4 ml-4 mr-3 pt-lg-0 pt-md-0 pt-sm-1 pt-1 d-flex align-items-center">        <span *ngFor="let action of view?.actions">          <button            class="btn ml-lg-3 ml-md-3 ml-sm-3 mr-3 px-2 py-0 bg-white border-secondary btn btn-outline-primary ladda-button text-right"            (click)="action.onClick(action?.label)" [ladda]="action.loader === action.label" [attr.data-style]="\'zoom-in\'">            {{ action.label | translate }}</button>        </span>        <button type="button" class="close d-sm-none d-none d-lg-block d-md-block pull-right py-0 ml-2 text-dark align-items-center"          (click)="closeError(view)" aria-label="Close">          <span aria-hidden="true">&times;</span>        </button>      </div>    </div>  </div></ng-container><ng-container *ngIf="showOnlyMessage">  <div [class]="\'alert \' + alertColorMap[messageType] + \' flex-grow-1 mb-0\'">    <i class="fas fa-info-circle mr-2" aria-hidden="true"></i>    {{message | translate}}  </div></div>'
+    var COMPONENTS = [{'name': 'AddCommentsComponent', 'selector': 'apt-add-comments'},{'name': 'AdditionalInformationComponent', 'selector': 'apt-additional-information'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AlertComponent', 'selector': 'apt-alert'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CaptchaComponent', 'selector': 'apt-captcha'},{'name': 'CartTotalsViewComponent', 'selector': 'app-cart-totals-view'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'ConstraintRuleAlertComponent', 'selector': 'apt-constraint-rule-alert'},{'name': 'ConstraintRuleSidebarComponent', 'selector': 'apt-constraint-rule-sidebar'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DependentPicklistComponent', 'selector': 'apt-dependent-picklist'},{'name': 'DocumentSelectorComponent', 'selector': 'apt-document-selector'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'EmailComposerComponent', 'selector': 'apt-email-composer'},{'name': 'EmailSearchComponent', 'selector': 'apt-email-search'},{'name': 'ErrorPageComponent', 'selector': 'apt-error-page'},{'name': 'FacetFilterComponent', 'selector': 'apt-facet-filter'},{'name': 'FavoriteFilterComponent', 'selector': 'apt-favorite-filter'},{'name': 'FavoriteModalComponent', 'selector': 'apt-favorite-modal'},{'name': 'FilesComponent', 'selector': 'apt-files'},{'name': 'FileUploaderComponent', 'selector': 'apt-file-uploader'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineitemCardComponent', 'selector': 'apt-lineitem-card'},{'name': 'LineItemMenuComponent', 'selector': 'apt-line-item-menu'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentIntegrationComponent', 'selector': 'apt-payment-integration'},{'name': 'PopoverComponent', 'selector': 'apt-popover'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceModalComponent', 'selector': 'apt-price-modal'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductAttributeComponent', 'selector': 'apt-product-attribute'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductSearchComponent', 'selector': 'apt-product-search'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'PromotionModalComponent', 'selector': 'apt-pr-modal'},{'name': 'QuickAddComponent', 'selector': 'app-quick-add'},{'name': 'RecipientsComponent', 'selector': 'apt-recipients'},{'name': 'ReplaceProductModalComponent', 'selector': 'apt-replace-product-modal'},{'name': 'RevalidateCartModalComponent', 'selector': 'apt-revalidate-cart-modal'},{'name': 'SelectAllComponent', 'selector': 'apt-select-all'},{'name': 'SendForSignatureComponent', 'selector': 'apt-send-for-signature'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'},{'name': 'TableRowSubItemComponent', 'selector': 'apt-table-row-sub-item'},{'name': 'ViewCommentsComponent', 'selector': 'apt-view-comments'},{'name': 'WizardComponent', 'selector': 'apt-wizard'}];
+    var DIRECTIVES = [{'name': 'AutoFocusDirective', 'selector': '[aptAutoFocus]'}];
+    var ACTUAL_COMPONENT = {'name': 'AlertComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'AlertComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
